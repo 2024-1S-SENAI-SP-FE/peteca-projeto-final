@@ -1,18 +1,25 @@
 body{
-    background-color: rgba(58, 153, 153, 0.76);
+    /* background-color: rgba(58, 153, 153, 0.76); */
     color: white;
     font-family: sans-serif;
+}
+
+.image{
+    background-image: url("imagens/image.imgs.full.high.avif");
+    background-repeat: no-repeat;
+    background-size:  100vw 100vh;
+    height:100vh;
+    z-index: -100;
 } 
 .logo-menu{
     position: absolute;
-    top: 0;
-    height: 100px;
+    height: 70px;
     width: 100vw;
     flex-flow: row;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(0, 0, 0, .5);
+    background-color:transparent;
     
 }
 .menu-navbar>ul{
@@ -23,20 +30,31 @@ li{
     padding: 10px;
     transition: all 300ms;
     border-radius: 8px;
+    color: rgb(255, 255, 255);
 }
 li:hover{
     background-color: rgb(43, 112, 112);
     transform: scale(1.05);
 }
 .menu-sanduba{
-    height: 2px;
+    height: 3px;
+    width: 30px;
+    margin:0  ;
     background-color: white;
 }
-.menu-sanduba::before{
-    height: 2px;
+.menu-sanduba::before, .menu-sanduba::after{
+    content: '';
+    height: 3px;
+    width: 30px;
     background-color: white;
+    margin-top: 5px;
+    display: block;
 }
-.menu-sanduba::after{
-    height: 2px;
-    background-color: white;
+
+.logo-texto{
+    position: absolute;
+    top: calc(85% - 50px);
+    left: 45%;
+    font-size: 3rem;
+
 }
