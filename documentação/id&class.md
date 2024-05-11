@@ -8,3 +8,7 @@ O objetivo desse arquivo é criar uma documentação de todas as IDs e Class usa
 
 3. `class="menu-navbar"` -> index.html - linha 20
 *(Class criada para identificar o menu de navegação do navbar da página principal)*
+
+4. `class="btn-menu-sanduba"` -> index.html - linha 16 
+*(class criada para ser o botão usado no mobile)*
+
