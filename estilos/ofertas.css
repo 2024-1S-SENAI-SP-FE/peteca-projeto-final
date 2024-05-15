@@ -1,11 +1,31 @@
 .carros-oferta {
   margin: auto;
 }
-
+.container-titulo{
+  display: flex;
+  justify-content: center;
+  
+}
+.conteiner-titulo, .conteiner-carros{
+  background-color: rgba(255, 85, 0, 0.516);
+}
+.container-carros {
+  border: 1px solid blue;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: repeat(8, 150px);
+  grid-template-rows: repeat(2, 80px);
+  gap: 1rem;
+}
+.aluguel-de-carros{
+  color: black;
+  align-items: center;
+  font-size: 3rem;
+  margin: 10px;
+}
 .carro {
   border: 1px solid red;
-  display: flex;
-  flex-direction: column;
+ 
   height: 300px;
   display: flex;
   align-items: center;
@@ -22,14 +42,6 @@
 }
 .nome-carro {
   color: black;
-}
-.container-carros {
-  border: 1px solid blue;
-  /* height: 1000px; */
-  display: grid;
-  grid-template-columns: repeat(8, 150px);
-  grid-template-rows: repeat(2, 80px);
-  gap: 1rem;
 }
 .carro1 {
   grid-column: 2/ 4;
@@ -74,5 +86,9 @@
 .btn-carro-saiba-mais:hover{
   background-color: rgb(0, 106, 212);
   transform: scale(1.05);
+  display: inline-block;
+}
+.estrelas{
+  color: black;
 }
 
