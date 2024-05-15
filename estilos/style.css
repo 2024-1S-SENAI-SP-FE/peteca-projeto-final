@@ -5,7 +5,7 @@ body {
 }
 
 .imagem-fundo {
-    background-image: url("/imagens/image.imgs.full.high.avif");
+    background-image: url("/imagens/WhatsApp\ Image\ 2024-05-14\ at\ 10.12.11.jpeg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     height: 100vh;
@@ -33,6 +33,10 @@ video {
 .menu-navbar>ul {
     display: flex;
 }
+ul{
+    height: 30px;
+
+}
 
 li {
     list-style: none;
@@ -59,4 +63,6 @@ li:active {
     font-size: 3rem;
 
 }
- 
+.btn-menu-sanduba{
+    display: none;
+} 
