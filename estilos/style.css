@@ -33,10 +33,7 @@ video {
 .menu-navbar>ul {
     display: flex;
 }
-ul{
-    height: 30px;
 
-}
 
 li {
     list-style: none;
