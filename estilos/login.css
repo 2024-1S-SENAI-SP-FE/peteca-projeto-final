@@ -17,10 +17,7 @@
 
 }
 
-body{
-    display: grid;
-    place-items: center;
-}
+
 
 .form-login {
     display: block;

@@ -5,7 +5,7 @@ body {
 }
 
 .imagem-fundo {
-    background-image: url("imagens/image.imgs.full.high.avif");
+    background-image: url("/imagens/image.imgs.full.high.avif");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     height: 100vh;
@@ -14,7 +14,7 @@ body {
 
 video {
     overflow-x: hidden;
-
+    
 }
 
 .container-menu {
@@ -27,7 +27,7 @@ video {
     justify-content: space-around;
     align-items: center;
     background-color: transparent;
-
+    
 }
 
 .menu-navbar>ul {
@@ -35,6 +35,7 @@ video {
 }
 
 li {
+    list-style: none;
     margin: 0 10px;
     padding: 10px;
     transition: all 300ms;
