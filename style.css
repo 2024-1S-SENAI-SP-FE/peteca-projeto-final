@@ -1,21 +1,23 @@
-body{
+body {
     /* background-color: rgba(58, 153, 153, 0.76); */
     color: white;
     font-family: sans-serif;
 }
 
-.imagem-fundo{
+.imagem-fundo {
     background-image: url("imagens/image.imgs.full.high.avif");
     background-repeat: no-repeat;
-    background-size:  100vw 100vh;
-    height:100vh;
+    background-size: 100vw 100vh;
+    height: 100vh;
     z-index: -100;
-} 
-video{
+}
+
+video {
     overflow-x: hidden;
 
 }
-.container-menu{
+
+.container-menu {
     position: absolute;
     top: 90px;
     height: 70px;
@@ -24,31 +26,117 @@ video{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:transparent;
-    
+    background-color: transparent;
+
 }
-.menu-navbar>ul{
+
+.menu-navbar>ul {
     display: flex;
 }
-li{
+
+li {
     margin: 0 10px;
     padding: 10px;
     transition: all 300ms;
     border-radius: 8px;
     color: rgb(255, 255, 255);
 }
-li:hover{
+
+li:hover {
     background-color: rgb(43, 112, 112);
     transform: scale(1.05);
 }
-li:active{
+
+li:active {
     transform: scale(.9);
 }
 
-.logo-texto{
+.logo-texto {
     position: absolute;
     top: calc(85% - 50px);
     left: 45%;
     font-size: 3rem;
 
 }
+
+
+/* login */
+
+
+
+.login {
+
+    border: 1px solid black;
+    width: 400px;
+    height: 500px;
+    /* background: url (); */
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    
+   
+
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+form {
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    /* backdrop-filter: 40px;  */
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 24px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 5);
+    margin-bottom: 60px;
+}
+
+label {
+    color: #4e56a7;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+
+input {
+
+    height: 40px;
+    /*tamanho da caixa de botão*/
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    border-color: black;
+}
+
+button {
+    background: #00095b;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    border: none;
+    margin: 10px 0px;
+    box-shadow: 0px, 0px 5px rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 30px;
+    
+}
+ /* fim do style do login */
+ 
