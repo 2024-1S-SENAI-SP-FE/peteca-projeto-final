@@ -1,86 +1,56 @@
 body {
-  /* background-color: rgba(58, 153, 153, 0.76); */
-  color: white;
   font-family: sans-serif;
 }
 
 header {
-  background-image: url("/imagens/WhatsApp\ Image\ 2024-05-14\ at\ 10.12.11.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
   height: 100vh;
-  z-index: -100;
+  background-image: url("/imagens/IMG-20240514-WA0008.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-video {
-  overflow-x: hidden;
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    /* border: 1px solid red; */
 }
 
-.container-menu {
-  position: absolute;
-  top: 90px;
-  height: 70px;
-  width: 100vw;
-  flex-flow: row;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: transparent;
+.logo img {
+    width: 141px;
+    height: 118px;
 }
 
-.menu-navbar > ul {
-  display: flex;
+#menu ul {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+    height: 52px;
+    margin-inline-end: 3rem;
 }
 
-li {
-  list-style: none;
-  margin: 0 10px;
-  padding: 10px;
-  transition: all 300ms;
-  border-radius: 8px;
-  color: rgb(255, 255, 255);
+#menu ul li{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
 }
 
-li:hover {
-  background-color: rgb(43, 112, 112);
-  transform: scale(1.05);
+#menu ul a{
+    color: #fff;
+    text-decoration: none;
 }
 
-li:active {
-  transform: scale(0.9);
+#menu ul li:last-child a{
+    background-color: #000000;
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 70%;
 }
-
-.logo-texto {
-  position: absolute;
-  top: calc(85% - 50px);
-  left: 45%;
-  font-size: 3rem;
+.container-menu{
+    backdrop-filter: blur(2px);
 }
-.btn-menu-sanduba {
-  display: none;
-}
-
-@media all and (max-width: 400px) {
-  body {
-    min-width: 100vw;
-    height: 100vh;
-  }
-  header {
-    background-image: url("/imagens/WhatsApp\ Image\ 2024-05-14\ at\ 10.12.11.jpeg");
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
-    height: 100vh;
-    z-index: -100;
-  }
-  .container-menu {
-    min-width: 100%;
-  }
- 
-}
-rodrigo
-
-
-matheus
 /* Sessão artigos */
-
- 
