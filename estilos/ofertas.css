@@ -92,3 +92,20 @@
   color: black;
 }
 
+@media all and (max-width:400px){
+  body{
+    min-width: 100vw;
+  }
+  .carros-oferta {
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carro{
+    width: 100px;
+    height: 50px    ;
+  }
+
+
+}
