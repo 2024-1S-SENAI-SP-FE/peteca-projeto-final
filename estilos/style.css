@@ -57,7 +57,7 @@ li:active {
   font-size: 3rem;
 }
 .btn-menu-sanduba {
-  display: none;
+  display: none;  
 }
 
 @media all and (max-width: 400px) {

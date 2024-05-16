@@ -10,7 +10,7 @@
   background-color: rgba(255, 85, 0, 0.516);
 }
 .container-carros {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 1000px;
   display: grid;
   grid-template-columns: repeat(8, 150px);
@@ -24,7 +24,7 @@
   margin: 10px;
 }
 .carro {
-  border: 1px solid red;
+  /* border: 1px solid red; */
  
   height: 300px;
   display: flex;
@@ -92,20 +92,52 @@
   color: black;
 }
 
-@media all and (max-width:400px){
+@media all and (max-width:500px){
   body{
     min-width: 100vw;
+    /* overflow-x: hidden; */
   }
   .carros-oferta {
     min-width: 250px;
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
     align-items: center;
   }
-  .carro{
-    width: 100px;
-    height: 50px    ;
+  .container-carros{
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    height: 300px;
+    overflow-x: scroll;
+    /* overflow-y:auto;   */
   }
-
-
+  .carro{
+    border: 2px solid rgb(159, 159, 159);
+    width: 80%;
+    padding: 0 10px;
+    /* height: 80px; */
+    /* box-shadow:6px 6px 5px black; */
+    border-radius:10px;
+  }
+  .carro1{
+    margin-left: 30px;
+  }
+  .carro img {
+    background-size: auto;
+    height: 30%;
+    /* height:150px;   */
+    object-fit: cover;
+    
+  }
+  .img-oferta{
+    width: 30px;
+  }
+  .nome-carro, .button-saiba{
+    font-size: .8rem;
+    
+}
+.btn-carro-saiba-mais{
+  margin: 10px 0;
+}
 }
