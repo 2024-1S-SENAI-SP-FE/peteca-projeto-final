@@ -74,7 +74,8 @@ header {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    transform: translateY(25vh);
+    margin-top: 100px;
+    /* transform: translateY(25vh); */
     text-align: center;
     color: #f5f5f9;
 }
@@ -87,6 +88,25 @@ header {
 .textos-header h1 {
     font-size: 64px;
     font-weight: bold;
+}
+
+.busca-carro {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.busca-carro input {
+    height: 40px;
+    border: none;
+}
+
+.busca-carro button {
+    width: 150px;
+    background-color: #00095b;
+    color: #f5f5f9;
+    border: none;
+    cursor: pointer;
 }
 
 /* Sessão artigos */
