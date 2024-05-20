@@ -97,8 +97,12 @@ header {
 }
 
 .busca-carro input {
-    height: 40px;
+    height: 45px;
     border: none;
+}
+
+.busca-carro input:first-child {
+    border-radius: 50px 0 0 50px;
 }
 
 .busca-carro button {
@@ -107,6 +111,7 @@ header {
     color: #f5f5f9;
     border: none;
     cursor: pointer;
+    border-radius: 0 50px 50px 0;
 }
 
 /* Sessão artigos */
