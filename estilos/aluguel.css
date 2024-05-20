@@ -1,0 +1,33 @@
+.check-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.span-check-in{
+    font-size: 2rem;
+   font-weight: 700; 
+}
+.container-info{
+    display: grid;
+    grid-template-columns: repeat(8, 8fr);
+}
+
+
+
+.carros-aluguel{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 40px 20px;
+    margin: 60px 30px;
+}
+img{
+    width: 30px;
+}
+.carros-disponiveis{
+    height: 300px;
+    width:400px;
+    box-shadow: 2px 2px 2px black;
+    display: flex;
+    flex-flow: column;
+}
