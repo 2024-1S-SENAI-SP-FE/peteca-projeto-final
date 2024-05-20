@@ -8,36 +8,37 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 }
-body{
+/* 'body{
     width: 100%;
-    height: 100vh;
+    height: 100vw;
     display: flex;
     justify-content:center;
     background-color:#ffffff ;
     margin-top: 50px;
-}
+}' */
 
 .login{
-    width: 50%;
-    height: 80vh;
+    width: 100vw;
+    /* height: 50vh; */
     display: flex;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, .212);
+
     
+}
+img{
+    width: 100%;
+    height:98vh;
 }
 
 .form-image {
-     width:50%; 
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00095b;
-    /* padding:1rem; */
+     /* width:100%; */
+     height: 10%;
+   
 
 }
 
 .form{
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +46,13 @@ body{
     background-color:#fff ;
     padding: 3rem;
  }  
-
+.form-login{
+    margin: 0 30px;
+    width: 300px;
+    /* display: flex;    */
+    flex-flow: column;
+    align-items: center;
+}
 
 .form-header {
   
@@ -53,13 +60,14 @@ body{
     display: flex;
     justify-content: space-between;
     position: relative;
+    width: 50%;
     
 
     
 }
 
 input-box{
-    width: 100%;
+    width: 50%;
     padding: 10px 0;
     font-size: 16px;
     color:white
