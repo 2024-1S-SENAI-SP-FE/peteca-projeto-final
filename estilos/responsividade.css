@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (max-width: 835px) {
+@media screen and (min-width: 430px) and (max-width: 835px) {
 
     header {
         height: 50vh;
