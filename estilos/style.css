@@ -104,20 +104,26 @@ header {
 
 .busca-carro input:first-child {
     border-radius: 50px 0 0 50px;
-    /* background-image: url(/icones/car_846338.png);
+    background-image: url(/icones/car_846338.png);
     background-repeat: no-repeat;
-    background-position: 1.2rem 0.7rem; */
+    background-position: 1.2rem 0.7rem;
 }
 
 .busca-carro input:nth-child(2) {
     height: auto;
+    width: 166px;
+}
+
+.busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    margin-left: 0;
 }
 
 .busca-carro input:last-of-type {
-    /* background-image: url(/icones/location-dot-solid.svg);
+    background-image: url(/icones/location-dot-solid.svg);
     background-size: 1rem;
     background-repeat: no-repeat;
-    background-position: 1.2rem 0.7rem; */
+    background-position: 1.2rem 0.7rem;
 }
 
 .busca-carro button {
