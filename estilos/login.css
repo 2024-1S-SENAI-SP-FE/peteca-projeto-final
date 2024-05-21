@@ -3,7 +3,7 @@
 .login {
 
     border: 1px solid black;
-    width: 400px;
+    width: 500px;
     height: 500px;
     /* background: url (); */
     color: black;
@@ -12,6 +12,7 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
+
     
    
 

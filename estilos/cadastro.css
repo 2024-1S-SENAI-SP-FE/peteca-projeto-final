@@ -47,23 +47,22 @@ img{
     padding: 3rem;
  }  
 .form-login{
-    margin: 0 30px;
+    margin: 0 0 0 200px;
     width: 300px;
-    /* display: flex;    */
+    /* display: flex;   
     flex-flow: column;
-    align-items: center;
+    justify-content: center;
+    align-items: center; */
 }
 
-.form-header {
-  
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 50%;
-    
+
 
     
+.title-login{
+    text-transform: uppercase; /* Transforma o texto em maiúsculo */
+    font-weight: bold; /* Define o texto em negrito */
+    text-align: center; /* Alinha o texto horizontalmente ao centro */
+
 }
 
 input-box{
@@ -79,16 +78,14 @@ input{
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     align-items: center;
-    justify-content: center;
+    width: 410px;
 
     /* margin-top: 5px; */
     
 }
-label{
-    justify-content: center;
-}
+
 .btn-login{
     background-color: #00095b;
     color: #fff;
@@ -97,5 +94,33 @@ label{
     justify-content: center;
     border-radius: 40px;
     background-position: center;
+    align-items: center;
+    margin: 0 0 0 90px;
+    margin-top: 20px;
+    width: 180px;
+    height: 50px;
 }
+.label-login{
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.titulo-login{
+    text-align: center;
+    text-transform: uppercase; /* Transforma o texto em maiúsculo */
+    font-weight: bold; /* Define o texto em negrito */
+    text-align: center; /* Alinha o texto horizontalmente ao centro */
+    margin-left: 200px;
+    margin-bottom: 30px;
+
+}
+#nome{
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    position: absolute;
+    bottom: 5px;
+}
+
 
