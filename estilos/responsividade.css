@@ -1,18 +1,42 @@
-.menu-sanduba{
-    height: 3px;
-    width: 30px;
-    margin:0  ;
-    background-color: white;
-}
-.menu-sanduba::before, .menu-sanduba::after{
-    content: '';
-    height: 3px;
-    width: 30px;
-    background-color: white;
-    margin-top: 5px;
-    display: block;
-}
-.btn-menu-sanduba{
-    border:none;
-    background: none;
+@media screen and (max-width: 430px) {
+
+    header {
+        background-position: -500px;
+    }
+
+    #menu ul {
+        display: none;
+    }
+
+    .busca-carro {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        margin: 1rem;
+    }
+
+    .busca-carro input:first-of-type{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        margin-bottom: 1rem;
+        width: auto;
+    }
+
+    .busca-carro input:nth-last-of-type(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        border-right: 1px solid black;
+        width: auto;
+    }
+
+    .busca-carro input:last-of-type {
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+
+    .busca-carro button {
+        width: auto;
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
 }
