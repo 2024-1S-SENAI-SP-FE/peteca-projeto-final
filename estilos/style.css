@@ -6,7 +6,7 @@ body {
 
 header {
     height: 100vh;
-    background-image: url("/imagens/mustang_updated.jpg");
+    background-image: url("../imagens/mustang_updated.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -99,28 +99,35 @@ header {
 .busca-carro input {
     height: 45px;
     border: none;
+    text-indent: 2.5rem;
+}
+
+input::placeholder {
     text-align: center;
+    text-indent: 0;
 }
 
 .busca-carro input:first-child {
     border-radius: 50px 0 0 50px;
-    background-image: url(/icones/car_846338.png);
+    background-image: url(../icones/car_846338.png);
     background-repeat: no-repeat;
     background-position: 1.2rem 0.7rem;
+    text-indent: 3rem;
 }
 
 .busca-carro input:nth-child(2) {
     height: auto;
     width: 166px;
+    text-indent: 1.5rem;
 }
 
 .busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
-    margin-left: 0;
+    margin-left: 1.2rem;
 }
 
 .busca-carro input:last-of-type {
-    background-image: url(/icones/location-dot-solid.svg);
+    background-image: url(../icones/location-dot-solid.svg);
     background-size: 1rem;
     background-repeat: no-repeat;
     background-position: 1.2rem 0.7rem;
@@ -128,7 +135,7 @@ header {
 
 .busca-carro button {
     background-color: #00095b;
-    background-image: url(/icones/magnifying-glass-solid.svg);
+    background-image: url(../icones/magnifying-glass-solid.svg);
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 1rem 0.8rem;
@@ -141,7 +148,7 @@ header {
 }
 
 .busca-carro button:hover {
-    background-color: #030735;
+    background-color: #080e53;
 }
 
 /* Sessão artigos */
