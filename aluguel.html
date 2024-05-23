@@ -8,42 +8,57 @@
     <link rel="stylesheet" href="estilos/aluguel.css">
 </head>
 <body>
+
+    <button class="entrar">Entrar</button>
+        
     <section class="check-in">
 
-       
-            <span class="span-check-in">Check-in:</span>
-            <span class="idade">Idade do condutor: 26-65</span>
-      
-
-      
-            <span class="local">Local:</span>
-            <div class="container-local-retirada">
-                <img src="icones/Place Marker.png" alt="img-localizacao" class="img-localizacao">
-                <input type="text" class="local-retirada" placeholder="EX: São Paulo">
-                
-            </div>
+       <div class="container-retirada">
            
-                <span class="retirada">Retirada:</span>
-                <div class="container-data-retirada">
-                    <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
-                    <input type="date" class="data-retirada" value="">
+                <span class="span-check-in">Check-in:</span>
+                <span class="idade">Idade do condutor: 26-65</span>
+
+                <div class="lado-a-lado">
+                    <span class="local">Local:</span>
+                    
+                    <div class="container-local-retirada">
+                        <img src="icones/Place Marker.png" alt="img-localizacao" class="img-localizacao">
+                        <input type="text" class="local-retirada" placeholder="EX: São Paulo">
+                    </div>
                 </div>
-                <div class="container-hora-retirada">
-                    <img src="icones/Time Span.svg" alt="img-relogio" class="img-relogio">
-                    <input type="time" class="hora-retirada " value="">
-                </div>
+                <div class="lado-a-lado">
+                    <span class="retirada">Retirada:</span>
+
+                    <div class="container-data-retirada">
+                        <input type="date" class="data-retirada" >
+                        <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
+                    </div>
+
+                    <div class="container-hora-retirada">
+                        <img src="icones/Time Span.svg" alt="img-relogio" class="img-relogio">
+                        <input type="time" class="hora-retirada " value="">
+                    </div>
+                    </div>
+       </div>
             
 
           
-            <span class="entrega">Entrega:</span>
-                <div class="container-data-entrega">
-                    <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
-                    <input type="date" class="data-entrega" >
+            <div class="container-entrega">
+                
+                <div class="lado-a-lado">
+                <span class="entrega">Entrega:</span>
+
+                    <div class="container-data-entrega">
+                        <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
+                        <input type="date" class="data-entrega" >
+                    </div>
+
+                    <div class="container-hora-entrega">
+                        <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
+                        <input type="time" class="hora-entrega">
+                    </div>
                 </div>
-                <div class="container-hora-entrega">
-                    <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
-                    <input type="time" class="hora-entrega">
-                </div>
+            </div>
           
     </section>
 
