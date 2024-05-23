@@ -6,7 +6,6 @@ body {
 
 header {
     height: 100vh;
-    background-image: url("/imagens/mustang_updated.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -42,8 +41,8 @@ header {
 }
 
 #menu ul li:last-child a {
-    background-color: #f5f5f9;
-    color: #00095b;
+    background-color: #000;
+    color: #fff;
     font-weight: bold;
     border-radius: 50px;
     display: inline-flex;
@@ -55,7 +54,7 @@ header {
 }
 
 #menu ul a {
-    color: #fff;
+    color: #000;
     font-weight: 400;
     text-decoration: none;
     padding-bottom: 7px;
@@ -68,74 +67,11 @@ header {
     border-bottom: 2px solid #f5f5f9;
 }
 
-.textos-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 100px;
-    /* transform: translateY(25vh); */
-    text-align: center;
-    color: #f5f5f9;
+#imagem-inicial-sobre-nos img {
+    width: 280px;
 }
 
-.textos-header p {
-    font-size: 40px;
-    font-weight: 300;
+.paragrafo-sobre-nos p {
+    margin-left: 23%;
+    text-align: justify;
 }
-
-.textos-header h1 {
-    font-size: 64px;
-    font-weight: bold;
-}
-
-.busca-carro {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.busca-carro input {
-    height: 45px;
-    border: none;
-    text-align: center;
-}
-
-.busca-carro input:first-child {
-    border-radius: 50px 0 0 50px;
-    /* background-image: url(/icones/car_846338.png);
-    background-repeat: no-repeat;
-    background-position: 1.2rem 0.7rem; */
-}
-
-.busca-carro input:nth-child(2) {
-    height: auto;
-}
-
-.busca-carro input:last-of-type {
-    /* background-image: url(/icones/location-dot-solid.svg);
-    background-size: 1rem;
-    background-repeat: no-repeat;
-    background-position: 1.2rem 0.7rem; */
-}
-
-.busca-carro button {
-    background-color: #00095b;
-    background-image: url(/icones/magnifying-glass-solid.svg);
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: 1rem 0.8rem;
-    width: 145px;
-    text-indent: 1.5rem;
-    color: #f5f5f9;
-    border: none;
-    border-radius: 0 50px 50px 0;
-    cursor: pointer;
-}
-
-.busca-carro button:hover {
-    background-color: #030735;
-}
-
-/* Sessão artigos */
