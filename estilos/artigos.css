@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+#artigos{
+    margin: 1rem 2rem 1rem 2rem;/* margem com ajuste automático */
+    font-size: 14px; /* o padrão é 16px */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 150;
+    background-color: #00095b     
+};
+
+
+h2{ 
+        font-size: 30px;
+        line-height: 1.0;
+};
+
+p{
+    line-height: 1,5; /* altura da linha: 1,5x o tamanho padrão */
+    margin: 1rem 0 1rem 0; /* valores: cima-baixo esquerda-direita */
+   }
+
+.botoes{
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
