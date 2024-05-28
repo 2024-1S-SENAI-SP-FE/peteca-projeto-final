@@ -161,3 +161,62 @@ input::placeholder {
 }
 
 /* Sessão artigos */
+
+
+
+
+
+
+
+
+/*FOOTER*/  
+footer{
+    width: 100%;
+    background-color:  rgb(182, 182, 182) ;
+}
+.footer-container{
+    display: grid;
+    grid-auto-flow: column;
+    padding: 3.5rem 3.5rem;
+    justify-content: space-evenly
+    
+    
+}
+.footer-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.80rem ;
+    list-style: none;
+   
+}
+.footer-li{
+    font-size: small;
+}
+.footer-a{
+    text-decoration: none;
+    color: #505050;
+}
+.footer-socialmidia{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 1.2rem;
+    
+}
+.footer-socialmidia .footer-link{
+   color: #727171;
+   
+   
+}
+.footer-copy{
+    background-color: #f5f5f9;
+    text-align: center;
+    padding: 10px;
+    font-size: small;
+}
