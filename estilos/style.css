@@ -116,22 +116,30 @@ input::placeholder {
 }
 
 .busca-carro input:nth-child(2) {
+    background-image: url(../icones/location-dot-solid.svg);
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: 1.2rem 0.7rem;
+    width: 166px;
+    text-indent: 2.5rem;
+}
+
+.busca-carro input:nth-child(3) {
     height: auto;
     width: 166px;
     text-indent: 1.5rem;
 }
 
+.busca-carro input:last-of-type {
+    height: auto;
+    width: 166px;
+    text-indent: 1.5rem;
+}
 .busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     margin-left: 1.2rem;
 }
 
-.busca-carro input:last-of-type {
-    background-image: url(../icones/location-dot-solid.svg);
-    background-size: 1rem;
-    background-repeat: no-repeat;
-    background-position: 1.2rem 0.7rem;
-}
 
 .busca-carro button {
     background-color: #00095b;
@@ -148,7 +156,7 @@ input::placeholder {
 }
 
 .busca-carro button:hover {
-    background-color: #080e53;
+    background-color: #030841;
 }
 
 /* Sessão artigos */
