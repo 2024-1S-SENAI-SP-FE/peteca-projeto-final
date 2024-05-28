@@ -79,3 +79,30 @@
     }
 
 }
+
+
+
+
+/*FOOTER-responsividade*/
+@media screen and (max-width: 430px){
+    footer{
+       width: 100%;
+      
+    }
+    .footer-container{
+       display: flex;
+       flex-direction: column;
+       padding: 5.5rem;
+        gap: 2rem;
+    }
+    .footer-ul{
+       height: 100%;
+       width: 100%;
+    }
+   
+}
+@media screen and (min-width: 430px) and (max-width: 835px){
+    footer{
+        /*fazer ainda*/
+    }
+}
