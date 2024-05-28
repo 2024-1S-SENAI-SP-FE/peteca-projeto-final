@@ -128,6 +128,7 @@ img{
 input::placeholder {
     position: absolute;
     bottom: 5px;
+
 }
 
 
@@ -140,13 +141,30 @@ input::placeholder {
 @media (min-width:320px) and (max-width:450px) {
    
    
-    body{
-        width: 100%;
-        height: 100%;
 
+    img{
+      width: 0px;
+    }
+    .titulo-login{
+     
+        font-size: 25px;
+        margin-bottom: 20px;
+        margin-left: 240px;
+    }
+    .btn-login{
+       margin: 0;
+       margin-top: 20px;
+       width: 13rem;
+       margin-left: 80px;
+    }
+    #nome,.label-login{
+        width: 100%;
+        margin-left: 35px;
+      
+        
     }
     input{
-        width: 50%;
+        border-bottom: 3px solid black;
     }
   
 
