@@ -120,7 +120,6 @@ input::placeholder {
     background-size: 1rem;
     background-repeat: no-repeat;
     background-position: 1.2rem 0.7rem;
-    height: auto;
     width: 166px;
     text-indent: 2.5rem;
 }

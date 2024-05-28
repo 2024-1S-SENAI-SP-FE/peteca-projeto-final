@@ -8,6 +8,10 @@
         display: none;
     }
 
+    .textos-header {
+        margin: 0;
+    }
+
     .busca-carro {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -39,18 +43,21 @@
     .busca-carro input:nth-child(3) {
         grid-column: 1 / 4;
         width: auto;
+        height: 45px;
     }
 
     .busca-carro input:last-of-type {
         grid-column-start: 4;
         grid-column-end: 7;
         width: auto;
+        height: 45px;
     }
 
     .busca-carro button {
         border-radius: 50px;
         width: auto;
-        margin-top: 0.5rem;
+        height: 55px;
+        margin-top: 0.2rem;
         grid-column-start: 2;
         grid-column-end: 6;
         background-position: 2.5rem center;
