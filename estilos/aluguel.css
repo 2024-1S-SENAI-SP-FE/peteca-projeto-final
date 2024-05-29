@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tilt+Neon&display=swap');
 body{
     font-family: "Inter", sans-serif;
+   
 }
 
 .entrar{
     position: absolute;
-    right: 30px;
-    top: 30px ;
+    right: 180px;
+    top: 180px ;
     color: black;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    box-shadow: 2px 2px 3px 1px rgb(105, 105, 105);
+    cursor:pointer; 
 }
 
 /* containers */
@@ -15,9 +23,9 @@ body{
     display: flex;
     justify-content: space-between;
     height: 200px;
-    width: 90vw;
+    width: 85vw;
     font-size: 20px;
-    margin: 180px 100px;
+    margin: 250px 100px;
     
 }
 .check-in{
@@ -52,6 +60,7 @@ body{
 .container-hora-retirada,.container-hora-entrega{
     display: flex;
     align-items: center;
+    justify-content: center;
     box-shadow: 2px 2px 2px  rgb(105, 105, 105);
     background-color: #F9F9F9; 
     height: 50px;
@@ -99,39 +108,32 @@ body{
 
 /* inputs */
 input{
- 
+    height:100%;
     border: none;
     outline: none;
 }
 input[type="date"]{
     border: 2px groove gray;
-    
     border: none;
-    
 }
 input[type="time"]{
     border: none;
-    
 }
 /* fim inputs */
 
-
-
-
-
+/* carros aluguel */
 .carros-aluguel{
     display: grid;
-    grid-template-columns: repeat(3, 3fr); 
-    border: 3px solid blue;
+    grid-template-columns: repeat(3, 300px); 
     padding: 30px; 
-    gap: 10px 1px;
-    /* filter: blur(2px); */
+    gap: 80px 15vw;
+    margin: 10px 30px;
 }
 .container-carro{
     position: relative;
     border-left: 1.5px  rgba(142, 142, 142, 0.100);
-    box-shadow: 2px 2px 1px rgba(142, 142, 142, 0.100);
-    background-color: rgba(142, 142, 142, 0.247);
+    box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
+    /* background-color: rgba(142, 142, 142, 0.247); */
     border-style: groove;
     border-radius: 3px;
     display: flex;
@@ -150,7 +152,7 @@ input[type="time"]{
     width: 100%; 
     /* height: 100px; */
 }
-img{
+.img-carros{
     padding:0 10px ;
     width: 280px;
     height: 150px;
@@ -176,8 +178,10 @@ img{
 
 a{
     margin-top: 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
 }
-
 
 .ano-carro{
     border: 1px dotted black;
@@ -208,9 +212,8 @@ a{
     position: absolute;
     bottom: 50px;
     font-size: 1.1rem;
-    /* right: 8px; */
 }
-
+/* Fim carrros aluguel */
 
 @media screen and (max-width:600px){
    
