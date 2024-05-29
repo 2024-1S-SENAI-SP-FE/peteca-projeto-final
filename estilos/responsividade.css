@@ -1,42 +1,95 @@
-@media screen and (max-width: 430px) {
 
-    header {
-        background-position: -500px;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0 auto;
+}
+
+h1.titulo-sobre-nos {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.paragrafo-imagem-sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagem-mustang-sobre-nos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.container-sobre-nos {
+    width: 100%;
+}
+
+.paragrafos-laterais-sobre-nos, .ultimo-paragrafo-sobre-nos {
+    margin: 0;
+    text-align: justify;
+}
+
+#carro-de-divisao {
+    margin: 10px 0;
+}
+
+#carro-de-divisao img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.artigos-MVV {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.MVV {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.MVV h2 {
+    margin-top: 0;
+}
+
+
+@media (min-width: 768px) {
+    .paragrafo-imagem-sobre-nos {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    #menu ul {
-        display: none;
+    .imagem-mustang-sobre-nos, .container-sobre-nos {
+        flex: 1;
+        margin: 0 10px;
     }
 
-    .busca-carro {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        margin: 1rem;
+    .container-sobre-nos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .artigos-MVV {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .busca-carro input:first-of-type{
-        grid-column-start: 1;
-        grid-column-end: 6;
-        margin-bottom: 1rem;
-        width: auto;
-    }
-
-    .busca-carro input:nth-last-of-type(2) {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        border-right: 1px solid black;
-        width: auto;
-    }
-
-    .busca-carro input:last-of-type {
-        grid-column-start: 4;
-        grid-column-end: 6;
-    }
-
-    .busca-carro button {
-        width: auto;
-        grid-column-start: 2;
-        grid-column-end: 5;
+    .MVV {
+        flex: 1;
+        margin: 0 10px;
     }
 }

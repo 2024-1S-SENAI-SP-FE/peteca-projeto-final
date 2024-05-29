@@ -25,19 +25,20 @@ body {
 }
 
 
-.image {
+/* .image {
     width: 100%;
     display: flex;
     justify-content: left;
     margin-bottom: 20px;
-}
+} */
 
-.imagem-mustang-sobre-nos img {
+.imagem-mustang-sobre-nos {
     width: 30%;
-    margin-right: 20px; /* Espaço entre a imagem e o parágrafo */
+    margin-right: 20px;
     justify-content: left;
-    /* max-width: 400px; */
-    border-radius: 10px
+    border-radius: 10px;
+    display: flex;
+    float: left;
 
 }
 
@@ -48,6 +49,10 @@ body {
     font-size: 20px;
 }
 
+.container-sobre-nos p {
+    margin-bottom: 2px;
+}
+
 .paragrafos-laterais-sobre-nos p {
     line-height: 1.6;
     margin: 20px;
@@ -55,12 +60,20 @@ body {
     display: flex;
 }
 
+.frase-final-sobre-nos {
+    margin: 30px;
+    text-align: center;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: bolder;
+    color: black;
+}
+
 #carro-de-divisao img {
     padding-left: 0;
     padding-right: 0;
     width: 100%;
 }
-
 
 .artigos-MVV {
     display: flex;
@@ -80,7 +93,7 @@ body {
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
 }
 
