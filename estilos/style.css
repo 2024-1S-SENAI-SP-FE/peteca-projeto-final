@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("../imagens/mustang_updated.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,12 +94,14 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .busca-carro input {
     height: 45px;
     border: none;
     text-indent: 2.5rem;
+    min-width: 150px;
 }
 
 input::placeholder {
