@@ -61,11 +61,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 2px  rgb(105, 105, 105);
-    background-color: #F9F9F9; 
+    box-shadow: 2px 2px 3px 2px rgb(105, 105, 105);
+    /* background-color: #F9F9F9;  */
+   /* border:1px solid black;  */
     height: 50px;
-    padding: 5px;
+    /* padding: 5px; */
     width: 200px;
+    margin-top: 10px;
 }
 
 .container-local-retirada{
@@ -88,7 +90,8 @@ body{
     margin-bottom: 5px;
 }
 .local-retirada{
-    width: 150px;
+    width:100%;
+    height: 20px;
 }
 
 /* imagens */
@@ -103,21 +106,28 @@ body{
 .img-localizacao{
     width: 20px;
     height: 20px;
+    object-fit: cover;
 }
 /* fim imagens */
 
 /* inputs */
 input{
+    
     height:100%;
+    width: 150%;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 800;
+    text-indent: 20px;
     border: none;
-    outline: none;
+    outline: none; 
+
 }
-input[type="date"]{
-    border: 2px groove gray;
-    border: none;
-}
-input[type="time"]{
-    border: none;
+
+input:focus{
+    border:3px solid black;
+    outline: white;
+    box-shadow: none;
 }
 /* fim inputs */
 
@@ -214,6 +224,34 @@ a{
     font-size: 1.1rem;
 }
 /* Fim carrros aluguel */
+
+/* Carros aluguel detalhes */
+
+
+.container-detalhes{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:600px){
    
