@@ -15,7 +15,7 @@ body{
         font-size: 14px; /* o padrão é 16px */
         font-family: "Open Sans", sans-serif;
         font-weight: 150;
-        background-color: #332f2f;      
+        background-color: #ebebeb;      
 };
 
 p{
@@ -43,4 +43,6 @@ p{
         display: flex;
         flex-direction: column;
 }
+
+
 
