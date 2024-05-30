@@ -67,8 +67,12 @@
 @media screen and (min-width: 430px) and (max-width: 835px) {
 
     header {
-        height: 50vh;
-        background-position: -50px;
+        min-height: 70vh;
+        background-position: -250px;
+    }
+
+    .busca-carro {
+        flex-wrap: nowrap;
     }
 
     .busca-carro input:nth-last-of-type(2) {
@@ -101,9 +105,11 @@
    
 }
 @media screen and (min-width: 430px) and (max-width: 835px) {
-    footer{
-        margin-top: 50%;
+
+    footer {
+        min-height: 30vh;
     }
+
     .footer-container{
         padding-left: 25px;
         padding-right: 25px;
