@@ -8,6 +8,10 @@
         display: none;
     }
 
+    .menu-dropdown {
+        display: initial;
+    }
+
     .textos-header {
         margin: 0;
     }
