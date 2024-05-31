@@ -19,7 +19,7 @@
         margin: 1rem;
     }
 
-    .busca-carro input:first-child{
+    .busca-carro select{
         border-radius: 0;
         grid-column-start: 1;
         grid-column-end: 7;
@@ -68,16 +68,11 @@
 
     header {
         min-height: 70vh;
-        background-position: -250px;
+        /* background-position: -250px; */
     }
 
     .busca-carro {
         flex-wrap: nowrap;
-    }
-
-    .busca-carro input:nth-last-of-type(2) {
-        height: 47px;
-        width: 166px;
     }
 
 }

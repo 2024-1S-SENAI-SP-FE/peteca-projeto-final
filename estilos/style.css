@@ -2,6 +2,7 @@
 
 body {
     font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
 }
 
 header {
@@ -109,11 +110,13 @@ input::placeholder {
     text-indent: 0;
 }
 
-.busca-carro input:first-child {
+.busca-carro select {
     border-radius: 50px 0 0 50px;
+    border: none;
     background-image: url(../icones/car_846338.png);
     background-repeat: no-repeat;
     background-position: 1.2rem 0.7rem;
+    width: 166px;
     text-indent: 3rem;
 }
 
@@ -127,13 +130,11 @@ input::placeholder {
 }
 
 .busca-carro input:nth-child(3) {
-    height: auto;
     width: 166px;
     text-indent: 1.5rem;
 }
 
 .busca-carro input:last-of-type {
-    height: auto;
     width: 166px;
     text-indent: 1.5rem;
 }
