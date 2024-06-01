@@ -4,7 +4,6 @@ body{
     overflow-x: hidden;
     
 }
-
 .entrar{
     position: absolute;
     right: 10%;
@@ -178,9 +177,6 @@ input:focus{
     width: 300px;
     object-fit: contain;
     
-}
-.img-mustang-gt{
-
 }
 .img-duty-f450{
     height: 150px;
