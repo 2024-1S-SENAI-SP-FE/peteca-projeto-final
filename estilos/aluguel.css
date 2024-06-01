@@ -7,8 +7,8 @@ body{
 
 .entrar{
     position: absolute;
-    right: 180px;
-    top: 180px ;
+    right: 10%;
+    top: 15% ;
     color: black;
     border: none;
     outline: none;
@@ -33,7 +33,7 @@ body{
     display: flex;
     padding: 30px;
     box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
-    width: 100%;
+    width: 100vw;
     height: 100%;
     height: inherit;
     margin: inherit;
@@ -47,12 +47,14 @@ body{
 .container-retirada{
     display: flex;
     flex-flow: column wrap;
-    margin-right: 300px;
+    margin-right: 10%;
+    width: 50%;
 
 }
 .container-entrega{
     display: flex;
     align-items: end;
+    width: 50%;
 }
 
 
@@ -112,7 +114,6 @@ body{
 
 /* inputs */
 input{
-    
     height:100%;
     width: 150%;
     padding: 5px;
@@ -153,21 +154,39 @@ input:focus{
     width: 300px;
     margin-left: 50px;
     padding: 30px;
-   
-}
-.container-img{
     
+}
+.container-img{    
     margin: 10px 30px;
     order: -1;
     width: 100%; 
-
+    /* background-color: #000000; */
 }
 .img-carros{
     padding:0 10px ;
     width: 280px;
     height: 150px;
     object-fit: cover;
-   
+    
+}
+.img-ford-territory{
+    width:300px ;
+    height: 180px;
+}
+.img-ranger-raptor{
+    /* height: 250px; */
+    width: 300px;
+    object-fit: contain;
+    
+}
+.img-mustang-gt{
+
+}
+.img-duty-f450{
+    height: 150px;
+    width: 200px;
+    margin-left: 30px;
+    object-fit: scale-down;
 }
 .container-nome-ano{
   
