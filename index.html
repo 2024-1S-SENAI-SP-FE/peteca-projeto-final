@@ -2,164 +2,177 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ford Drive </title>
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Bootstrap -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Links estilos -->
-    <link rel="stylesheet" href="estilos/reset.css">
-    <link rel="stylesheet" href="estilos/style.css" type="text/css">
-    <link rel="stylesheet" href="estilos/responsividade.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ford Drive </title>
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Bootstrap -->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Links estilos -->
+  <link rel="stylesheet" href="estilos/reset.css">
+  <link rel="stylesheet" href="estilos/style.css" type="text/css">
+  <link rel="stylesheet" href="estilos/responsividade.css" type="text/css">
 </head>
 
 <body>
-    <header><!-- Início cabeçalho -->
+  <header><!-- Início cabeçalho -->
 
-        <nav id="menu">
-            <div class="logo">
-                <img src="imagens/logo.png" alt="">
-            </div>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Carros</a></li>
-                <li><a href="">Sobre nós</a></li>
-                <li><a href="">Contatos</a></li>
-                <li><a href=""><img src="../icones/arrow-right-to-bracket-solid.svg" alt="">Log In</a></li>
+    <nav id="menu">
+      <div class="logo">
+        <img src="imagens/logo.png" alt="">
+      </div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Carros</a></li>
+        <li><a href="">Sobre nós</a></li>
+        <li><a href="">Contatos</a></li>
+        <li><a href=""><img src="../icones/arrow-right-to-bracket-solid.svg" alt="">Log In</a></li>
+      </ul>
+
+      
+    </nav>
+
+    <div class="navbar">
+
+      <div class="container-fluid">
+        <button class="btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fa-3x" style="color: #f5f5f9; margin: 0;"></i>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a data-bs-dismiss="offcanvas" aria-label="Close" class="btn-fechar"><i
+                    class="fa-solid fa-xmark fa-xl" style="color: #f5f5f9;"></i>Fechar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-car"
+                    style="color: #f5f5f9;"></i>Carros</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-newspaper" style="color: #f5f5f9;"></i>Artigos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Artigo 1</a></li>
+                  <li><a href="#">Artigo 2</a></li>
+                  <li><a href="#">Artigo 3</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-address-card"
+                    style="color: #f5f5f9;"></i>Sobre nós</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-phone-volume"
+                    style="color: #f5f5f9;"></i>Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-arrow-right-to-bracket"
+                    style="color: #f5f5f9;"></i>Login</a>
+              </li>
             </ul>
-        </nav>
-
-        <nav class="navbar bg-body-tertiary fixed-top menu-dropdown">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </nav>
-
-        <div class="textos-header">
-            <p>Drive your way to the car of your dreams</p>
-            <h1>Ford Drive</h1>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="busca-carro">
-            <select name="modelo" id="modelo">
-                <option value="" selected disabled>Veículo</option>
-                <option value="">F-150 Shelby</option>
-                <option value="">Mustang Mach 1</option>
-                <option value="">Ford Territory Titanium</option>
-                <option value="">Ranger Raptor</option>
-                <option value="">Mustang GT</option>
-                <option value="">Ford Super Duty F-450 DRW</option>
-                <option value="">Ranger XLS</option>
-                <option value="">Ford GT</option>
-                <option value="">Mustang Mach-E</option>
-                <option value="">Ford Explorer St</option>
-                <option value="">Shelby GT500</option>
-                <option value="">Maverick</option>
-                <option value="">Ford Ranger 3.2</option>
-                <option value="">Ranger P703</option>
-                <option value="">Bronco Sport</option>
-            </select>
-            <input type="text" placeholder="Local">
-            <input type="date">
-            <input type="date">
-            <button>Buscar carro</button>
-        </div>
 
-    </header><!-- Fim cabeçalho-->
 
-    <section class="carrossel-carros">
+    <div class="textos-header">
+      <p>Drive your way to the car of your dreams</p>
+      <h1>Ford Drive</h1>
+    </div>
 
-        <!-- TO-D0: Criar carrossel de carros -->
+    <div class="busca-carro">
+      <select name="modelo" id="modelo">
+        <option value="" selected disabled>Veículo</option>
+        <option value="">F-150 Shelby</option>
+        <option value="">Mustang Mach 1</option>
+        <option value="">Ford Territory Titanium</option>
+        <option value="">Ranger Raptor</option>
+        <option value="">Mustang GT</option>
+        <option value="">Ford Super Duty F-450 DRW</option>
+        <option value="">Ranger XLS</option>
+        <option value="">Ford GT</option>
+        <option value="">Mustang Mach-E</option>
+        <option value="">Ford Explorer St</option>
+        <option value="">Shelby GT500</option>
+        <option value="">Maverick</option>
+        <option value="">Ford Ranger 3.2</option>
+        <option value="">Ranger P703</option>
+        <option value="">Bronco Sport</option>
+      </select>
+      <input type="text" placeholder="Local">
+      <input type="date">
+      <input type="date">
+      <button>Buscar carro</button>
+    </div>
 
-    </section>
+  </header><!-- Fim cabeçalho-->
 
-    <section id="artigos"><!-- Início da sessão artigos-->
+  <section class="carrossel-carros">
 
-        <!-- TO-DO: Criar sessão de artigos -->
+    <!-- TO-D0: Criar carrossel de carros -->
 
-    </section><!-- Fim da sessão artigos-->
-    <footer>
-        <div class="footer-container">
-            <ul class="footer-ul">
-                <li class="footer-title">
-                    <h3>Veiculos</h3>
-                </li>
-                <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
-            </ul>
-            <ul class="footer-ul">
-                <li class="footer-title">
-                    <h3>Aluguel</h3>
-                </li>
-                <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
-            </ul>
-            <ul class="footer-ul">
-                <li class="footer-title">
-                    <h3>Artigos</h3>
-                </li>
-                <li class="footer-li"><a href="#" class="footer-a">Descontos para PCD</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Tecnologia,Segurança e Potência</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Ford Mustang 2024 </a></li>
-            </ul>
-            <ul class="footer-ul">
-                <li class="footer-title">
-                    <h3>Sobre Nós</h3>
-                </li>
-                <li class="footer-li"><a href="#" class="footer-a">Ford Drive </a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Projeto Ford Academy</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Contatos</a></li>
-            </ul>
-        </div>
-        <div class="footer-socialmidia">
-            <a href="#" class="footer-link"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="footer-link"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="footer-link"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="footer-link"><i class="fa-brands fa-youtube"></i></a>
+  </section>
 
-        </div>
-        <div class="footer-copy"><span>Copyright &copy; 2024 Ford Drive Company - Todos os direitos reservados</span>
-        </div>
-    </footer>
+  <section id="artigos"><!-- Início da sessão artigos-->
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- TO-DO: Criar sessão de artigos -->
+
+  </section><!-- Fim da sessão artigos-->
+  <footer>
+    <div class="footer-container">
+      <ul class="footer-ul">
+        <li class="footer-title">
+          <h3>Veiculos</h3>
+        </li>
+        <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
+        <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
+      </ul>
+      <ul class="footer-ul">
+        <li class="footer-title">
+          <h3>Aluguel</h3>
+        </li>
+        <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
+        <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
+      </ul>
+      <ul class="footer-ul">
+        <li class="footer-title">
+          <h3>Artigos</h3>
+        </li>
+        <li class="footer-li"><a href="#" class="footer-a">Descontos para PCD</a></li>
+        <li class="footer-li"><a href="#" class="footer-a">Tecnologia,Segurança e Potência</a></li>
+        <li class="footer-li"><a href="#" class="footer-a">Ford Mustang 2024 </a></li>
+      </ul>
+      <ul class="footer-ul">
+        <li class="footer-title">
+          <h3>Sobre Nós</h3>
+        </li>
+        <li class="footer-li"><a href="#" class="footer-a">Ford Drive </a></li>
+        <li class="footer-li"><a href="#" class="footer-a">Projeto Ford Academy</a></li>
+        <li class="footer-li"><a href="#" class="footer-a">Contatos</a></li>
+      </ul>
+    </div>
+    <div class="footer-socialmidia">
+      <a href="#" class="footer-link"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="footer-link"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="footer-link"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" class="footer-link"><i class="fa-brands fa-youtube"></i></a>
+
+    </div>
+    <div class="footer-copy"><span>Copyright &copy; 2024 Ford Drive Company - Todos os direitos reservados</span>
+    </div>
+  </footer>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
