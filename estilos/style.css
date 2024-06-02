@@ -166,6 +166,23 @@ input::placeholder {
     background-color: #030841;
 }
 
+/* Carrossel */
+#carrossel {
+    background-color: gray;
+    width: 100%;
+    height: 425px;
+}
+
+.carousel-indicators {
+}
+
+.carousel-item img {
+    width: 768px;
+    height: 425px;
+    float: right;
+}
+
+
 /* Sessão artigos */
 
 
