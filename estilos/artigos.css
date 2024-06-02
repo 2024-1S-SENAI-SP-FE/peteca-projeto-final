@@ -12,6 +12,7 @@ h1,h2{
 body{
        /* vw: viewport width */
         margin: 1rem 2rem 1rem 2rem;/* margem com ajuste automático */
+        line-height: 1;
         font-size: 14px; /* o padrão é 16px */
         font-family: "Open Sans", sans-serif;
         font-weight: 150;
@@ -21,28 +22,27 @@ body{
 p{
     text-align: center;
 }
-
-
-.div1 {
-        display: flex;
-        flex-direction: column;
-
+div {
+        font-size: 0%;
+        width: 50%;
+        min-width: 250px;
+        display: inline-block;
+        vertical-align: top;
 }
-
-.div2 {
-        display: flex;
-        flex-direction: column;
+#bloco1{
+        float: left;
 }
-
-.div3 {
-        display: flex;
-        flex-direction: column;
+#bloco2{
+       float: right; 
 }
-
-.div4 {
-        display: flex;
-        flex-direction: column;
+.tudo{
+        width: 85%;
 }
-
-
-
+.tudo.img{
+        float: left;
+       float: right; 
+}
+.tudo.p{
+        padding-left: 140px;
+        padding-right: 140px;
+}
