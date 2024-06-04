@@ -27,3 +27,22 @@ O objetivo desse arquivo é criar uma documentação de todas as IDs e Class usa
 | .card-body | index.html | 183 | Bootstrap - identifica o corpo do cartão e tudo o que deve conter nele |
 | .card-title | index.html | 184 | Bootstrap - define o título do cartão |
 | .card-text | index.html | 185 | Bootstrap - define o texto do cartão |
+### Class e Id's da página Sobre Nós
+
+1. `.titulo-sobre-nos` -> sobre-nos.html *(class utilizada para editar o título principal da página "sobre nós")*
+
+2. `.paragrafo-imagem-sobre-nos` -> sobre-nos.html *(class utilizada em uma div para editar o texto de apresentação da página "sobre nós")*
+
+3. `.container-sobre-nos` -> sobre-nos.html *(class utilizada em uma div para editar os paragrafos de apresentação da página)*
+
+4. `.paragrafos-laterais-sobre-nos` -> sobre-nos.html *(class utilizada nos paragráfos localizados -ao lado- da imagem do Mustang na página)*
+
+5. `.ultimo-paragrafo-sobre-nos` -> sobre-nos.html *(class utilizada no último paragráfo do texto de apresentação da página)*
+
+6. `.frase-final-sobre-nos` -> sobre-nos.html *(class utilizada para editar a frase final do paragráfo de apresentação)*
+
+7. `#carro-de-divisao` -> sobre-nos.html *(id utilizada para editar a imagem de divisão da página)*
+
+8. `.artigos-MVV` -> sobre-nos.html *(class utilizada para editar uma div que abrange os artigos de  Missão, Visão e Valores da página)*
+
+9. `.MVV` -> sobre-nos.html *(class utilizada para editar uma div que abrange os artigos de  Missão, Visão e Valores da página de forma individual)*
