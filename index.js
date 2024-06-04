@@ -15,6 +15,28 @@ function criaScripts(scripts) {
     return a
 }
 
-document.body.append(criaScripts(scripts))
+document.body.appendChild(criaScripts(scripts))
 
-console.log(criaScripts(scripts)  );
+console.log(criaScripts(scripts));
+
+
+const links = [
+  { "rel": "stylesheet", url: "./estilos/reset.css" },
+  { "rel": "stylesheet", url: "./estilos/styles.css" },
+  { "rel": "stylesheet", url: "./estilos/resposividade.css" },
+  { "rel": "stylesheet", url: "./estilos/aluguel.css" },
+];
+
+function criaLink(links) {
+  const head = document.head
+  links.forEach(l => {
+    const link = document.createElement('link')
+    
+    link.setAttribute('rel', l.rel)
+    link.href = l.url
+    head.appendChild(link)
+  });
+
+}
+document.head.appendChild(criaLink(links))
+console.log('aaaaaaaaaaaaaaaa');
