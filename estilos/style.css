@@ -188,9 +188,17 @@ input::placeholder {
 }
 
 .carousel-item img {
-    width: 768px;
+    /* width: 768px; */
     height: 500px;
     float: right;
+}
+
+.carousel-inner .carousel-item:nth-child(3) img {
+    transform: translatex(15%);
+}
+
+.carousel-inner .carousel-item:nth-child(4) img {
+    transform: translatex(5%);
 }
 
 .carousel-caption {
@@ -230,12 +238,40 @@ input::placeholder {
 
 /* Sessão artigos */
 
+#artigos {
+    background-color: var(--azul-padrao);
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
 
+.card {
+    background-color: var(--azul-padrao);
+    border: none;
+}
 
+.card img {
+    height: 100%;
+}
 
+.card h1 {
+    font-weight: 900;
+    color: var(--branco-padrao);
+}
 
+.card p {
+    color: var(--branco-padrao);
+}
 
+.card a {
+    margin-top: 1rem;
+    background-color: #000000;
+    border: none;
+}
 
+.card a:hover {
+    background-color: #111111;
+}
 
 /*FOOTER*/
 footer {

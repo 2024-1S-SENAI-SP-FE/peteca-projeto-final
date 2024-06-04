@@ -118,6 +118,14 @@
         grid-column-end: 6;
         background-position: 2.5rem center;
     }
+
+    #carrossel {
+        display: none;
+    }
+
+    #artigos {
+        flex-direction: column;
+    }
 }
 
 @media screen and (min-width: 430px) and (max-width: 835px) {
