@@ -6,13 +6,13 @@ const scripts = [
 ];
 
 function criaScripts(scripts) {
-
-    const a = document.createElement("script");
-   scripts.forEach(scrpt => {
-       a.src = scrpt.src
-       return a
-    });
-    return a
+  const fragment = document.createDocumentFragment();
+  scripts.forEach((scrpt) => {
+    const scriptElement = document.createElement("script");
+    scriptElement.src = scrpt.src;
+    fragment.appendChild(scriptElement);
+  });
+  return fragment;
 }
 
 document.body.appendChild(criaScripts(scripts))
@@ -29,6 +29,7 @@ const links = [
 
 function criaLink(links) {
   const head = document.head
+  const retorno = 
   links.forEach(l => {
     const link = document.createElement('link')
     
@@ -38,5 +39,6 @@ function criaLink(links) {
   });
 
 }
-document.head.appendChild(criaLink(links))
+criaLink(links)
+// document.head.appendChild(criaLink(links))
 console.log('aaaaaaaaaaaaaaaa');
