@@ -15,7 +15,7 @@ function criaAncora(href, inner) {
 
     return ancora 
 }
-function criaLi(ancora) {
+function criaLi(ancora){
     const liFooter = document.createElement("li");
     liFooter.classList.add("footer-li");
     liFooter.append(ancora)
@@ -36,14 +36,10 @@ const footer = document.createElement("footer");
 const containerFooter = document.createElement("div");
 containerFooter.classList.add("footer-container");
 
-
-
 const liTitle = document.createElement("li");
 liTitle.classList.add("footer-title");
 const h3 = document.createElement("h3");
 h3.textContent = "Aluguel";
-
-
 
 liTitle.append(h3);
 
