@@ -1,8 +1,19 @@
 .entrar{
     position: absolute;
-    right: 30px;
-    top: 30px ;
+    right: 80px;
+    top: 80px ;
+    width: 100px;
+    height: 30px;
     color: black;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10px rgb(213, 213, 213);
+    border: none;
+    cursor:pointer;
+}
+.lado-a-lado{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
 }
 .check-in{
     display: flex;
@@ -11,71 +22,63 @@
     width: 75vw;
     margin: 180px 100px;
     box-shadow: 5px 7px 20px 9px rgb(105, 105, 105);
-    font-size: 20px;
+    font-size: 18px;
     
+}
+.container-data-retirada,
+.container-local-retirada,
+.container-data-entrega,
+.container-data-entrega,
+.container-hora-retirada,   
+.container-hora-entrega{
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px  rgb(105, 105, 105);
+    background-color: #F9F9F9; 
+    height: 30px;
 }
 .container-retirada{
     display: flex;
     flex-flow: column wrap;
-    margin-right: 300px;
-
+    /* width: 50%; */
 }
 .container-entrega{
     display: flex;
     align-items: end;
+    width: 50%;   
 }
 .container-local-retirada{
     display: flex;
-    /* border: 2px groove gray; */
     height:30px;
-    /* width: 100px; */
+  
 }
 .local-retirada{
-    /* box-shadow: 2px 2px 2px  rgb(105, 105, 105);   */
     border: none;
     outline: none;
     width: 100%;
     height: 100%;
     background: inherit;
-
-}
-.container-data-retirada{
-    display: flex;
-    /* border: 2px groove gray; */
-    /* box-shadow: 2px 2px 2px  rgb(105, 105, 105); */
-
 }
 .container-data-entrega{
     display: flex;
-    /* border: 2px groove gray; */
-    /* box-shadow: 2px 2px 2px  rgb(105, 105, 105); */
+    margin-right: 10px;
 }
 .container-hora-entrega{
     display: flex;
+    margin: 0 20px 0 0;
 }
 .container-hora-retirada{
     display:flex;
-    height: 20px;
+    /* height: 20px; */
     width: 150px; 
     margin:30px 10px;
 }
-.container-data-retirada,
-.container-local-retirada,
-.container-data-entrega,
-.container-data-entrega{
-    display: flex;
-    align-items: center;
-    box-shadow: 2px 2px 2px  rgb(105, 105, 105);
-    background-color: #F9F9F9; 
-    height: 50px;
-    /* width: 230px; */
-}
-.lado-a-lado{
-    display: flex;
-    align-items: center;
-}
 .local, .retirada, .entrega{
     margin: 5px 20px;
+}
+.hora-retirada{
+    height: 100%;
+    width: 80%;
 }
 
 
@@ -110,15 +113,15 @@ input[type="time"]{
 
 
 
-
+/* carros para aluguel */
 
 .carros-aluguel{
     display: grid;
     grid-template-columns: repeat(3, 3fr); 
     border: 3px solid blue;
-    padding: 30px; 
+    padding: 30px 30px; 
     gap: 10px 1px;
-    /* filter: blur(2px); */
+    margin: 0 auto;
 }
 .container-carro{
     position: relative;
@@ -206,10 +209,15 @@ a{
 
 
 @media screen and (max-width:600px){
-   
+   body{
+    min-width: 100vw;
+   }
     .carros-aluguel{
         display: grid;
-        grid-template-columns:  300px;
+        grid-template-columns: 300px;
+        /* place-items: center; */
+        min-width: 100vw;
+
     }
 
 }
