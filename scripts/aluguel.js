@@ -182,3 +182,11 @@ dadosCarros.forEach((dados) => {
 });
 
 console.log("Carros adicionados:", dadosCarros.length);
+
+
+//Lógica do flip
+/*
+Detectar o click no link
+Executar a animação no card especifico
+Colocar as informações respectivas do carro 
+*/
