@@ -20,25 +20,27 @@ document.body.appendChild(criaScripts(scripts))
 console.log(criaScripts(scripts));
 
 
-const links = [
-  { "rel": "stylesheet", url: "./estilos/reset.css" },
-  { "rel": "stylesheet", url: "./estilos/styles.css" },
-  { "rel": "stylesheet", url: "./estilos/resposividade.css" },
-  { "rel": "stylesheet", url: "./estilos/aluguel.css" },
+const batata = [
+  { "rel": "stylesheet", "type": "text/css", url: "/estilos/reset.css"},
+  { "rel": "stylesheet", "type": "text/css", url: "/estilos/styles.css" },
+  { "rel": "stylesheet", "type": "text/css", url: "/estilos/resposividade.css" },
+  { "rel": "stylesheet", "type": "text/css", url: "/estilos/aluguel.css" },
 ];
 
-function criaLink(links) {
+function criaLink(batata) {
   const head = document.head
-  const retorno = 
-  links.forEach(l => {
+
+  batata.forEach(l => {
     const link = document.createElement('link')
     
     link.setAttribute('rel', l.rel)
+    link.setAttribute('type', l.type)
     link.href = l.url
     head.appendChild(link)
   });
 
+  // return head
 }
-criaLink(links)
+criaLink(batata)
 // document.head.appendChild(criaLink(links))
-console.log('aaaaaaaaaaaaaaaa');
+console.log(criaLink(batata));
