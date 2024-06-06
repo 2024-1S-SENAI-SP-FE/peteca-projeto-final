@@ -1,92 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
+    min-height: 100vh;
     font-family: "Inter", sans-serif;
+    padding: 2em 1em;
+    margin: 0;
+    padding: 0;
+    /* display: flex;  */
+    /* background-color: red; */
+}
+
+/* done */
+.imagem-mustang-sobre-nos img {
+    width: 25%;
+    margin-right: 20px; /* Espaço entre a imagem e o parágrafo */
+}
+
+/* texto sobre nós */
+#container section {
+    font-size: 0.9rem;
 }
 
 header {
-    height: 100vh;
-    background-image: url("/imagens/mustang_updated.jpg");
+    min-height: 100vh;
+    background-image: url("../imagens/mustang_updated.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Inter", sans-serif;
+    align-items: end; 
+    padding: 1rem;
 }
 
-.logo img {
-    width: 141px;
-    height: 118px;
-}
+#paragrafo-sobre-nos section, p {
+    margin-left: 10%;
+    font-size: large;
+    text-align: justify;
+    max-width: 200px;
 
-#menu ul {
+}    
+
+.paragrafos-laterais-sobre-nos  {
     display: flex;
-    margin-bottom: 1.5rem;
-    gap: 3rem;
-    height: 52px;
-    margin-inline-end: 3rem;
+    margin: 1rem;
+
 }
 
-#menu ul li {
-    height: 100%;
-    display: inline-flex;
-    align-items: center;
-}
-
-#menu ul li:last-child img {
-    height: 20px;
-}
-
-#menu ul li:last-child a {
-    background-color: #f5f5f9;
-    color: #00095b;
-    font-weight: bold;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 120px;
-    height: 70%;
-    padding-bottom: 0;
-}
-
-#menu ul a {
-    color: #fff;
-    font-weight: 400;
-    text-decoration: none;
-    padding-bottom: 7px;
-    border-bottom: 2px solid transparent;
-}
-
-#menu ul a:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease;
-    border-bottom: 2px solid #f5f5f9;
-}
-
-.textos-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 100px;
-    /* transform: translateY(25vh); */
+/* artigos MVV */
+.titulo-MVV {
+    font-size: xx-large;
+    color: #00095B;
     text-align: center;
-    color: #f5f5f9;
+    text-decoration: black;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 4rem;
 }
 
-.textos-header p {
-    font-size: 40px;
-    font-weight: 300;
+.artigos-MVV {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+   
 }
 
-.textos-header h1 {
-    font-size: 64px;
+.MVV {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.MVV h3{
+    color: #00095B;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -94,35 +80,119 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .busca-carro input {
     height: 45px;
     border: none;
-    text-align: center;
+    text-indent: 2.5rem;
+    min-width: 150px;
 }
 
-.busca-carro input:first-child {
+input::placeholder {
+    text-align: center;
+    margin: 2px;
+}
+
+.MVV p {
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+}
+footer{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+
+    .textos-header h1 {
+        font-size: 2em;
+    }
+
+    .textos-header p {
+        font-size: 1em;
+    }
+
+    article p {
+        max-width: 100%;
+    }
+}
+    
+
+
+.busca-carro select {
     border-radius: 50px 0 0 50px;
-    /* background-image: url(/icones/car_846338.png);
+    border: none;
+    background-image: url(../icones/car_846338.png);
     background-repeat: no-repeat;
-    background-position: 1.2rem 0.7rem; */
+    background-position: 1.2rem 0.7rem;
+    width: 166px;
+    text-indent: 3rem;
 }
 
 .busca-carro input:nth-child(2) {
-    height: auto;
+    background-image: url(../icones/location-dot-solid.svg);
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: 1.2rem 0.7rem;
+    width: 166px;
+    text-indent: 2.5rem;
+}
+
+.busca-carro input:nth-child(3) {
+    width: 166px;
+    text-indent: 1.5rem;
 }
 
 .busca-carro input:last-of-type {
-    /* background-image: url(/icones/location-dot-solid.svg);
-    background-size: 1rem;
-    background-repeat: no-repeat;
-    background-position: 1.2rem 0.7rem; */
+    width: 166px;
+    text-indent: 1.5rem;
 }
+.busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    margin-left: 1.2rem;
+}
+
 
 .busca-carro button {
     background-color: #00095b;
-    background-image: url(/icones/magnifying-glass-solid.svg);
+    background-image: url(../icones/magnifying-glass-solid.svg);
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 1rem 0.8rem;
@@ -135,7 +205,66 @@ header {
 }
 
 .busca-carro button:hover {
-    background-color: #030735;
+    background-color: #030841;
 }
 
 /* Sessão artigos */
+
+
+
+
+
+
+
+
+/*FOOTER*/  
+footer{
+    width: 100%;
+    background-color:  rgb(182, 182, 182) ;
+}
+.footer-container{
+    display: grid;
+    grid-auto-flow: column;
+    padding: 3.5rem 3.5rem;
+    justify-content: space-evenly
+    
+    
+}
+.footer-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.80rem ;
+    list-style: none;
+   
+}
+.footer-li{
+    font-size: small;
+}
+.footer-a{
+    text-decoration: none;
+    color: #505050;
+}
+.footer-socialmidia{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 1.2rem;
+    
+}
+.footer-socialmidia .footer-link{
+   color: #727171;
+   
+   
+}
+.footer-copy{
+    background-color: #f5f5f9;
+    text-align: center;
+    padding: 10px;
+    font-size: small;
+}

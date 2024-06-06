@@ -1,229 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos/reset.css">
-    <link rel="stylesheet" href="estilos/aluguel.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carros Disponiveis</title>
+    <!-- <link rel="stylesheet" href="estilos/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="estilos/aluguel.css" /> -->
+    <!-- <link rel="stylesheet" href="estilos/style.css"> -->
+    <!-- <link rel="stylesheet" href="estilos/responsividade.css"> -->
+  </head>
+  <body>
     <button class="entrar">Entrar</button>
-        
-    <section class="check-in">
 
-       <div class="container-retirada">
-           
-                <span class="span-check-in">Check-in:</span>
-                <span class="idade">Idade do condutor: 26-65</span>
+    <section class="container-check-in">
+      <div class="check-in">
+        <div class="container-retirada">
+          <span class="span-check-in">Check-in:</span>
+          <span class="idade">Idade do condutor: 26-65</span>
+          <div class="lado-a-lado">
+            <span class="local">Local:</span>
 
-                <div class="lado-a-lado">
-                    <span class="local">Local:</span>
-                    
-                    <div class="container-local-retirada">
-                        <img src="icones/Place Marker.png" alt="img-localizacao" class="img-localizacao">
-                        <input type="text" class="local-retirada" placeholder="EX: São Paulo">
-                    </div>
-                </div>
-                <div class="lado-a-lado">
-                    <span class="retirada">Retirada:</span>
-
-                    <div class="container-data-retirada">
-                        <input type="date" class="data-retirada" >
-                        <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
-                    </div>
-
-                    <div class="container-hora-retirada">
-                        <img src="icones/Time Span.svg" alt="img-relogio" class="img-relogio">
-                        <input type="time" class="hora-retirada " value="">
-                    </div>
-                    </div>
-       </div>
-            
-
-          
-            <div class="container-entrega">
-                
-                <div class="lado-a-lado">
-                <span class="entrega">Entrega:</span>
-
-                    <div class="container-data-entrega">
-                        <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
-                        <input type="date" class="data-entrega" >
-                    </div>
-
-                    <div class="container-hora-entrega">
-                        <img src="icones/calendar_month.png" alt="img-calendario" class="img-calendario">
-                        <input type="time" class="hora-entrega">
-                    </div>
-                </div>
+            <div class="container-local-retirada">
+              <img
+                src="icones/Place Marker.png"
+                alt="img-localizacao"
+                class="img-localizacao"
+              />
+              <input
+                type="text"
+                class="local-retirada"
+                placeholder="EX: São Paulo"
+                min="current-data"
+                required
+              />
             </div>
-          
+          </div>
+          <div class="lado-a-lado">
+            <span class="retirada">Retirada:</span>
+            <div class="container-data-retirada">
+              <input type="date" class="data-retirada" />
+            
+            </div>
+            <div class="container-hora-retirada">
+            
+              <input type="time" class="hora-retirada" value="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-entrega">
+          <div class="lado-a-lado">
+            <span class="entrega">Entrega:</span>
+            <div class="container-data-entrega">
+              <input type="date" class="data-entrega" />
+             
+            </div>
+            <div class="container-hora-entrega">
+              <input type="time" class="hora-entrega" />
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+<section class="carros-aluguel"></section>
 
-
+<hr>
 
     <section class="carros-aluguel">
+      <div class="container-carro">
+        <span class="nome-carro-detalhes"></span>
 
+        <div class="container-detalhes">
+          <div class="lado-a-lado">
+            <img class="img-boneco" src="icones/bonecos 2.svg" alt="">
+            <span class="pessoas">4 pessoas</span>
+          </div>
 
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/f-450.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
+          <div class="lado-a-lado">
+            <img class="img-gasosa" src="icones/gasosa 5.svg" alt="">
+            <span class="gasolina">flex</span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-volante" src="icones/volante 5.svg" alt="">
+            <span class="automatico"></span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-portas" src="icones/Car Door.svg" alt="">
+            <span class="portas"></span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-abs" src="icones/ABS.svg" alt="">
+            <span class="abs"></span>
+          </div>
+
+          
         </div>
+        <div class="consumo-litragem">
+          <span class="tipo-consumo">teste</span>
+
+          <span class="tipo-consumo">teste</span>
      
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/ford-gt.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
+          <span class="litragem">teste </span>
+    
+          <span class="litragem">teste </span>
         </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/ford-shelbygt500.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
+        <a href="">Esconder detalhes</a>
+      </div>
+      <div class="container-carro">
+        <span class="nome-carro-detalhes"></span>
+
+        <div class="container-detalhes">
+          <div class="lado-a-lado">
+            <img class="img-boneco" src="icones/bonecos 2.svg" alt="">
+            <span class="pessoas">4 pessoas</span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-gasosa" src="icones/gasosa 5.svg" alt="">
+            <span class="gasolina">flex</span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-volante" src="icones/volante 5.svg" alt="">
+            <span class="automatico"></span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-portas" src="icones/Car Door.svg" alt="">
+            <span class="portas"></span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-abs" src="icones/ABS.svg" alt="">
+            <span class="abs"></span>
+          </div>
+
+          
         </div>
+        <div class="consumo-litragem">
+          <span class="tipo-consumo">teste</span>
+
+          <span class="tipo-consumo">teste</span>
      
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/images.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
+          <span class="litragem">teste </span>
+    
+          <span class="litragem">teste </span>
         </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/ranger-raptor.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
+        <a href="">Esconder detalhes</a>
+      </div>
+      <div class="container-carro">
+        <span class="nome-carro-detalhes"></span>
+
+        <div class="container-detalhes">
+          <div class="lado-a-lado">
+            <img class="img-boneco" src="icones/bonecos 2.svg" alt="">
+            <span class="pessoas">4 pessoas</span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-gasosa" src="icones/gasosa 5.svg" alt="">
+            <span class="gasolina">flex</span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-volante" src="icones/volante 5.svg" alt="">
+            <span class="automatico"></span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-portas" src="icones/Car Door.svg" alt="">
+            <span class="portas"></span>
+          </div>
+
+          <div class="lado-a-lado">
+            <img class="img-abs" src="icones/ABS.svg" alt="">
+            <span class="abs"></span>
+          </div>
+
+          
         </div>
+        <div class="consumo-litragem">
+          <span class="tipo-consumo">teste</span>
+
+          <span class="tipo-consumo">teste</span>
      
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/mustang mach-e.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
+          <span class="litragem">teste </span>
+    
+          <span class="litragem">teste </span>
         </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/mustang-conversivel.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
-        </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/mustang-gt.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
-        </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/mustang-conversivel.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
-        </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/mustang mach-e.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
-        </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/ranger-raptor.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
-        </div>
-     
-        <div class="container-carro">
-            <div class="container-img"><img src="imagens/rangerxls.jpg" alt="ford f-450"></div>
-            <div class="container-nome-ano">
-                <span class="nome-carro">F-150 Shelby</span>
-                <span class="ano-carro">2023</span>
-            </div>
-            <div class="container-info-carro">
-                <button class="button-alugue">Alugue</button>
-                <span class="valor-aluguel">$450/month</span>
-                <a href="" class="detalhes">Ver detalhes</a>
-            </div>
-        </div>
-     
+        <a href="">Esconder detalhes</a>
+      </div>
     </section>
-</body>
+  </body>
+  <script src="index.js" defer ></script>
 </html>

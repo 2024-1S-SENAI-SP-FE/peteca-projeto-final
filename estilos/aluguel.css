@@ -1,23 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tilt+Neon&display=swap');
+body{
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    
+}
 .entrar{
     position: absolute;
-    right: 80px;
-    top: 80px ;
-    width: 100px;
-    height: 30px;
+    right: 10%;
+    top: 15% ;
     color: black;
-    background-color: #FFFFFF;
-    box-shadow: 0px 3px 10px rgb(213, 213, 213);
     border: none;
-    cursor:pointer;
+    outline: none;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    box-shadow: 2px 2px 3px 1px rgb(105, 105, 105);
+    cursor:pointer; 
 }
-.lado-a-lado{
+
+/* containers */
+.container-check-in{
     display: flex;
-    align-items: center;
-    margin: 30px 0;
+    justify-content: space-between;
+    /* height: 300px; */
+    width: 85vw;
+    font-size: 20px;
+    margin: 100px 80px;
+    
 }
 .check-in{
     display: flex;
     padding: 30px;
+<<<<<<< HEAD
     height: 200px;
     width: 75vw;
     margin: 180px 100px;
@@ -36,15 +50,35 @@
     box-shadow: 2px 2px 2px  rgb(105, 105, 105);
     background-color: #F9F9F9; 
     height: 30px;
+=======
+    box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
+    width: 100vw;
+    height: 100%;
+    height: inherit;
+    margin: inherit;
+    
+}
+.lado-a-lado{
+    display: flex;
+    align-items: center;
+    margin: 8px 0 0 0 ;
+>>>>>>> 0758a7be301f4642258bdf046735735b22ac9e14
 }
 .container-retirada{
     display: flex;
     flex-flow: column wrap;
+<<<<<<< HEAD
     /* width: 50%; */
+=======
+    margin-right: 10%;
+    width: 50%;
+
+>>>>>>> 0758a7be301f4642258bdf046735735b22ac9e14
 }
 .container-entrega{
     display: flex;
     align-items: end;
+<<<<<<< HEAD
     width: 50%;   
 }
 .container-local-retirada{
@@ -73,15 +107,55 @@
     width: 150px; 
     margin:30px 10px;
 }
+=======
+    width: 50%;
+}
+
+
+.container-data-retirada,
+.container-local-retirada,
+.container-data-entrega,
+.container-data-entrega,
+.container-hora-retirada,.container-hora-entrega{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 3px 2px rgb(105, 105, 105);
+    height: 50px;
+    width: 35%;
+    margin-top: 10px;
+}
+
+.container-local-retirada{
+    height: 30px;
+}
+.container-hora-entrega, .container-hora-retirada
+{
+    margin-left:30px ;
+    
+}
+/* Fim Containers */
+
+>>>>>>> 0758a7be301f4642258bdf046735735b22ac9e14
 .local, .retirada, .entrega{
     margin: 5px 20px;
+    font-weight: 700;
+}
+.span-check-in{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.local-retirada{
+    width:100%;
+    height: 20px;
 }
 .hora-retirada{
     height: 100%;
     width: 80%;
 }
 
-
+/* imagens */
 .img-calendario{
     width: 20px;
     height: 20px;
@@ -93,24 +167,31 @@
 .img-localizacao{
     width: 20px;
     height: 20px;
+    object-fit: cover;
 }
+/* fim imagens */
+
+/* inputs */
 input{
- 
+    height:100%;
+    width: 150%;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    /* text-indent: 20px; */
     border: none;
-    outline: none;
-}
-input[type="date"]{
-    border: 2px groove gray;
-    
-    border: none;
-    
-}
-input[type="time"]{
-    border: none;
-    
+    outline: none; 
+
 }
 
+input:focus{
+    border:2px solid black;
+    outline: white;
+    box-shadow: none;
+}
+/* fim inputs */
 
+<<<<<<< HEAD
 
 
 /* carros para aluguel */
@@ -122,39 +203,63 @@ input[type="time"]{
     padding: 30px 30px; 
     gap: 10px 1px;
     margin: 0 auto;
+=======
+/*------------------------------------------------- carros aluguel --------------------------------------------*/
+.carros-aluguel{
+    display: grid;
+    grid-template-columns: repeat(3, 15%); 
+    width: 100vw;
+    padding: 30px; 
+    gap: 80px 15vw;
+    margin: 10px 20px;
+>>>>>>> 0758a7be301f4642258bdf046735735b22ac9e14
 }
 .container-carro{
     position: relative;
-    border-left: 1.5px  rgba(142, 142, 142, 0.100);
-    box-shadow: 2px 2px 1px rgba(142, 142, 142, 0.100);
-    background-color: rgba(142, 142, 142, 0.247);
-    border-style: groove;
-    border-radius: 3px;
     display: flex;
     flex-flow: column ;
     align-items: center;
+    border-left: 1.5px  rgba(142, 142, 142, 0.100);
+    box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
+    border-style: groove;
+    border-radius: 3px;
     height: 350px;
     width: 300px;
     margin-left: 50px;
     padding: 30px;
-   
+    
 }
-.container-img{
-    /* border: 3px solid rgb(0, 34, 128); */
+.container-img{    
     margin: 10px 30px;
     order: -1;
     width: 100%; 
-    /* height: 100px; */
+    /* background-color: #000000; */
 }
-img{
+.img-carros{
     padding:0 10px ;
     width: 280px;
     height: 150px;
     object-fit: cover;
-    /* height: 80px; */
+    
+}
+.img-ford-territory{
+    width:300px ;
+    height: 180px;
+}
+.img-ranger-raptor{
+    /* height: 250px; */
+    width: 300px;
+    object-fit: contain;
+    
+}
+.img-duty-f450{
+    height: 150px;
+    width: 200px;
+    margin-left: 30px;
+    object-fit: scale-down;
 }
 .container-nome-ano{
-    /* border: 3px solid rgb(157, 255, 0); */
+  
     display: flex;
     justify-content: space-evenly;
     align-items: center ;
@@ -162,7 +267,7 @@ img{
     width: 100%;
 }
 .container-info-carro{
-    /* border: 3px solid rgb(128, 0, 70); */
+  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly ;
@@ -172,8 +277,10 @@ img{
 
 a{
     margin-top: 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
 }
-
 
 .ano-carro{
     border: 1px dotted black;
@@ -204,8 +311,54 @@ a{
     position: absolute;
     bottom: 50px;
     font-size: 1.1rem;
-    /* right: 8px; */
 }
+/* Fim carrros aluguel */
+
+/* Carros aluguel detalhes */
+
+
+.container-detalhes{
+   display: flex;
+   flex-flow: column wrap;
+   height: 200px;
+}
+.container-detalhes span{
+    width: 100px;
+    margin-right: 30px;
+}
+.container-detalhes img{
+    width: 40px;
+    margin: 0 10px 10px;
+    
+}
+.consumo-litragem{
+    display: flex;
+    flex-flow: column wrap;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.tipo-consumo{
+    margin: 0 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:600px){

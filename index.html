@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/reset.css  ">
+    <title> Ford Drive </title>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Links estilos -->
+    <link rel="stylesheet" href="estilos/reset.css">
     <link rel="stylesheet" href="estilos/style.css" type="text/css">
     <link rel="stylesheet" href="estilos/responsividade.css" type="text/css">
-    <title> Ford Drive </title>
+    <script src="index.js"></script>
 </head>
 
 <body>
-    <header><!-- Início cabeçalho -->
+    <header>
 
         <nav id="menu">
             <div class="logo">
@@ -20,9 +26,10 @@
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="aluguel.html">Carros</a></li>
-                <li><a href="">Sobre nós</a></li>
+                <li><a href="">Carros</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
                 <li><a href="">Contatos</a></li>
-                <li><a href=""><img src="/icones/arrow-right-to-bracket-solid.svg" alt="">Log In</a></li>
+                <li><a href=""><img src="../icones/arrow-right-to-bracket-solid.svg" alt="">Log In</a></li>
             </ul>
         </nav>
 
@@ -32,149 +39,88 @@
         </div>
 
         <div class="busca-carro">
-            <input type="text" placeholder="Modelo">
-            <input type="date" placeholder="Data">
+            <select name="modelo" id="modelo">
+                <option value="" selected disabled>Veículo</option>
+                <option value="">F-150 Shelby</option>
+                <option value="">Mustang Mach 1</option>
+                <option value="">Ford Territory Titanium</option>
+                <option value="">Ranger Raptor</option>
+                <option value="">Mustang GT</option>
+                <option value="">Ford Super Duty F-450 DRW</option>
+                <option value="">Ranger XLS</option>
+                <option value="">Ford GT</option>
+                <option value="">Mustang Mach-E</option>
+                <option value="">Ford Explorer St</option>
+                <option value="">Shelby GT500</option>
+                <option value="">Maverick</option>
+                <option value="">Ford Ranger 3.2</option>
+                <option value="">Ranger P703</option>
+                <option value="">Bronco Sport</option>
+            </select>
             <input type="text" placeholder="Local">
+            <input type="date">
+            <input type="date">
             <button>Buscar carro</button>
         </div>
 
     </header><!-- Fim cabeçalho-->
 
+    <section class="carrossel-carros">
 
-    <section class="carros-ofertas">
-
-
-        <div class="container-titulo">
-            <h2 class="aluguel-de-carros">Nossas ofertas</h2>
-        </div>
-    <section class="carros-ofertas">
-        
-
-     
-        
-        
-
-
-        <div class="container-carros">
-
-            <div class="carro carro1">
-                <img src="imagens/f-450.jpg" alt="" class="img-oferta">
-                <span class="nome-carro"> mustang gt</span>
-                <div class="estrelas">Avaliação</div>
-                <div class="button-saiba">
-                    <button type="button" class="btn-carro-saiba-mais">Saiba mais</button>
-                    <button class="btn-carro-saiba-mais">Comprar</button>
-                </div>
-
-            </div>
-
-            <div class="carro carro2">
-
-                <img src="imagens/ford-gt.jpg" alt="" class="img-oferta">
-                <span class="nome-carro"> mustang gt</span>
-                <div class="estrelas">Avaliação</div>
-                <div class="button-saiba">
-                    <button type="button" class="btn-carro-saiba-mais">Saiba mais</button>
-                    <button class="btn-carro-saiba-mais">Comprar</button>
-                </div>
-
-            </div>
-
-            <div class="carro carro3">
-
-                <img src="imagens/ranger-raptor.jpg" alt="" class="img-oferta">
-                <span class="nome-carro"> mustang gt</span>
-                <div class="estrelas">Avaliação</div>
-                <div class="button-saiba">
-                    <button type="button" class="btn-carro-saiba-mais">Saiba mais</button>
-                    <button class="btn-carro-saiba-mais">Comprar</button>
-                </div>
-
-            </div>
-
-            <div class="carro carro4">
-
-                <img src="imagens/rangerxls.jpg" alt="" class="img-oferta">
-                <span class="nome-carro"> mustang gt</span>
-                <div class="estrelas">Avaliação</div>
-                <div class="button-saiba">
-                    <button type="button" class="btn-carro-saiba-mais">Saiba mais</button>
-                    <button class="btn-carro-saiba-mais">Comprar</button>
-                </div>
-
-            </div>
-            <div class="carro carro5">
-
-                <img src="imagens/images.jpg" alt="" class="img-oferta">
-                <span class="nome-carro"> mustang gt</span>
-                <div class="estrelas">Avaliação</div>
-                <div class="button-saiba">
-                    <button type="button" class="btn-carro-saiba-mais">Saiba mais</button>
-                    <button class="btn-carro-saiba-mais">Comprar</button>
-                </div>
-
-            </div>
-
-            <div class="carro carro6">
-                <img src="imagens/mustang-conversivel.jpg" alt="" class="img-oferta">
-                <span class="nome-carro"> mustang gt</span>
-                <div class="estrelas">Avaliação</div>
-                <div class="button-saiba">
-                    <button type="button" class="btn-carro-saiba-mais">Saiba mais</button>
-                    <button class="btn-carro-saiba-mais">Comprar</button>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="anterior-carro">Carro anterior</button>
-        <button type="button" class="proximo-carro">Proximo carro</button>
-
-
+        <!-- TO-D0: Criar carrossel de carros -->
 
     </section>
 
     <section id="artigos"><!-- Início da sessão artigos-->
 
-        <div class="artigo">
-
-            <img src="" alt="">
-
-            <h2>Soluções e Descontos para PcD: Explorando a Mobilidade com Luxo</h2>
-
-            <p>Se você está buscando carros de luxo adaptados para pessoas com deficiência, está no lugar certo! A
-                acessibilidade é fundamental para garantir que todos possam desfrutar de mobilidade e conforto. Alugar
-                um carro de luxo adaptado pode ser uma excelente opção para quem deseja aproveitar o prazer de dirigir
-                com segurança e estilo.</p>
-
-            <button>Saiba Mais</button>
-
-        </div>
-
-        <div class="artigo">
-
-            <img src="" alt="">
-
-            <h2></h2>
-
-            <p></p>
-
-            <button></button>
-
-        </div>
-
-        <div class="artigo">
-
-            <img src="" alt="">
-
-            <h2></h2>
-
-            <p></p>
-
-            <button></button>
-
-        </div>
+        <!-- TO-DO: Criar sessão de artigos -->
 
     </section><!-- Fim da sessão artigos-->
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-ul">
+                <li class="footer-title">
+                    <h3>Veiculos</h3>
+                </li>
+                <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
+                <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
+            </ul>
+            <ul class="footer-ul">
+                <li class="footer-title">
+                    <h3>Aluguel</h3>
+                </li>
+                <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
+                <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
+            </ul>
+            <ul class="footer-ul">
+                <li class="footer-title">
+                    <h3>Artigos</h3>
+                </li>
+                <li class="footer-li"><a href="#" class="footer-a">Descontos para PCD</a></li>
+                <li class="footer-li"><a href="#" class="footer-a">Tecnologia,Segurança e Potência</a></li>
+                <li class="footer-li"><a href="#" class="footer-a">Ford Mustang 2024 </a></li>
+            </ul>
+            <ul class="footer-ul">
+                <li class="footer-title">
+                    <h3>Sobre Nós</h3>
+                </li>
+                <li class="footer-li"><a href="#" class="footer-a">Ford Drive </a></li>
+                <li class="footer-li"><a href="#" class="footer-a">Projeto Ford Academy</a></li>
+                <li class="footer-li"><a href="#" class="footer-a">Contatos</a></li>
+            </ul>
+        </div>
+        <div class="footer-socialmidia">
+            <a href="#" class="footer-link"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="footer-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-link"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="footer-link"><i class="fa-brands fa-youtube"></i></a>
 
+        </div>
+        <div class="footer-copy"><span>Copyright &copy; 2024 Ford Drive Company - Todos os direitos reservados</span>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
