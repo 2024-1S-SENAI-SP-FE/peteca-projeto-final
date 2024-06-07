@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Carro</title>
+    <link rel="stylesheet" href="/estilos/reset.css">
+    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" href="/estilos/reserva.css">
+</head>
+<body>    
+    <main>
+        <section class="dados-pessoais">
+            <h2>Dados Pessoais</h2>
+            <p>Mayara Alhessa dos Santos | (+55) 11 XXXXX-XXX</p>
+            <p>emailfake@gmail.com</p>
+        </section>
+
+        <section class="forma-pagamento">
+            <h2>Informe a Forma de Pagamento</h2>
+            <form>
+                <label>
+                    <input type="radio" name="pagamento" value="credito">
+                    <span>Cartão de Crédito</span>
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="boleto">
+                    <span>Boleto Bancário</span>
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="pix" checked>
+                    <span>PIX</span>
+                    <img src="pix-icon.png" alt="PIX">
+                </label>
+            </form>
+        </section>
+
+        <section class="kits">
+            <h2>Selecione um Kit</h2>
+            <div class="kit">
+                <input type="radio" id="kit1" name="kit" value="kids" checked>
+                <label for="kit1">
+                    <h3>Kit 1 - Pacote Kids</h3>
+                    <p>Cadeirinha e/ou Booster e/ou Bebê Conforto, Proteção para Vidros, Step Extra, Wi-Fi</p>
+                    <span class="price">$50</span>
+                </label>
+            </div>
+            <div class="kit">
+                <input type="radio" id="kit2" name="kit" value="aventureiro">
+                <label for="kit2">
+                    <h3>Kit 2 - Aventureiro</h3>
+                    <p>GPS, Proteção para Vidros, Step Extra, Wi-Fi, Seguro de Assistência na Estrada</p>
+                    <span class="price">$30</span>
+                </label>
+            </div>
+            <div class="kit">
+                <input type="radio" id="kit3" name="kit" value="moro-em-sao-paulo">
+                <label for="kit3">
+                    <h3>Kit 3 - Moro em São Paulo</h3>
+                    <p>GPS, Proteção para Vidros, Step Extra, Seguro contra Roubo, Blindagem do Veículo, Coletá à Prova de Balas (Opcional)</p>
+                    <span class="price">$40</span>
+                </label>
+            </div>
+        </section>
+
+        <section class="resumo-reserva">
+            <h2>Resumo da Reserva</h2>
+            <div class="reserva">
+                <p><strong>Período do contrato:</strong> 1 diária</p>
+                <p><strong>Retirada:</strong> Santos Affonso Penna - Avenida Affonso Pena - N° 50 - Boqueirão / Santos - SP</p>
+                <p><strong>Data:</strong> 23/06/2024 às 11:30H</p>
+                <p><strong>Devolução:</strong> Santos Affonso Penna - Avenida Affonso Pena - N° 50 - Boqueirão / Santos - SP</p>
+                <p><strong>Data:</strong> 23/06/2024 às 11:30H</p>
+            </div>
+            <div class="carro-selecionado">
+                <h3>Carro Selecionado</h3>
+                <img src="ford-gt.png" alt="Ford GT 2020">
+                <span class="price">$450</span>
+                <p>Ford GT 2020</p>
+            </div>
+            <div class="kit-selecionado">
+                <h3>Kit Selecionado</h3>
+                <p>Kit 1 - Pacote Kids</p>
+                <p>Cadeirinha e/ou Booster e/ou Bebê Conforto, Proteção para Vidros, Step Extra, Wi-Fi</p>
+                <span class="price">$50</span>
+            </div>
+            <div class="valor-total">
+                <h3>Valor Total:</h3>
+                <span class="price">$500</span>
+            </div>
+            <button type="button">Finalizar Reserva</button>
+        </section>
+    </main>
+</body>
+</html>

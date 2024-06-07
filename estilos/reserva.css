@@ -1,0 +1,88 @@
+body {
+    font-family: "Inter", sans-serif;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+    display: flex;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section {
+    flex: 1;
+}
+
+h2 {
+    color: #003366;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.kits .kit {
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kits .kit input {
+    margin-right: 10px;
+}
+
+.kit label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.resumo-reserva {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.reserva, .carro-selecionado, .kit-selecionado, .valor-total {
+    margin-bottom: 20px;
+}
+
+.carro-selecionado img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #003366;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #002244;
+}
