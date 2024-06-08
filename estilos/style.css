@@ -180,6 +180,14 @@ input::placeholder {
     /* height: 425px; */
 }
 
+#carrossel>h1 {
+    display: inline-block;
+    margin: 1rem 0.5rem 1rem 1rem;
+    color: #002366;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
 .carousel-indicators button[type="button"] {
     background-color: #000000;
     width: 10px;
@@ -202,23 +210,23 @@ input::placeholder {
 
 .carousel-item:first-child img {
     width: 65%;
-    transform: translate(0, -10%);
+    transform: translate(-3%, -15%);
     height: 100vh;
     /* transform: translatex(10%); */
 }
 
 .carousel-item:nth-child(2) img {
     width: 65%;
-    transform: translate(0, -6%);
+    transform: translate(-2%, -12%);
 }
 
 .carousel-item:nth-child(3) img {
-    transform: translate(20%, 0);
-    height: 90vh;
+    transform: translate(14%, 0);
+    height: 77vh;
 }
 
 .carousel-item:nth-child(4) img {
-    transform: translate(12%, -10%);
+    transform: translate(13%, -20%);
 }
 
 
@@ -227,7 +235,7 @@ input::placeholder {
     height: 300px;
     width: 30%;
     left: 6%;
-    top: 20%;
+    top: 10%;
 }
 
 .carousel-caption h1 {
