@@ -301,6 +301,14 @@ input::placeholder {
     width: 50%;
 }
 
+.icones-modal .icones-esquerda img,
+.icones-modal .icones-direita img {
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-right: 0.5rem;
+}
+
 .icones-modal .icones-direita {
     width: 50%;
 }
