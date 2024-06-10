@@ -43,4 +43,3 @@ function criaLink(batata) {
 }
 criaLink(batata)
 // document.head.appendChild(criaLink(links))
-console.log(criaLink(batata));
