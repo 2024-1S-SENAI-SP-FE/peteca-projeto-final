@@ -275,7 +275,8 @@ a{
 
 @media screen and (max-width:600px){
    body{
-    min-width: 100vw;
+    min-height: 100vh;
+    align-items: center;
    }
    .container-check-in{
     display: flex;
@@ -289,24 +290,44 @@ a{
     /* height: 300px; */
     margin: 0 10px;
     padding: 20px;
+    display: block;
    }
-   .container-retirada{
+   
+   .container-retirada, .container-entrega{
     width: 100px;
+    display: flex;
    }
+   .hora-retirada, .data-retirada, .hora-entrega, .data-entrega{
+    height: 80%;
+    width: 500px;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    text-indent: 20px; 
+    border: none;
+    outline: none;
+    
+    }
    .container-retirada .span-check-in,.idade,.retirada{
-    /* width: 30px; */
     font-size: 20px;
    }
    .lado-a-lado{
     display: block;
+    height: 200px;
    }
    .container-local-retirada{
     height: 50px;
     width: 300px;
    }
-   .container-entrega{
-    display: none;
+   .container-hora-retirada{
+    margin: 10px 0;
    }
+   .container-hora-retirada input{
+    /* width: 150%; */
+    }
+    
+
 
     .carros-aluguel{
         display: grid;
@@ -319,7 +340,16 @@ a{
 
 }
 @media screen and (min-width:600px) and (max-width: 1200px){
-
+    .carros-aluguel{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 10px 20px;
+    }
+    .container-carro{
+        width: 250px;
+        display: flex;
+        flex-flow: column;
+    }
 }
 
 
