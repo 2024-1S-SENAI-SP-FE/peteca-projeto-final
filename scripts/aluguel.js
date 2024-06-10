@@ -137,6 +137,7 @@ function criaContainerNomeAno(nome, ano) {
   return containerNomeAno;
 }
 
+let a 
 function criaContainerInfoCarro(valorAluguel, detalhesLink) {
   const containerInfoCarro = document.createElement("div");
   containerInfoCarro.classList.add("container-info-carro");
@@ -144,12 +145,12 @@ function criaContainerInfoCarro(valorAluguel, detalhesLink) {
   const btnAlugue = document.createElement("button");
   btnAlugue.classList.add("button-alugue");
   btnAlugue.textContent = "Alugue";
-
+  
   const spanValorAluguel = document.createElement("span");
   spanValorAluguel.classList.add("valor-aluguel");
   spanValorAluguel.textContent = valorAluguel;
-
-  const a = document.createElement("a");
+  
+  let a = document.createElement("a");
   a.href = detalhesLink;
   a.classList.add("detalhes");
   a.textContent = "Detalhes";
@@ -190,3 +191,23 @@ Detectar o click no link
 Executar a animação no card especifico
 Colocar as informações respectivas do carro 
 */
+
+
+const detalhes = document.querySelectorAll('.detalhes')
+
+let paiDoContainerInfo;
+
+detalhes.forEach(detalhes => {
+  
+  detalhes.addEventListener("click", () => {
+    const card = detalhes.parentElement;
+    let paiDoContainerInfo = card.parentElement
+    paiDoContainerInfo.classList.add("flip-card");
+    detalhes.innerHTML = 'voltar'
+
+    setInterval(() => {
+      paiDoContainerInfo.classList.remove('flip-card')
+      detalhes.innerHTML = "detalhes";
+    }, 2000)
+  })
+});
