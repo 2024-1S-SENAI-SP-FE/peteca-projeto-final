@@ -30,59 +30,155 @@ form input[type="radio"] {
     margin-right: 10px;
 }
 
-.kits .kit {
-    background: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.kits {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.kits .kit input {
-    margin-right: 10px;
+.kits h2 {
+    background-color: #001f5b;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+.kit {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.kit input[type="radio"] {
+    margin-right: 20px;
+    accent-color: #001f5b;
 }
 
 .kit label {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
 }
 
+.kit h3 {
+    margin: 0;
+    color: #333;
+}
+
+.kit p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.kit .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.kit label[for="kit1"]::before {
+    content: url('checked-icon.png'); /* Use a real path to the green checkmark icon */
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.kit input[type="radio"]#kit1:not(:checked) + label[for="kit1"]::before {
+    content: none;
+}
 .price {
     font-size: 1.2em;
     color: #333;
 }
 
+
+/* --------------------- Estilo do bloco de resumo da reserva -------------------------- */
 .resumo-reserva {
-    border: 1px solid #ccc;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.resumo-reserva h2 {
+    background-color: #001f5b;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin: -20px -20px 20px -20px;
 }
 
 .reserva, .carro-selecionado, .kit-selecionado, .valor-total {
-    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.reserva p, .carro-selecionado p, .kit-selecionado p, .valor-total p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.reserva strong, .carro-selecionado strong, .kit-selecionado strong, .valor-total strong {
+    color: #333;
 }
 
 .carro-selecionado img {
     width: 100%;
-    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carro-selecionado .price, .kit-selecionado .price, .valor-total .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.carro-selecionado .price {
     display: block;
-    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.kit-selecionado .price {
+    display: block;
+    margin-top: 5px;
+}
+
+.valor-total {
+    border-bottom: none;
+    text-align: right;
 }
 
 button {
-    background: #003366;
+    display: block;
+    width: 100%;
+    background-color: #001f5b;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
+    padding: 15px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover {
-    background: #002244;
+    background-color: #004080;
 }
