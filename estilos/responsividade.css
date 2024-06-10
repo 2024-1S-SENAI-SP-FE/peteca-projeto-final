@@ -151,7 +151,7 @@
 
     header {
         min-height: 70vh;
-        /* background-position: -250px; */
+        background-position: center;
     }
 
     .busca-carro {
