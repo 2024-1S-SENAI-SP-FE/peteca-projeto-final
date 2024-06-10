@@ -26,7 +26,7 @@ body{
     width: 85vw;
     font-size: 20px;
     margin: 100px 80px;
-    
+
 }
 .check-in{
     display: flex;
@@ -330,20 +330,15 @@ a{
 
 .flip-card {
     background-color: transparent;
-    /* width: 300px; */
-    /* height: 300px; */
-    perspective: 1000px;
-}
-.flip-card:hover{
-    animation: Flip 800ms ease-in-out forwards;
-
+    animation: Flip 800ms forwards;
+    /* perspective: 1000px; */
 }
 @keyframes Flip {
     from{
-        transform: rotateY(0deg) scale(1.05);
+        transform: rotateY(0deg);
     }
     to{
-        transform: rotateY(180deg) scale(1);
+        transform: rotateY(180deg);
         
     }
 }
