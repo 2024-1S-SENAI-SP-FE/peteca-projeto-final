@@ -67,6 +67,11 @@ p {
 .blocos p{
     margin-bottom: 1rem;
 }
+
+#bloco-img {
+    display: flex;
+    gap: 7rem;
+}
 .class-size-img {
   width: 36rem;
   height: 20rem;
