@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
     font-family: "Inter", sans-serif;
     padding: 1rem 1rem;
@@ -12,117 +14,154 @@ main {
     gap: 20px;
 }
 
-section {
-    flex: 1;
+/* ----------------------------- DADOS PESSOAIS ---------------------------------------- */
+.dados-pessoais {
+    margin-bottom: 20px;
 }
 
-h2 {
-    color: #003366;
-}
-
-form label {
-    display: flex;
-    align-items: center;
+.dados-pessoais h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-form input[type="radio"] {
+.dados-pessoais p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 5px 0;
+}
+/* ------------------------------------------------------------------------------------- */
+ 
+/* ------------------------------ FORMA DE PAGAMENTO ------------------------------------ */
+.forma-pagamento section {
+    justify-content: left;
+    float: left;
+    display: flex;
+
+}
+
+.forma-pagamento h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.forma-pagamento form {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.forma-pagamento label {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forma-pagamento input[type="radio"] {
     margin-right: 10px;
 }
 
+.forma-pagamento label img {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+/* --------------------------------- KITS ----------------------------------------------- */
 .kits {
-    max-width: 600px;
+    width: 50%;
     margin: 50px auto;
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .kits h2 {
-    background-color: #001f5b;
-    color: #fff;
     text-align: center;
-    padding: 15px;
-    border-radius: 10px 10px 0 0;
-    margin: -20px -20px 20px -20px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
 }
 
 .kit {
+    border-top: 1px solid #ccc;
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    position: relative;
+    cursor: pointer;
+}
+
+.kit:first-child {
+    border-top: none;
 }
 
 .kit input[type="radio"] {
-    margin-right: 20px;
-    accent-color: #001f5b;
+    display: none;
 }
 
 .kit label {
-    flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .kit h3 {
     margin: 0;
+    font-size: 18px;
     color: #333;
 }
 
 .kit p {
-    margin: 5px 0;
+    margin: 5px 0 0;
     color: #666;
 }
 
 .kit .price {
     font-size: 24px;
-    font-weight: bold;
     color: #333;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    font-weight: bold;
 }
 
-.kit label[for="kit1"]::before {
-    content: url('checked-icon.png'); /* Use a real path to the green checkmark icon */
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+.kit input[type="radio"]:checked + label {
+    background-color: #eee;
+    border-left: 5px solid green;
 }
 
-.kit input[type="radio"]#kit1:not(:checked) + label[for="kit1"]::before {
-    content: none;
-}
 .price {
     font-size: 1.2em;
     color: #333;
 }
-
+/* ------------------------------------------------------------------------------------- */
 
 /* --------------------- Estilo do bloco de resumo da reserva -------------------------- */
 .resumo-reserva {
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 2px;
 }
 
 .resumo-reserva h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
     background-color: #001f5b;
     color: #fff;
     text-align: center;
     padding: 15px;
-    border-radius: 10px 10px 0 0;
-    margin: -20px -20px 20px -20px;
+    border-radius: 2px;
+    margin: -20px ;
 }
 
 .reserva, .carro-selecionado, .kit-selecionado, .valor-total {
@@ -131,12 +170,15 @@ form input[type="radio"] {
 }
 
 .reserva p, .carro-selecionado p, .kit-selecionado p, .valor-total p {
+    text-align: justify;
+    line-height: 1.6;
     margin: 5px 0;
-    color: #333;
+    color: #000;
 }
 
 .reserva strong, .carro-selecionado strong, .kit-selecionado strong, .valor-total strong {
-    color: #333;
+    font-weight: bold;
+    color: #000;
 }
 
 .carro-selecionado img {
