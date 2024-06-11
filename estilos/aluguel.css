@@ -1,374 +1,428 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tilt+Neon&display=swap');
-body{
-    font-family: "Inter", sans-serif;
-    overflow-x: hidden;
-    
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tilt+Neon&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
-.entrar{
-    position: absolute;
-    right: 10%;
-    top: 15% ;
-    color: black;
-    border: none;
-    outline: none;
-    width: 150px;
-    height: 30px;
-    font-size: 15px;
-    box-shadow: 2px 2px 3px 1px rgb(105, 105, 105);
-    cursor:pointer; 
+.entrar {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  color: black;
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  box-shadow: 2px 2px 3px 1px rgb(105, 105, 105);
+  cursor: pointer;
 }
 
 /* containers */
-.container-check-in{
-    display: flex;
-    justify-content: space-between;
-    /* height: 300px; */
-    width: 85vw;
-    font-size: 20px;
-    margin: 100px 80px;
-
+.container-check-in {
+  display: flex;
+  justify-content: space-between;
+  /* height: 300px; */
+  width: 85vw;
+  font-size: 20px;
+  margin: 100px 80px;
 }
-.check-in{
-    display: flex;
-    padding: 30px;
-    box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
-    width: 100vw;
-    height: 100%;
-    height: inherit;
-    margin: inherit;
-    
+.check-in {
+  display: flex;
+  padding: 30px;
+  box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
+  width: 100vw;
+  height: 100%;
+  height: inherit;
+  margin: inherit;
 }
-.lado-a-lado{
-    display: flex;
-    align-items: center;
-    margin: 8px 0 0 0 ;
+.lado-a-lado {
+  display: flex;
+  align-items: center;
+  margin: 8px 0 0 0;
 }
-.container-retirada{
-    display: flex;
-    flex-flow: column wrap;
-    margin-right: 10%;
-    width: 50%;
-
+.container-retirada {
+  display: flex;
+  flex-flow: column wrap;
+  margin-right: 10%;
+  width: 50%;
 }
-.container-entrega{
-    display: flex;
-    align-items: end;
-    width: 50%;
+.container-entrega {
+  display: flex;
+  align-items: end;
+  width: 50%;
 }
-
 
 .container-data-retirada,
 .container-local-retirada,
 .container-data-entrega,
 .container-data-entrega,
-.container-hora-retirada,.container-hora-entrega{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 3px 2px rgb(105, 105, 105);
-    height: 50px;
-    width: 35%;
-    margin-top: 10px;
+.container-hora-retirada,
+.container-hora-entrega {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 3px 2px rgb(105, 105, 105);
+  height: 50px;
+  width: 35%;
+  margin-top: 10px;
 }
 
-.container-local-retirada{
-    height: 30px;
+.container-local-retirada {
+  height: 30px;
 }
-.container-hora-entrega, .container-hora-retirada
-{
-    margin-left:30px ;
-    
+.container-hora-entrega,
+.container-hora-retirada {
+  margin-left: 30px;
 }
 /* Fim Containers */
 
-.local, .retirada, .entrega{
-    margin: 5px 20px;
-    font-weight: 700;
+.local,
+.retirada,
+.entrega {
+  margin: 5px 20px;
+  font-weight: 700;
 }
-.span-check-in{
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 5px;
+.span-check-in {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
-.local-retirada{
-    width:100%;
-    height: 20px;
+.local-retirada {
+  width: 100%;
+  height: 20px;
 }
-.hora-retirada{
-    height: 100%;
-    width: 80%;
+.hora-retirada {
+  height: 100%;
+  width: 80%;
 }
 
 /* imagens */
-.img-calendario{
-    width: 20px;
-    height: 20px;
+.img-calendario {
+  width: 20px;
+  height: 20px;
 }
-.img-relogio{
-    width: 20px;
-    height: 20px;
+.img-relogio {
+  width: 20px;
+  height: 20px;
 }
-.img-localizacao{
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
+.img-localizacao {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
 }
 /* fim imagens */
 
 /* inputs */
-input{
-    height:100%;
-    width: 150%;
-    padding: 5px;
-    font-size: 12px;
-    font-weight: 800;
-    /* text-indent: 20px; */
-    border: none;
-    outline: none; 
-
+input {
+  height: 100%;
+  width: 150%;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  /* text-indent: 20px; */
+  border: none;
+  outline: none;
 }
 
-input:focus{
-    border:2px solid black;
-    outline: white;
-    box-shadow: none;
+input:focus {
+  border: 2px solid black;
+  outline: white;
+  box-shadow: none;
 }
 /* fim inputs */
 
 /*------------------------------------------------- carros aluguel --------------------------------------------*/
-.carros-aluguel{
-    display: grid;
-    grid-template-columns: repeat(3, 15%); 
-    width: 100vw;
-    padding: 30px; 
-    gap: 80px 15vw;
-    margin: 10px 20px;
+.carros-aluguel {
+  display: grid;
+  grid-template-columns: repeat(3, 15%);
+  width: 100vw;
+  padding: 30px;
+  gap: 80px 15vw;
+  margin: 10px 20px;
 }
-.container-carro{
-    position: relative;
-    display: flex;
-    flex-flow: column ;
-    align-items: center;
-    border-left: 1.5px  rgba(142, 142, 142, 0.100);
-    box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
-    border-style: groove;
-    border-radius: 3px;
-    height: 350px;
-    width: 300px;
-    margin-left: 50px;
-    padding: 30px;
-    
+.container-carro {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-left: 1.5px rgba(142, 142, 142, 0.1);
+  box-shadow: 2px 2px 3px 4px rgb(105, 105, 105);
+  border-style: groove;
+  border-radius: 3px;
+  height: 350px;
+  width: 300px;
+  margin-left: 50px;
+  padding: 30px;
 }
-.container-img{    
-    margin: 10px 30px;
-    order: -1;
-    width: 100%; 
-    /* background-color: #000000; */
+.container-img {
+  margin: 10px 30px;
+  order: -1;
+  width: 100%;
+  /* background-color: #000000; */
 }
-.img-carros{
-    padding:0 10px ;
-    width: 280px;
-    height: 150px;
-    object-fit: cover;
-    
+.img-carros {
+  padding: 0 10px;
+  width: 280px;
+  height: 150px;
+  object-fit: cover;
 }
-.img-ford-territory{
-    width:300px ;
-    height: 180px;
+.img-ford-territory {
+  width: 300px;
+  height: 180px;
 }
-.img-ranger-raptor{
-    /* height: 250px; */
-    width: 300px;
-    object-fit: contain;
-    
+.img-ranger-raptor {
+  /* height: 250px; */
+  width: 300px;
+  object-fit: contain;
 }
-.img-duty-f450{
-    height: 150px;
-    width: 200px;
-    margin-left: 30px;
-    object-fit: scale-down;
+.img-duty-f450 {
+  height: 150px;
+  width: 200px;
+  margin-left: 30px;
+  object-fit: scale-down;
 }
-.container-nome-ano{
-  
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center ;
-    height: 40px;
-    width: 100%;
+.container-nome-ano {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+  width: 100%;
 }
-.container-info-carro{
-  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly ;
-    width: 200px;
-    margin-top: 30px;
+.container-info-carro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 200px;
+  margin-top: 30px;
 }
 
-a{
-    margin-top: 10px;
-    color: black;
-    font-weight: 600;
-    font-size: 20px;
+a {
+  margin-top: 10px;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.ano-carro{
-    border: 1px dotted black;
-    padding: 3px 20px;
-    border-radius: 3px;
+.ano-carro {
+  border: 1px dotted black;
+  padding: 3px 20px;
+  border-radius: 3px;
 }
-.nome-carro{
-    font-size: 30px;
+.nome-carro {
+  font-size: 30px;
 }
-.button-alugue{
-    position: absolute;
-    left: 40px;
-    background-color: #06163E;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    width: 180px;
-    padding:5px 20px;
-    cursor: pointer;
+.button-alugue {
+  position: absolute;
+  left: 40px;
+  background-color: #06163e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 180px;
+  padding: 5px 20px;
+  cursor: pointer;
 }
-.valor-aluguel{
-    position: absolute;
-    right: 20px;
-    font-size: 20px;
-    margin-left: 10px;
+.valor-aluguel {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  margin-left: 10px;
 }
-.detalhes{
-    position: absolute;
-    bottom: 50px;
-    font-size: 1.1rem;
+.detalhes {
+  position: absolute;
+  bottom: 50px;
+  font-size: 1.1rem;
 }
 /* Fim carrros aluguel */
 
 /* Carros aluguel detalhes */
 
-
-.container-detalhes{
-   display: flex;
-   flex-flow: column wrap;
-   height: 200px;
+.container-detalhes {
+  display: flex;
+  flex-flow: column wrap;
+  height: 200px;
 }
-.container-detalhes span{
-    width: 100px;
-    margin-right: 30px;
+.container-detalhes span {
+  width: 100px;
+  margin-right: 30px;
 }
-.container-detalhes img{
-    width: 40px;
-    margin: 0 10px 10px;
-    
+.container-detalhes img {
+  width: 40px;
+  margin: 0 10px 10px;
 }
-.consumo-litragem{
-    display: flex;
-    flex-flow: column wrap;
-    height: 40px;
-    margin-bottom: 30px;
+.consumo-litragem {
+  display: flex;
+  flex-flow: column wrap;
+  height: 40px;
+  margin-bottom: 30px;
 }
-.tipo-consumo{
-    margin: 0 30px;
+.tipo-consumo {
+  margin: 0 30px;
 }
 
-
-
-@media screen and (max-width:600px){
-   body{
+@media screen and (max-width: 600px) {
+  body {
     min-height: 100vh;
-    align-items: center;
-   }
-   .container-check-in{
+    overflow-x: hidden;
+  }
+  .container-check-in {
     display: flex;
     justify-content: center;
     width: 100vw;
-    margin: 0;
-    padding: 20px;
-   }
-   .check-in{
+    margin: 80px 0;
+    /* padding: 20px; */
+    /* overflow-x: hidden; */
+  }
+  .check-in {
     width: 300px;
     /* height: 300px; */
     margin: 0 10px;
     padding: 20px;
     display: block;
-   }
-   
-   .container-retirada, .container-entrega{
+    overflow-x: hidden;
+  }
+  .check-in div {
+    width: 100%;
+  }
+  .check-in input {
+    font-size: 20px;
+    text-indent: 10px;
+  }
+
+  .container-retirada,
+  .container-entrega {
     width: 100px;
     display: flex;
-   }
-   .hora-retirada, .data-retirada, .hora-entrega, .data-entrega{
+  }
+  .hora-retirada,
+  .data-retirada,
+  .hora-entrega,
+  .data-entrega {
     height: 80%;
     width: 500px;
     margin: 10px 0;
     padding: 5px;
     font-size: 12px;
     font-weight: 800;
-    text-indent: 20px; 
+    text-indent: 20px;
     border: none;
     outline: none;
-    
-    }
-   .container-retirada .span-check-in,.idade,.retirada{
+  }
+  .container-hora-entrega {
+    margin-left: 0;
+  }
+  .container-retirada .span-check-in,
+  .idade,
+  .retirada {
     font-size: 20px;
-   }
-   .lado-a-lado{
+  }
+  .lado-a-lado {
     display: block;
     height: 200px;
-   }
-   .container-local-retirada{
+  }
+  .container-local-retirada {
     height: 50px;
     width: 300px;
-   }
-   .container-hora-retirada{
+    margin-top: 30px;
+  }
+  .container-hora-retirada {
     margin: 10px 0;
-   }
-   .container-hora-retirada input{
-    /* width: 150%; */
-    }
-    
+  }
+  /* -------------------------------------------carros */
 
+  .carros-aluguel {
+    display: grid;
+    grid-template-columns: 300px;
+    /* place-items: center; */
+    min-width: 300px;
+    margin: 0 0 0 35px;
+    padding: 0;
+    width: 350px;
+  }
+  .container-carro {
+    width: 250px;
+    margin: 10px 0;
+  }
+  .img-carros {
+    width: 230px;
+  }
+  .button-alugue {
+    width: 240px;
+  }
+  .valor-aluguel {
+    margin-left: 30px;
+    bottom: 70px;
+    left: 70px;
+    /* margin-bottom: 20px; */
+  }
+  .detalhes {
+    bottom: 30px;
+  }
+  .container-detalhes {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+  }
 
-    .carros-aluguel{
-        display: grid;
-        grid-template-columns: 300px;
-        /* place-items: center; */
-        min-width: 300px;
-        margin: 0;
-
-    }
-
+  .container-detalhes .lado-a-lado {
+    /* width: 100px; */
+    height: auto;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+  }
+  .container-detalhes img {
+    width: 40px;
+  }
+  .container-detalhes span {
+    margin: 0;
+  }
 }
-@media screen and (min-width:600px) and (max-width: 1200px){
-    .carros-aluguel{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        gap: 10px 20px;
-    }
-    .container-carro{
-        width: 250px;
-        display: flex;
-        flex-flow: column;
-    }
+
+@media screen and (min-width: 300px) and (max-width: 360px) {
+  .carros-aluguel {
+    margin-left: 30px;
+    width: 330px;
+  }
 }
 
+@media screen and (min-width: 361px) and (max-width: 399px) {
+  .carros-aluguel {
+    margin-left: 32px;
+  }
+}
 
-
+@media screen and (min-width: 400px) {
+  .carros-aluguel {
+    margin-left: 43px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .carros-aluguel {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px 20px;
+  }
+  .container-carro {
+    width: 250px;
+    display: flex;
+    flex-flow: column;
+  }
+}
 
 /* Animação de transição do Flip */
 
-
 .flip-card {
-    background-color: transparent;
-    animation: Flip 800ms forwards;
-    /* perspective: 1000px; */
+  background-color: transparent;
+  animation: Flip 800ms forwards;
+  /* perspective: 1000px; */
 }
 @keyframes Flip {
-    from{
-        transform: rotateY(0deg);
-    }
-    to{
-        transform: rotateY(180deg);
-        
-    }
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
 }
