@@ -21,7 +21,7 @@
     width: 100vw;
     /* height: 50vh; */
     display: flex;
-    box-shadow: 1px 5px 10px rgba(0, 0, 0, .212);
+    /* box-shadow: 1px 5px 10px rgba(0, 0, 0, .212); */
 
     
 }
@@ -82,7 +82,7 @@ input{
     align-items: center;
     width: 410px;
 
-    /* margin-top: 5px; */
+     margin-top:5px; 
     
 }
 
@@ -101,7 +101,7 @@ input{
     height: 50px;
 }
 .label-login{
-    margin-top: 50px;
+    /* margin-top: 50px; */
     justify-content: center;
 }
 
@@ -110,17 +110,20 @@ input{
     text-transform: uppercase; /* Transforma o texto em maiúsculo */
     font-weight: bold; /* Define o texto em negrito */
     text-align: center; /* Alinha o texto horizontalmente ao centro */
-    margin-left: 200px;
+    margin-left: 250px;
     margin-bottom: 30px;
 
 }
 #nome{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 input::placeholder {
     position: absolute;
     bottom: 5px;
+}
+label{
+  
 }
 
 
