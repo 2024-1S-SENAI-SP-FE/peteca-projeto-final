@@ -76,69 +76,80 @@ main {
 
 /* --------------------------------- KITS ----------------------------------------------- */
 .kits {
-    width: 50%;
-    margin: 50px auto;
+    /* width: %; */
+    display: flex;
+    width: 25%;
+    margin: 10px auto;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px; */
+    /* overflow: hidden; */
 }
 
 .kits h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
     text-align: center;
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 15px;
     margin: 0;
 }
 
 .kit {
     border-top: 1px solid #ccc;
     display: flex;
-    align-items: center;
+    align-items: justify;
     padding: 20px;
     cursor: pointer;
 }
 
 .kit:first-child {
-    border-top: none;
+    border-top: 5px;
 }
 
 .kit input[type="radio"] {
-    display: none;
+    display: flex;
 }
 
 .kit label {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 }
 
 .kit h3 {
-    margin: 0;
-    font-size: 18px;
+    padding: 10%;
+    font-size: 1rem;
     color: #333;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+
 }
 
 .kit p {
-    margin: 5px 0 0;
-    color: #666;
+    margin: 5px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
 }
 
-.kit .price {
+.kit .preco {
     font-size: 24px;
-    color: #333;
+    color: #000;
     font-weight: bold;
 }
 
 .kit input[type="radio"]:checked + label {
     background-color: #eee;
-    border-left: 5px solid green;
+    border-left: 5px solid #001f5b;
 }
 
-.price {
-    font-size: 1.2em;
-    color: #333;
+.preco {
+    font-size: 1.5rem;
+    color: #000;
 }
 /* ------------------------------------------------------------------------------------- */
 
@@ -160,7 +171,7 @@ main {
     color: #fff;
     text-align: center;
     padding: 15px;
-    border-radius: 2px;
+    /* border-radius: 2px; */
     margin: -20px ;
 }
 
@@ -187,18 +198,18 @@ main {
     border-radius: 10px;
 }
 
-.carro-selecionado .price, .kit-selecionado .price, .valor-total .price {
+.carro-selecionado .preco, .kit-selecionado .preco, .valor-total .preco {
     font-size: 24px;
     font-weight: bold;
     color: #333;
 }
 
-.carro-selecionado .price {
+.carro-selecionado .preco {
     display: block;
     margin-top: 10px;
 }
 
-.kit-selecionado .price {
+.kit-selecionado .preco {
     display: block;
     margin-top: 5px;
 }
