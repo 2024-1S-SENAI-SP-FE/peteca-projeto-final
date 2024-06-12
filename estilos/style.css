@@ -224,7 +224,6 @@ input::placeholder {
     height: 80vh;
     width: auto;
     transform: translate(10%, -20%);
-
 }
 
 .carousel-item:nth-child(4) img {
