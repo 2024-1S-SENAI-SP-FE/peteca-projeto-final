@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.package {
+    width: 500px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.package-header {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.package-header.selected {
+    background-color: #d0d0d0;
+}
+
+.package-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.package-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.package-content {
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.package-content p {
+    margin: 0;
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+/*
+.container {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+.dados-pessoais h2 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.dados-pessoais p {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.forma-pagamento h2 {
+    font-size: 16px;
+    margin: 20px 0 10px;
+}
+
+.tipo-pagamento {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* .payment-option:last-child {
+    border-bottom: none;
+} */
+
+/* .payment-option img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.forma-pagamento label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.payment-option input {
+    margin-right: 10px;
+}
+
+.payment-option.selected {
+    background-color: #e0f7fa;
+    border-left: 4px solid #00c853;
+    position: relative;
+}
+
+.checkmark {
+    position: absolute;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+} */ 

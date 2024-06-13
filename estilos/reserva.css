@@ -16,7 +16,29 @@ main {
 
 /* ----------------------------- DADOS PESSOAIS ---------------------------------------- */
 .dados-pessoais {
-    margin-bottom: 20px;
+    /* background-color: #ffffff; */
+    /* border: 1px solid #dcdcdc;
+    border-radius: 8px; */
+    padding: 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 320px;
+}
+
+.dados-pessoais h2 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dados-pessoais p {
+    font-size: 14px;
+    margin: 0 0 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+    /* margin-bottom: 20px;
 }
 
 .dados-pessoais h2 {
@@ -30,7 +52,7 @@ main {
     font-size: 1rem;
     font-weight: 500;
     margin: 5px 0;
-}
+} */
 /* ------------------------------------------------------------------------------------- */
  
 /* ------------------------------ FORMA DE PAGAMENTO ------------------------------------ */
@@ -45,7 +67,7 @@ main {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 20px 0 10px;
 }
 
 .forma-pagamento form {
@@ -55,16 +77,29 @@ main {
 
 .forma-pagamento label {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    /* display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px; */
 }
 
 .forma-pagamento input[type="radio"] {
     margin-right: 10px;
 }
+
+.tipo-pagamento {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+
 
 .forma-pagamento label img {
     margin-left: auto;
@@ -76,10 +111,11 @@ main {
 
 /* --------------------------------- KITS ----------------------------------------------- */
 .kits {
-    /* width: %; */
-    display: flex;
-    width: 25%;
-    margin: 10px auto;
+    width: 100%;
+    align-items: flex-start;
+    /* display: flex;
+    width: 25%; */
+    margin: 10px;
     background-color: #fff;
     border-radius: 5px;
     /* box-shadow: 0 0 10px; */
@@ -180,6 +216,13 @@ main {
     border-bottom: 1px solid #ddd;
 }
 
+.carro-selecionado h3, .kit-selecionado h3, .valor-total h3 {
+    font-size: .5rem;
+    color: #000;
+    font-weight: 700;
+
+}
+
 .reserva p, .carro-selecionado p, .kit-selecionado p, .valor-total p {
     text-align: justify;
     line-height: 1.6;
@@ -190,6 +233,7 @@ main {
 .reserva strong, .carro-selecionado strong, .kit-selecionado strong, .valor-total strong {
     font-weight: bold;
     color: #000;
+    margin-top: 5px;
 }
 
 .carro-selecionado img {
