@@ -14,7 +14,7 @@ body {
     border: 1px solid #ccc;
 }
 
-.package-header {
+.header-kits {
     background-color: #e0e0e0;
     display: flex;
     justify-content: space-between;
@@ -23,16 +23,12 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
-.package-header.selected {
-    background-color: #d0d0d0;
-}
-
-.package-title {
+.kit-titulo {
     font-size: 18px;
     font-weight: bold;
 }
 
-.package-price {
+.kit-preco {
     font-size: 18px;
     font-weight: bold;
 }
@@ -44,6 +40,8 @@ body {
 
 .package-content p {
     margin: 0;
+    padding: 15px;
+    background-color: #f9f9f9;
 }
 
  
