@@ -12,3 +12,17 @@ O objetivo desse arquivo é criar uma documentação de todas as IDs e Class usa
 4. `class="btn-menu-sanduba"` -> index.html - linha 16 
 *(class criada para ser o botão usado no mobile)*
 
+5. `class="imgCar"` -> artigo1.html - linha 16 *(class criada para separar a primeira imagem dos outros conteúdos que estao abaixo dela)*
+
+6. `class= "div-centro"` -> artigo1.html - linha 19 *(class criada para colocar as div's no centro)*
+
+7. `class="blocos"` -> artigo1.html - limha 20 *(class criada para deixar textos e imagens num mesmo espaçamento)*
+
+8. `class="class-size-img"` -> artigo1.html - linha 41 e 42 *(class criada para deixar imagens lado a lado)*
+
+9. `class="imgCar2" ` -> artigo1.html - linha 80 *(class criada para separar a penúltima imagem dos conteúdos que estão acima dela)*
+
+10. `class="conteudo-bottom"` -> artigo2.html - linha 74 *( class criada para )*
+
+11. *( as class do artigo3.html são as mesmas que as dos dois primeiros artigos)*
+
