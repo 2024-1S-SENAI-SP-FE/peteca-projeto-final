@@ -185,29 +185,35 @@ dadosCarros.forEach((dados) => {
 console.log("Carros adicionados:", dadosCarros.length);
 
 
-//Lógica do flip
-/*
-Detectar o click no link
-Executar a animação no card especifico
-Colocar as informações respectivas do carro 
-*/
 
 
-const detalhes = document.querySelectorAll('.detalhes')
 
-let paiDoContainerInfo;
 
-detalhes.forEach(detalhes => {
-  
-  detalhes.addEventListener("click", () => {
-    const card = detalhes.parentElement;
-    let paiDoContainerInfo = card.parentElement
-    paiDoContainerInfo.classList.add("flip-card");
-    detalhes.innerHTML = 'voltar'
 
-    setInterval(() => {
-      paiDoContainerInfo.classList.remove('flip-card')
-      detalhes.innerHTML = "detalhes";
-    }, 2000)
-  })
+
+
+// Logica da execução da animação de flip-------------------------------------------------------------------
+
+let ancorasFlip = document.querySelectorAll('.detalhes')
+
+ancorasFlip.forEach((ancora) => {
+  ancora.addEventListener("click", () => {
+    const paiAncora = ancora.parentElement;
+    const avoAncora = paiAncora.parentElement;
+
+    if (avoAncora.classList.contains("flip-card")) {
+      avoAncora.classList.remove("flip-card");
+      avoAncora.classList.add('flip-card-normal')
+      ancora.innerHTML = "detalhes";
+    } else if (avoAncora.classList.contains('flip-card-normal')) {
+      avoAncora.classList.remove("flip-card-normal");
+      avoAncora.classList.add('flip-card')
+      ancora.innerHTML = "voltar";
+
+    } else {
+      avoAncora.classList.add('flip-card')
+      ancora.innerHTML = "voltar";
+    }
+    
+  });
 });
