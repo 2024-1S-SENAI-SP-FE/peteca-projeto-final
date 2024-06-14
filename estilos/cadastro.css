@@ -212,33 +212,55 @@ input::placeholder {
        
           font-size: 50px;
         
-          margin-left:490px;
+          margin-left:500px;
           margin-top: 0px;
+          margin-bottom: 100px;
           
       }
       .btn-login{
       
          margin-top: 20px;
-         width: 13rem;
-         margin-left: 190px;
+         width: 18rem;
+         height: 50px;
+         margin-left: 380px;
 
          
       }
       #nome,.label-login{
           width: 100%;
           margin-left: 50%;
+          
         
         }
         .login{
         height: 100%;   
         width: 100%;
         margin: 0px;
+
      
         }
-        body{
-            margin-bottom: 100%;
-        }
+        
         .btn-link{
-            margin-left: 300px;
+            margin-left: 440px;
+            position: absolute;
+
+
+        
+        }
+        #nome{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .form-login{
+            
+            /* border-bottom: 4px solid black; */
+            width: 540px;
+            margin-left: 20px;
+            
+        }
+        input{
+            border-bottom: 4px solid black;
+            margin-bottom: 30px;
+        
         }
 }
