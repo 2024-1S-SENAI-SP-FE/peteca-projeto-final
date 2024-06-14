@@ -466,9 +466,13 @@ a {
 /* Animação de transição do Flip */
 
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   animation: Flip 800ms forwards;
   /* perspective: 1000px; */
+}
+
+.flip-card-normal{
+animation: FlipReverse 800ms forwards;
 }
 @keyframes Flip {
   from {
@@ -476,5 +480,13 @@ a {
   }
   to {
     transform: rotateY(180deg);
+  }
+}
+@keyframes FlipReverse {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
