@@ -120,6 +120,49 @@
     }
 
     #carrossel {
+        /* display: none; */
+        height: 90vh;
+    }
+
+    #carrossel>h1 {
+        font-size: 24px;
+    }
+    
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        height: 20%;
+        width: auto;
+    }
+
+    .carousel-item:first-child img {
+        height: auto;
+        width: 80%;
+        transform: translate(-12%, 0);
+
+    }
+
+    .carousel-caption {
+        display: block !important;
+        height: 100%;
+        width: 95%;
+        left: 1rem;
+        top: 12rem;
+    }
+
+    .carousel-caption h1 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .carousel-caption a {
         display: none;
     }
 
