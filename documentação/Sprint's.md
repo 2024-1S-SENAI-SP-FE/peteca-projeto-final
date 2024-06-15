@@ -28,13 +28,13 @@
     6.1 - Responsividade - <span style="color: orange">Em progresso</span>  
     6.2 - Validação de dados inseridos - <span style="color: #fa3e3e">A fazer</span>  
 
-7. Página de Artigo 1 - <span style="color: orange">Em progresso</span>  
+7. Página de Artigo 1 - <span style="color: orange">Feito</span>  
     7.1 - Responsividade - <span style="color: orange">Em progresso</span>  
 
-8. Página de Artigo 2 - <span style="color: orange">Em progresso</span>  
+8. Página de Artigo 2 - <span style="color: orange">Feito</span>  
     8.1 - Responsividade - <span style="color: orange">Em progresso</span>  
 
-9. Página de Artigo 3 - <span style="color: orange">Em progresso</span>  
+9. Página de Artigo 3 - <span style="color: orange">Feito</span>  
     9.1 - Responsividade - <span style="color: orange">Em progresso</span>  
 
 10. Rodapé dinâmico com Javascript - <span style="color: orange">Em progresso</span>  
