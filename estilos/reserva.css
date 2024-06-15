@@ -15,9 +15,6 @@ main {
 }
 
 /* ----------------------------- DADOS PESSOAIS ---------------------------------------- */
-.container-dados-pag-kit{
-    
-}
 
 .dados-pessoais {
     padding: 20px;
@@ -39,24 +36,11 @@ main {
     font-size: 1rem;
     font-weight: 500;
 }
-    /* margin-bottom: 20px;
-}
 
-.dados-pessoais h2 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.dados-pessoais p {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 5px 0;
-} */
 /* ------------------------------------------------------------------------------------- */
  
 /* ------------------------------ FORMA DE PAGAMENTO ------------------------------------ */
+
 .forma-pagamento section {
     margin-bottom: 20px;
     justify-content: left;
@@ -84,12 +68,7 @@ main {
     cursor: pointer;
     width: 100%;
     margin-bottom: 10px;
-    /* display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px; */
+    
 }
 
 .forma-pagamento input[type="radio"] {
@@ -113,13 +92,12 @@ main {
 /* -------------------------------------------------------------------------------------- */
 
 /* --------------------------------- KITS ----------------------------------------------- */
+
 .kits {
-    margin-bottom: 20px;
+    margin-right: 40px;
     width: 100%;
     align-items: flex-start;
-    margin: 10px;
     background-color: #fff;
-    border-radius: 5px;
 }
 
 .kits h2 {
@@ -131,46 +109,55 @@ main {
     background-color: #333;
     color: #fff;
     padding: 15px;
-    margin: 0;
 }
 
 .kit {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     padding: 10px;
-    border-radius: 5px;
-    border-top: 1px solid #ccc;
+    border-radius: 2px;
+    /* border-top: 1px solid #ccc; */
     display: flex;
-    align-items: justify;
+    align-items:flex-start;
     padding: 20px;
     cursor: pointer;
 }
 
 .kit:first-child {
     border-top: 5px;
+    cursor: pointer;
 }
 
 .kit input[type="radio"] {
     display: flex;
+    cursor: pointer;
+    align-items: center;
 }
 
 .kit label {
-    display: flex;
+    /* display: flex; */
     justify-content: space-evenly;
     width: 100%;
+    cursor: pointer;
+    display: block;
+    /* padding: 20px; */
+    /* border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e8e8e8; */
+    position: relative;
 }
 
 .header-kits {
-    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
     padding: 15px;
-    border-bottom: 1px solid #ccc;
     cursor: pointer;
 }
 
 .kit-titulo {
+    margin-right: 40px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -182,14 +169,12 @@ main {
 }
 
 .kit p {
-    /* margin: 5px; */
     color: #333;
     text-align: justify;
     line-height: 1.6;
     cursor: pointer;
-    margin: 0;
-    padding: 15px;
-    background-color: #f9f9f9;
+    padding: 10px;
+    /* background-color: #f9f9f9; */
 }
 
 .kit input[type="radio"]:checked + label {
@@ -201,7 +186,7 @@ main {
 
 /* --------------------- Estilo do bloco de resumo da reserva -------------------------- */
 .resumo-reserva {
-    margin: 50px auto;
+    margin: 10px;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px #ccc;
