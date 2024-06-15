@@ -1,5 +1,6 @@
 @media screen and (max-width: 430px) {
-    body {
+    /* responsividade da página sobre nós */
+body {
         margin: 0;
         padding: 0;
     }
