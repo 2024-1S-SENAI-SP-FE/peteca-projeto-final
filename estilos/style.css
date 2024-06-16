@@ -383,7 +383,7 @@ input::placeholder {
 }
 
 .card {
-    background-color: var(--azul-padrao);
+    background-color: var(--branco-padrao);
     border: none;
 }
 
@@ -393,12 +393,11 @@ input::placeholder {
 
 .card h1 {
     font-weight: 900;
+    font-size: 1rem;
     line-height: 1.1rem;
-    color: var(--branco-padrao);
 }
 
 .card p {
-    color: var(--branco-padrao);
     line-height: 1.1rem;
 }
 
