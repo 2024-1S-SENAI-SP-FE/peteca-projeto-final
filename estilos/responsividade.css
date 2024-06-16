@@ -1,3 +1,9 @@
+@media screen and (max-width: 320px) {
+    #carrossel {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 430px) {
 
     header {
@@ -121,7 +127,7 @@
 
     #carrossel {
         /* display: none; */
-        height: 90vh;
+        height: 68vh;
     }
 
     #carrossel>h1 {
@@ -144,12 +150,28 @@
 
     }
 
+    .carousel-item:nth-child(2) img {
+        width: 80%;
+        transform: translate(-12%, 0);
+    }
+
+    .carousel-item:nth-child(3) img {
+        width: 100%;
+        height: auto;
+        transform: translate(4%, 0);
+    }
+
+    .carousel-item:nth-child(4) img {
+        width: 80%;
+        transform: translate(-12%, 0);
+    }
+
     .carousel-caption {
         display: block !important;
         height: 100%;
         width: 95%;
         left: 1rem;
-        top: 12rem;
+        top: 13.5rem;
     }
 
     .carousel-caption h1 {
@@ -159,7 +181,11 @@
 
     .carousel-caption p {
         margin: 0.5rem 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption button {
+        margin: 1rem 0;
     }
 
     .carousel-caption a {
@@ -288,5 +314,17 @@
         padding-left: 25px;
         padding-right: 25px;
         gap: 15px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    #carrossel {
+        height: 78vh;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 390px){
+    #carrossel {
+        height: 72vh;
     }
 }
