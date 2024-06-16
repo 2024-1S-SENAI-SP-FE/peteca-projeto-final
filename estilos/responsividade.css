@@ -1,3 +1,9 @@
+@media screen and (max-width: 320px) {
+    #carrossel {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 430px) {
 
     header {
@@ -120,32 +126,77 @@
     }
 
     #carrossel {
+        /* display: none; */
+        height: 68vh;
+    }
+
+    #carrossel>h1 {
+        font-size: 24px;
+    }
+    
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        height: 20%;
+        width: auto;
+    }
+
+    .carousel-item:first-child img {
+        height: auto;
+        width: 80%;
+        transform: translate(-12%, 0);
+
+    }
+
+    .carousel-item:nth-child(2) img {
+        width: 80%;
+        transform: translate(-12%, 0);
+    }
+
+    .carousel-item:nth-child(3) img {
+        width: 100%;
+        height: auto;
+        transform: translate(4%, 0);
+    }
+
+    .carousel-item:nth-child(4) img {
+        width: 80%;
+        transform: translate(-12%, 0);
+    }
+
+    .carousel-caption {
+        display: block !important;
+        height: 100%;
+        width: 95%;
+        left: 1rem;
+        top: 13.5rem;
+    }
+
+    .carousel-caption h1 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption button {
+        margin: 1rem 0;
+    }
+
+    .carousel-caption a {
         display: none;
     }
 
     #artigos {
         flex-direction: column;
     }
-}
-
-@media screen and (min-width: 430px) and (max-width: 835px) {
-
-    header {
-        min-height: 70vh;
-        /* background-position: -250px; */
-    }
-
-    .busca-carro {
-        flex-wrap: nowrap;
-    }
-
-}
 
 
-
-
-/*FOOTER-responsividade*/
-@media screen and (max-width: 430px) {
     footer {
         width: 100%;
         height: 100%;
@@ -163,10 +214,97 @@
         height: 100%;
         width: 100%;
     }
-
 }
 
 @media screen and (min-width: 430px) and (max-width: 835px) {
+
+    header {
+        min-height: 70vh;
+        background-position: center;
+    }
+
+    .busca-carro {
+        flex-wrap: nowrap;
+    }
+
+    /* Carrossel */
+
+    #carrossel {
+        height: 600px;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        float: none;
+    }
+
+    .carousel-item:first-child img {
+        width: 100%;
+        height: 100%;
+        transform: translate(-1%, -12%);
+    }
+
+    .carousel-item:nth-child(2) img {
+        width: 100%;
+        /* height: 45vh; */
+        transform: translate(-1%, -12%);
+    }
+
+    .carousel-item:nth-child(2) .carousel-caption {
+        top: 73%;
+    }
+
+    .carousel-item:nth-child(3) img {
+        height: auto;
+        transform: translate(-8%, -16%);
+    }
+
+    .carousel-item:nth-child(3) .carousel-caption {
+        height: 100vh;
+        padding: auto;
+        top: 79%;
+    }
+
+    .carousel-item:nth-child(4) img {
+        width: 99%;
+        transform: translate(0, -10%);
+    }
+
+    .carousel-item:nth-child(4) .carousel-caption {
+        height: 100vh;
+        padding: auto;
+        top: 72%;
+    }
+
+    .carousel-item .carousel-caption {
+        height: auto;
+        width: 100%;
+        top: 70%;
+        left: 0;
+    }
+
+    .carousel-caption h1 {
+        margin: 0;
+    }
+
+    .carousel-caption p {
+        display: none;
+    }
+
+    .carousel-caption a {
+        display: none;
+    }
+
+    /* Artigos */
+
+    .card img {
+        height: 200px;
+    }
+
+    /* Footer */
 
     footer {
         min-height: 30vh;
@@ -176,5 +314,17 @@
         padding-left: 25px;
         padding-right: 25px;
         gap: 15px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    #carrossel {
+        height: 78vh;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 390px){
+    #carrossel {
+        height: 72vh;
     }
 }
