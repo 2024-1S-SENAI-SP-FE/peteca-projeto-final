@@ -217,3 +217,31 @@ ancorasFlip.forEach((ancora) => {
     
   });
 });
+
+
+
+const btnRegistrar = document.querySelector('.btn-registrar')
+const divRegistrar = document.querySelector('.div-registrar')
+  btnRegistrar.addEventListener('click', () => {
+    btnRegistrar.classList.add('ocultar')
+    divRegistrar.classList.add('registrando')
+
+    const interval1 = setInterval(registrou => {
+      divRegistrar.classList.remove("registrando");
+      divRegistrar.classList.add("registrou");divRegistrar.innerHTML = 'Registrado✅'
+    }, 1000)
+    const interval2 = setInterval(() => {
+      btnRegistrar.classList.remove("ocultar");
+      divRegistrar.classList.remove("registrando");
+      divRegistrar.classList.remove("registrou");
+      divRegistrar.innerHTML = "Agora escolha o carro desejado";
+      
+      divRegistrar.style.height='auto '
+    }, 3000)
+
+    setTimeout(() => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+    }, 3000);
+    
+})
