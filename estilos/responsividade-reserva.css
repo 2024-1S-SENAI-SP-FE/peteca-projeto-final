@@ -1,80 +1,50 @@
-.container-dados-pag-kit {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-section {
-    flex: 1 1 45%;
-    margin: 10px;
-}
-
-/* Estilos específicos para dispositivos móveis */
-@media (max-width: 768px) {
-    .container-dados-pag-kit {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    section {
+@media (max-width: 1200px) {
+    .container-dados-pag-kit, .resumo-reserva {
         flex: 1 1 100%;
-        margin: 10px 0;
-    }
-    
-    .resumo-reserva img {
-        width: 100%;
-        height: auto;
-    }
-
-    .resumo-reserva .carro-selecionado,
-    .resumo-reserva .kit-selecionado,
-    .resumo-reserva .valor-total {
-        text-align: center;
-    }
-
-    .resumo-reserva .preco {
-        display: block;
-        margin: 10px 0;
-    }
-
-    button {
-        width: 100%;
-        padding: 15px;
-        font-size: 1.2em;
+        max-width: 100%;
     }
 }
 
-/* Estilos específicos para tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container-dados-pag-kit {
-        flex-direction: row;
-        flex-wrap: wrap;
+@media (max-width: 768px) {
+    .header-kits {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    
-    section {
-        flex: 1 1 45%;
-        margin: 15px;
+
+    .header-kits span {
+        margin-bottom: 5px;
     }
-    
+
+    .kit {
+        padding: 10px 5px;
+    }
+
     .resumo-reserva img {
         width: 100%;
         height: auto;
     }
+}
 
-    .resumo-reserva .carro-selecionado,
-    .resumo-reserva .kit-selecionado,
-    .resumo-reserva .valor-total {
-        text-align: center;
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
     }
 
-    .resumo-reserva .preco {
-        display: block;
-        margin: 10px 0;
+  .dados-pessoais, .forma-pagamento, .kits, .resumo-reserva  h2 {
+        font-size: 1.2em;
     }
 
-    button {
+    .preco {
+        font-size: 1em;
+    }
+
+    .resumo-reserva button {
         width: 100%;
         padding: 15px;
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .kit {
+        padding: 5px;
     }
 }
