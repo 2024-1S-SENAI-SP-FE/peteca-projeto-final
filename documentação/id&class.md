@@ -22,7 +22,4 @@ O objetivo desse arquivo é criar uma documentação de todas as IDs e Class usa
 
 9. `class="imgCar2" ` -> artigo1.html - linha 80 *(class criada para separar a penúltima imagem dos conteúdos que estão acima dela)*
 
-10. `class="conteudo-bottom"` -> artigo2.html - linha 74 *( class criada para )*
-
-11. *( as class do artigo3.html são as mesmas que as dos dois primeiros artigos)*
-
+10.

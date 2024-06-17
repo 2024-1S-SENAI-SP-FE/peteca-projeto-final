@@ -51,12 +51,10 @@ p {
   margin: 2rem;
   text-align: justify;
 }
-
 .blocos img {
   width: 100%;
   height: 385px;
 }
-
 .blocos h2 {
     margin-bottom: 1rem;
     font-weight: 900;
@@ -66,26 +64,17 @@ p {
 .blocos p{
     margin-bottom: 1rem;
 }
-
 #bloco-img {
     display: flex;
-    gap: 7rem;
+    gap: 15rem;
+    justify-content: center;
 }
 .class-size-img {
   width: 36rem;
   height: 20rem;
+  display: flex;
+  justify-content: center;
 }
-
-.conteudo-bottom h2 {
-    font-size: 18px;
-    margin-bottom: 1rem;
-    font-weight: 900;
-    margin: 1rem;
-}
-.conteudo-bottom p {
-    margin: 1rem 1rem;   
-}
-.conteudo-bottom 
 
 #p-bloco {
   margin-left: 60px;
