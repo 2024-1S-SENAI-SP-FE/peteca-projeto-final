@@ -1,109 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-* {
-  font-family: "Inter", sans-serif !important;
+#artigos{
+    margin: 1rem 2rem 1rem 2rem;/* margem com ajuste automático */
+    font-size: 14px; /* o padrão é 16px */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 150;
+    background-color: #00095b     
 }
-#artigos {
-  margin: 1rem 2rem 1rem 2rem; /* margem com ajuste automático */
-  font-size: 14px; /* o padrão é 16px */
-  /* font-family: "Inter", sans-serif; */
-  font-weight: 150;
-  background-color: #00095b;
-}
-h1 {
-  text-align: center;
-  font-weight: bold;
+h1{
+    margin: 0;
+    text-align: center;
 }
 
-h2 {
-  text-align: center;
-  line-height: 2rem;
+h2{ 
+    text-align: center;
+     font-size: 30px;
+    line-height: 0.4;
 }
-
-h3 {
-  margin: 1rem;
-  font-size: 20px;
-  text-align: center;
+h3{
+    margin: 1rem;
+    font-size: 20px;
+    text-align: center;
 }
-p {
-  line-height: 1.5; /* altura da linha: 1,5x o tamanho padrão */
-  margin: 10px;
+p{
+    line-height: 1.5; /* altura da linha: 1,5x o tamanho padrão */
+    margin: 10px;
+    
+   }
+.imgCar{
+    width: 88rem;
+    height: 25rem;
 }
-.imgCar {
-  width: 88rem;
-  height: 25rem;
+#id-img{
+    display: flex;
+    justify-content: center;
 }
-#id-img {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.div-centro{
+    display: flex;
+   
 }
-#id-img {
-  display: flex;
-  justify-content: center;
-}
-.div-centro {
-  display: flex;
-  gap: 2rem;
-}
-.blocos {
-  width: 45%;
-  margin: 2rem;
+.blocos{
+    margin: 30px;
+   padding: 10px;
   text-align: justify;
 }
-
-.blocos img {
-  width: 100%;
-  height: 385px;
+.class-size-img{
+    width: 36rem;
+    height: 20rem;
 }
-
-.blocos h2 {
-    margin-bottom: 1rem;
-    font-weight: 900;
-    font-size: 16px;
-    margin: 1rem;
-}
-.blocos p{
-    margin-bottom: 1rem;
-}
-
-#bloco-img {
+#bloco-img{
     display: flex;
+    justify-content: center;
     gap: 7rem;
 }
-.class-size-img {
-  width: 36rem;
-  height: 20rem;
+#p-blocos{
+    margin-left: 60px;
 }
-
-.conteudo-bottom h2 {
-    font-size: 18px;
-    margin-bottom: 1rem;
-    font-weight: 900;
-    margin: 1rem;
+#p-container{
+    margin-top: 0;
+    margin-bottom: 3rem;
+    text-align: justify;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
-.conteudo-bottom p {
-    margin: 1rem 1rem;   
+.imgCar2{
+    width: 83.5rem;
+    height: 23em;
 }
-.conteudo-bottom 
-
-#p-bloco {
-  margin-left: 60px;
-}
-#p-container {
-  margin-top: 0;
-  margin-bottom: 3rem;
-  text-align: justify;
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-.imgCar2 {
-  width: 83.5rem;
-  height: 23em;
-}
-.botoes {
-  margin: 2rem 0;
-  display: flex;
-  gap: 1rem;
+.botoes{
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
 }
 /* Vendo se deu certo kkk*/
