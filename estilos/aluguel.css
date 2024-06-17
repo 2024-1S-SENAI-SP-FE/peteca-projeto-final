@@ -16,9 +16,9 @@ body {
   box-shadow: 2px 2px 3px 1px rgb(105, 105, 105);
   cursor: pointer;
 }
-/* .ocultar {
+.ocultar {
   display: none;
-} */
+}
 
 /* containers */
 .container-check-in {
@@ -138,23 +138,31 @@ input:focus {
 /* fim inputs */
 /* botão registrar */
 
-  /* .btn-registrar {
+  .btn-registrar {
     width: 100px;
     height: 30px;
     background-color: #06163e;
     color: white;
-    margin-top: 180px;
-    display: none;
+    /* margin-top: 10px; */
+    /* display: none; */
   }
-  .registrado{
-    animation: registrado 2s linear infinite;
-    border-top: 3px solid #06163e;
-    width: 10px; 
-    height: 30px;
-    width: 30px;
+  .registrando{
+    animation: registrado 1s linear infinite;
+    border: 3px solid #06163e;
+    border-top-color:transparent  ;
+    width: 50px;
+    height: 40px;
     border-radius: 50%; 
-    display: none;
-  } */
+    /* margin-top: 10px; */
+    /* display: none; */
+  }
+  .registrou{
+    width: 100px;
+    height: 50px;
+    /* background-color: #2dbd11; */
+    color: rgb(0, 0, 0);
+    /* margin-top: 10px; */
+  }
 /* Fim botão registrar */
 
 /*------------------------------------------------- carros aluguel --------------------------------------------*/
