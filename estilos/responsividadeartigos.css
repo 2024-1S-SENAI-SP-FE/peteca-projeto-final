@@ -1,0 +1,95 @@
+
+h1{
+    font-size: 2.5em;
+}
+h3{
+    font-size: 2.0em;
+}
+/* texto para telas menores */
+@media (max-width: 768px) {
+    .text-box {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+/* imagem banner */
+.imgCar {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+/* divisão de tema1 */
+.div-centro{
+    display: flex; 
+}
+.blocos{
+margin: 0.2px;
+padding: 20px;
+flex-direction: column;
+display: flex;
+flex-wrap: wrap;
+max-width: 100%;
+padding: 10px;
+box-sizing: border-box;
+flex: 1;
+max-width: 50%;
+padding: 10px;
+box-sizing: border-box;
+border: 1px solid;
+margin-bottom: 10px;
+/*justify-content: space-between; caso quiser que o final do texto fique alinhado um com o outro, porém desalinha o inicio*/
+}
+.blocos h2 {
+    margin: 15px 0;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    justify-content: center;
+    line-height: 1.2;  /* Altura da linha para evitar encavalamento */
+    word-break: break-word; /* Quebra de palavras longas */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+/* divisão de imagem */
+/* imagem para telas menores */
+@media (max-width: 768px) {
+    .bloco-img img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+#bloco-img{
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.class-size-img{
+    width: 36rem;
+    height: 20rem;
+}
+/* imagem estilo banner2 */
+.imgCar2 {
+    margin: 10px 0;
+    width: 800rem;
+    height: 23em;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+/* texto acima e depois da imagem estilo banner2 */
+#p-container h2 {
+    margin-top: 15px;
+    justify-content: center;
+}
+#p-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
