@@ -16,6 +16,9 @@ body {
   box-shadow: 2px 2px 3px 1px rgb(105, 105, 105);
   cursor: pointer;
 }
+/* .ocultar {
+  display: none;
+} */
 
 /* containers */
 .container-check-in {
@@ -123,6 +126,9 @@ input {
   border: none;
   outline: none;
 }
+/* .local-retirada{
+  width: 100%;
+} */
 
 input:focus {
   border: 2px solid black;
@@ -130,6 +136,26 @@ input:focus {
   box-shadow: none;
 }
 /* fim inputs */
+/* botão registrar */
+
+  /* .btn-registrar {
+    width: 100px;
+    height: 30px;
+    background-color: #06163e;
+    color: white;
+    margin-top: 180px;
+    display: none;
+  }
+  .registrado{
+    animation: registrado 2s linear infinite;
+    border-top: 3px solid #06163e;
+    width: 10px; 
+    height: 30px;
+    width: 30px;
+    border-radius: 50%; 
+    display: none;
+  } */
+/* Fim botão registrar */
 
 /*------------------------------------------------- carros aluguel --------------------------------------------*/
 .carros-aluguel {
@@ -259,7 +285,6 @@ a {
 .tipo-consumo {
   margin: 0 30px;
 }
-
 @media screen and (max-width: 600px) {
   body {
     min-height: 100vh;
@@ -328,14 +353,14 @@ a {
   .container-hora-retirada {
     margin: 10px 0;
   }
+
   /* -------------------------------------------carros */
 
   .carros-aluguel {
     display: grid;
     grid-template-columns: 300px;
-    /* place-items: center; */
     min-width: 300px;
-    /* margin: 0 0 0 35px; */
+    margin: 0 0 0 35px;
     padding: 0;
     width: 350px;
   }
@@ -362,11 +387,11 @@ a {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    width: 100%; 
+    width: 100%;
   }
 
   .container-detalhes .lado-a-lado {
-    width: 100px;
+    /* width: 100px; */
     height: auto;
     margin: 0 0 10px;
     display: flex;
@@ -399,54 +424,56 @@ a {
   }
 }
 
-
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-  .container-check-in{
+@media screen and (min-width: 600px) and (max-width: 900px){
+  .container-check-in {
     width: 100vw;
     margin: 100px 30px;
   }
-  .check-in{
+  .check-in {
     width: 650px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
   }
-  .container-data-retirada,.container-hora-retirada,.container-data-entrega,.container-hora-entrega{
+  .container-data-retirada,
+  .container-hora-retirada,
+  .container-data-entrega,
+  .container-hora-entrega {
     width: 200px;
     height: 60px;
     border-radius: 6px;
-    }
-  .container-data-retirada,.container-hora-retirada,.container-data-entrega,.container-hora-entrega input{
   }
-  input{
+   .container-data-retirada,
+  .container-hora-retirada,
+  .container-data-entrega,
+  .container-hora-entrega input {
+  } 
+  input {
     height: 80%;
     width: 100%;
     font-size: 25px;
     border: inherit;
-
   }
-  input:focus{
-     border: 4px solid black;
+  input:focus {
+    border: 4px solid black;
   }
-  .container-retirada{
+  .container-retirada {
     margin-right: 300px;
   }
-  .container-entrega{
-    /* margin-left: 80px; */
-  }
-  .container-local-retirada{
+  /* .container-entrega {
+    /* margin-left: 80px; 
+  } */
+  .container-local-retirada {
     width: 300px;
   }
-  .local-retirada{
+  .local-retirada {
     width: inherit;
-  }
-  
-  .hora-retirada{
+  } 
+
+ .hora-retirada {
     width: inherit;
     height: inherit;
-  }
-
-
+  } 
 
   .carros-aluguel {
     display: grid;
@@ -471,8 +498,8 @@ a {
   /* perspective: 1000px; */
 }
 
-.flip-card-normal{
-animation: FlipReverse 800ms forwards;
+.flip-card-normal {
+  animation: FlipReverse 800ms forwards;
 }
 @keyframes Flip {
   from {
@@ -490,3 +517,11 @@ animation: FlipReverse 800ms forwards;
     transform: rotateY(0deg);
   }
 }
+ @keyframes registrado {
+    from{
+      transform:rotate(0);
+    }
+    to{
+      transform:rotate(360deg);
+    }
+  }
