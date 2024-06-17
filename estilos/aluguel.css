@@ -335,7 +335,7 @@ a {
     grid-template-columns: 300px;
     /* place-items: center; */
     min-width: 300px;
-    margin: 0 0 0 35px;
+    /* margin: 0 0 0 35px; */
     padding: 0;
     width: 350px;
   }
@@ -362,11 +362,11 @@ a {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    width: 100%;
+    width: 100%; 
   }
 
   .container-detalhes .lado-a-lado {
-    /* width: 100px; */
+    width: 100px;
     height: auto;
     margin: 0 0 10px;
     display: flex;
