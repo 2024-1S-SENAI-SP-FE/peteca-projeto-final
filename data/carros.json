@@ -1,0 +1,20 @@
+{
+    "carros": [
+        
+        {
+            "id": "carro1",
+            "imagem": "",
+            "preco": "",
+            "modelo": "",
+            "ano": ""
+        },
+        
+        {
+            "id": "carro2",
+            "imagem": "",
+            "preco": "",
+            "modelo": "",
+            "ano": ""
+        }
+    ]
+}
