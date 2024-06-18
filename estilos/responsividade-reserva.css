@@ -1,119 +1,50 @@
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    padding: 20px;
+@media (max-width: 1200px) {
+    .container-dados-pag-kit, .resumo-reserva {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
-/* Estrutura básica */
-.container-dados-pag-kit {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Estilo das seções */
-section {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    flex: 1 1 300px;
-    min-width: 280px;
-}
-
-/* Cabeçalhos */
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* Estilo dos parágrafos e spans */
-p {
-    margin-bottom: 10px;
-}
-
-span.preco {
-    font-weight: bold;
-    color: #d9534f;
-}
-
-/* Estilo do formulário de pagamento */
-.forma-pagamento form {
-    display: flex;
-    flex-direction: column;
-}
-
-.tipo-pagamento {
-    margin-left: 8px;
-}
-
-/* Estilo dos kits */
-.kit {
-    margin-bottom: 20px;
-}
-
-.header-kits {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.kit-titulo {
-    font-weight: bold;
-}
-
-.kit-preco {
-    color: #d9534f;
-    font-weight: bold;
-}
-
-/* Estilo do resumo da reserva */
-.resumo-reserva {
-    flex: 1 1 100%;
-}
-
-.reserva, .carro-selecionado, .kit-selecionado, .valor-total {
-    margin-bottom: 20px;
-}
-
-.carro-selecionado img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-}
-
-/* Botão de finalizar reserva */
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: #5cb85c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-button:hover {
-    background: #4cae4c;
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
-    .container-dados-pag-kit {
+    .header-kits {
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-kits span {
+        margin-bottom: 5px;
+    }
+
+    .kit {
+        padding: 10px 5px;
+    }
+
+    .resumo-reserva img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+  .dados-pessoais, .forma-pagamento, .kits, .resumo-reserva  h2 {
+        font-size: 1.2em;
+    }
+
+    .preco {
+        font-size: 1em;
+    }
+
+    .resumo-reserva button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .kit {
+        padding: 5px;
     }
 }
