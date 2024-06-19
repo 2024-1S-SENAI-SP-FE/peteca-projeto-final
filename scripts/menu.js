@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {"url": "carros.html", "texto": "Carros"},
         {"url": "sobre-nos.html", "texto": "Sobre nós"},
         {"url": "contato.html", "texto": "Contatos"},
-        {"url": "login.html", "texto": '<img src="../icones/arrow-right-to-bracket-solid.svg" alt="">Log in'}
+        {"url": "login.html", "texto": '<img src="../icones/arrow-right-to-bracket-solid copy.svg" alt="">Log in'}
     ];
     
     function criaAncora(url, texto){
