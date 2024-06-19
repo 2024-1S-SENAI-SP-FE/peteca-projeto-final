@@ -119,7 +119,7 @@ main {
     border-radius: 2px;
     /* border-top: 1px solid #ccc; */
     display: flex;
-    align-items:flex-start;
+    /* align-items:flex-start; */
     padding: 20px;
     cursor: pointer;
 }
