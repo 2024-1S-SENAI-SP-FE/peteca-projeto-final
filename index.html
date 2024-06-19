@@ -88,26 +88,26 @@
 
         <div class="busca-carro">
             <select name="modelo" id="modelo">
-                <option value="" selected disabled>Veículo</option>
-                <option value="">F-150 Shelby</option>
-                <option value="">Mustang Mach 1</option>
-                <option value="">Ford Territory Titanium</option>
-                <option value="">Ranger Raptor</option>
-                <option value="">Mustang GT</option>
-                <option value="">Ford Super Duty F-450 DRW</option>
-                <option value="">Ranger XLS</option>
-                <option value="">Ford GT</option>
-                <option value="">Mustang Mach-E</option>
-                <option value="">Ford Explorer St</option>
-                <option value="">Shelby GT500</option>
-                <option value="">Maverick</option>
-                <option value="">Ford Ranger 3.2</option>
-                <option value="">Ranger P703</option>
-                <option value="">Bronco Sport</option>
+                <option selected disabled>Veículo</option>
+                <option value="carro1">F-150 Shelby</option>
+                <option value="carro2">Mustang Mach 1</option>
+                <option value="carro3">Ford Territory Titanium</option>
+                <option value="carro4">Ranger Raptor</option>
+                <option value="carro5">Mustang GT</option>
+                <option value="carro6">Ford Super Duty F-450 DRW</option>
+                <option value="carro7">Ranger XLS</option>
+                <option value="carro8">Ford GT</option>
+                <option value="carro9">Mustang Mach-E</option>
+                <option value="carro10">Ford Explorer St</option>
+                <option value="carro11">Shelby GT500</option>
+                <option value="carro12">Maverick</option>
+                <option value="carro13">Ford Ranger 3.2</option>
+                <option value="carro14">Ranger P703</option>
+                <option value="carro15">Bronco Sport</option>
             </select>
             <input type="text" placeholder="Local">
-            <input type="date">
-            <input type="date">
+            <input type="date" id="retirada">
+            <input type="date" id="devolucao">
             <button>Reservar</button>
         </div>
 
@@ -192,7 +192,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
+                                    <button type="button" class="btn btn-primary" value="carro12">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -201,14 +201,13 @@
             </div>
 
             <div class="carousel-item">
-                <img src="imagens/iloveimg-resized/ford_23rangerraptor4wdtc4b_angularfront.png"
-                    alt="">
+                <img src="imagens/iloveimg-resized/ford_23rangerraptor4wdtc4b_angularfront.png" alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="text-body">Range Raptor</h1>
                     <p class="text-body text-start">Versão mais poderosa da picape tem motor diesel de 213 cv e câmbio
                         automático
                         de dez marchas; Ranger Raptor foi inspirada na ‘irmã’ F-150 Raptor</p>
-                    <button type="button" class="btn btn-primary">Alugue já</button>
+                    <button type="button" class="btn btn-primary" value="carro5">Alugue já</button>
                     <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalRaptor">Exibir
                         detalhes</a>
 
@@ -486,6 +485,23 @@
     </footer><!-- Fim footer -->
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--Script para definir data mínima-->
+    <script>
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+
+        dateInputs.forEach(dateInput => {
+            const today = new Date(); // Pega a data atual para cada input
+            const yyyy = today.getFullYear();
+            const mm = today.getMonth() + 1;
+            const dd = today.getDate();
+
+            const todayString = `${yyyy}-${mm.toString().padStart(2, '0')}-${dd.toString().padStart(2, '0')}`;
+
+            dateInput.min = todayString;
+        });
+    </script>
+
 </body>
 
 </html>
