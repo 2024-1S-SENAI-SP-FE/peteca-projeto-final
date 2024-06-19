@@ -3,18 +3,18 @@
         
         {
             "id": "carro1",
-            "imagem": "",
-            "preco": "",
-            "modelo": "",
-            "ano": ""
+            "imagem": ".../imagens/iloveimg-resized/83db8adb14077b609539478ca6023c80.png",
+            "preco": "427,27",
+            "modelo": "F-150 Shelby",
+            "ano": "2023"
         },
         
         {
             "id": "carro2",
-            "imagem": "",
-            "preco": "",
-            "modelo": "",
-            "ano": ""
+            "imagem": "imagens/Mach1.png",
+            "preco": "514,81",
+            "modelo": "Mustang Mach 1",
+            "ano": "2024"
         }
     ]
 }
