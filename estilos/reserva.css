@@ -95,7 +95,8 @@ main {
 
 .kits {
     margin-right: 40px;
-    width: 100%;
+    max-width: 832px;
+    /* width: 100%; */
     align-items: flex-start;
     background-color: #fff;
 }
