@@ -1,84 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva de Carro</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu js -->
+    <script src="scripts/menu.js"></script>
     <link rel="stylesheet" href="/estilos/reset.css">
     <link rel="stylesheet" href="/estilos/reserva.css">
     <link rel="stylesheet" href="/estilos/responsividade-reserva.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
 </head>
-<body>    
+
+<body>
+
+    <div class="navbar">
+
+        <div class="container-fluid">
+            <button class="btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-3x" style="color: #1e1eb3; margin: 0;"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a data-bs-dismiss="offcanvas" aria-label="Close" class="btn-fechar"><i
+                                    class="fa-solid fa-xmark fa-xl" style="color: #f5f5f9;"></i>Fechar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-car"
+                                    style="color: #f5f5f9;"></i>Carros</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-newspaper" style="color: #f5f5f9;"></i>Artigos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Artigo 1</a></li>
+                                <li><a href="#">Artigo 2</a></li>
+                                <li><a href="#">Artigo 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-address-card"
+                                    style="color: #f5f5f9;"></i>Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-phone-volume"
+                                    style="color: #f5f5f9;"></i>Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i
+                                    class="fa-solid fa-arrow-right-to-bracket" style="color: #f5f5f9;"></i>Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
     <main>
-        
+
         <div class="container-dados-pag-kit">
 
-        <section class="dados-pessoais">
-            <h2>Dados Pessoais</h2>
-            <p> Nome do Usuário | (+55) XX XXXXX-XXX </p>
-            <p> EmaildoUsuário@gmail.com </p>
-        </section>
+            <section class="dados-pessoais">
+                <h2>Dados Pessoais</h2>
+                <p> Nome do Usuário | (+55) XX XXXXX-XXX </p>
+                <p> EmaildoUsuário@gmail.com </p>
+            </section>
 
-        <section class="forma-pagamento">
+            <section class="forma-pagamento">
 
-            <h2>Informe a Forma de Pagamento</h2>
+                <h2>Informe a Forma de Pagamento</h2>
 
-            <form>
-                <label>
-                    <input type="radio" name="pagamento" value="credito">
-                    <span class="tipo-pagamento">Cartão de Crédito</span>
-                </label>
-                <label>
-                    <input type="radio" name="pagamento" value="boleto">
-                    <span class="tipo-pagamento">Boleto Bancário</span>
-                </label>
-                <label>
-                    <input type="radio" name="pagamento" value="pix" checked>
-                    <span class="tipo-pagamento">PIX</span>
-                </label>
-            </form>
+                <form>
+                    <label>
+                        <input type="radio" name="pagamento" value="credito">
+                        <span class="tipo-pagamento">Cartão de Crédito</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="pagamento" value="boleto">
+                        <span class="tipo-pagamento">Boleto Bancário</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="pagamento" value="pix" checked>
+                        <span class="tipo-pagamento">PIX</span>
+                    </label>
+                </form>
 
-        </section>
+            </section>
 
-        <section class="kits">
+            <section class="kits">
 
-            <h2> Selecione um Kit </h2>
+                <h2> Selecione um Kit </h2>
 
-            <div class="kit">
-                <input type="radio" id="kit1" name="kit">
-                <label for="kit1">
-                    <div class="header-kits">
-                        <span class="kit-titulo">KIT 1 - PACOTE KIDS</span>
-                        <span class="kit-preco">$ 50</span>
-                    </div>
-                    <p>Cadeirinha e/ou Booster e/ou Bebê Conforto, Proteção para Vidros, Step Extra, Wi-Fi</p>
-                </label>
-            </div>
+                <div class="kit">
+                    <input type="radio" id="kit1" name="kit">
+                    <label for="kit1">
+                        <div class="header-kits">
+                            <span class="kit-titulo">KIT 1 - PACOTE KIDS</span>
+                            <span class="kit-preco">$ 50</span>
+                        </div>
+                        <p>Cadeirinha e/ou Booster e/ou Bebê Conforto, Proteção para Vidros, Step Extra, Wi-Fi</p>
+                    </label>
+                </div>
 
-            <div class="kit">
-                <input type="radio" id="kit2" name="kit">
-                <label for="kit2">
-                    <div class="header-kits">
-                        <span class="kit-titulo">KIT 2 - AVENTUREIRO</span>
-                        <span class="kit-preco">$ 30</span>
-                    </div>
-                    <p>GPS, Proteção para Vidros, Step Extra, Wi-Fi, Seguro de Assistência na Estrada</p>
-                </label>
-            </div>
+                <div class="kit">
+                    <input type="radio" id="kit2" name="kit">
+                    <label for="kit2">
+                        <div class="header-kits">
+                            <span class="kit-titulo">KIT 2 - AVENTUREIRO</span>
+                            <span class="kit-preco">$ 30</span>
+                        </div>
+                        <p>GPS, Proteção para Vidros, Step Extra, Wi-Fi, Seguro de Assistência na Estrada</p>
+                    </label>
+                </div>
 
-            <div class="kit">
-                <input type="radio" id="kit3" name="kit">
-                <label for="kit3">
-                    <div class="header-kits">
-                        <span class="kit-titulo">KIT 3 - MORO EM SÃO PAULO</span>
-                        <span class="kit-preco">$ 40</span>
-                    </div>
-                    <p>GPS, Proteção para Vidros, Step Extra, Seguro contra Roubo, Blindagem do Veículo, Coletá à Prova de Balas (Opcional)</p>
-                </label>
-            </div>
+                <div class="kit">
+                    <input type="radio" id="kit3" name="kit">
+                    <label for="kit3">
+                        <div class="header-kits">
+                            <span class="kit-titulo">KIT 3 - MORO EM SÃO PAULO</span>
+                            <span class="kit-preco">$ 40</span>
+                        </div>
+                        <p>GPS, Proteção para Vidros, Step Extra, Seguro contra Roubo, Blindagem do Veículo, Coletá à
+                            Prova de Balas (Opcional)</p>
+                    </label>
+                </div>
 
-        </section>
-     </div>
+            </section>
+        </div>
 
         <section class="resumo-reserva">
 
@@ -89,13 +150,14 @@
 
                 <p><strong>Retirada:</strong> Rua Moreira de Godói, 226 - Ipiranga / São Paulo - SP</p>
                 <p><strong>Data:</strong> 23/06/2024 às 11:30H</p>
-                <p><strong>Devolução:</strong>  Rua Moreira de Godói, 226 - Ipiranga / São Paulo - SP</p>
+                <p><strong>Devolução:</strong> Rua Moreira de Godói, 226 - Ipiranga / São Paulo - SP</p>
                 <p><strong>Data:</strong> 24/06/2024 às 11:30H</p>
             </div>
 
             <div class="carro-selecionado">
                 <h3>Carro Selecionado</h3>
-                <img src="/imagens/carro-reserva.jpeg" alt="Imagem de um carro esportivo de alta performance, modelo Ford GT, na cor preta com design aerodinâmico e um grande aerofólio traseiro."> 
+                <img src="/imagens/carro-reserva.jpeg"
+                    alt="Imagem de um carro esportivo de alta performance, modelo Ford GT, na cor preta com design aerodinâmico e um grande aerofólio traseiro.">
                 <span class="preco"> $450</span>
                 <p> Ford GT 2020 </p>
             </div>
@@ -113,9 +175,11 @@
             </div>
             <button type="button">Finalizar Reserva</button>
         </section>
-    
+
     </main>
 
     <script src="scripts/script.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
