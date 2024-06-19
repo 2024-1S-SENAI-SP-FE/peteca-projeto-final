@@ -219,29 +219,47 @@ ancorasFlip.forEach((ancora) => {
 });
 
 
+// ógica botão registrar -----------------------------------------------------------
 
-const btnRegistrar = document.querySelector('.btn-registrar')
-const divRegistrar = document.querySelector('.div-registrar')
-  btnRegistrar.addEventListener('click', () => {
-    btnRegistrar.classList.add('ocultar')
-    divRegistrar.classList.add('registrando')
 
-    const interval1 = setInterval(registrou => {
+
+const btnRegistrar = document.querySelector(".btn-registrar");
+btnRegistrar.addEventListener("click", () => {
+  let inputLocal = document.querySelector(".local-retirada").value,
+    dataRetirada = document.querySelector(".data-retirada").value,
+    horaRetirada = document.querySelector(".hora-retirada").value,
+    dataEntrega = document.querySelector(".data-entrega").value,
+    horaEntrega = document.querySelector(".hora-entrega").value;
+  let erro;
+  if(!inputLocal) erro = 'O local não está definido, por favor defina'
+  if(!dataRetirada) erro = "Faltam alguns campos para definir:)";
+  if(!horaRetirada) erro = "Faltam alguns campos para definir:)";
+  if(!dataEntrega) erro = "Faltam alguns campos para definir:)";
+  if (!horaEntrega) erro = "Faltam alguns campos para preencher";
+
+  if (!inputLocal&&!dataEntrega&&!dataRetirada&&!horaEntrega&&!horaRetirada) {
+    window.alert('Nenhum campo preenchido, por favor, digite as informações necessarias')
+  }
+   else if (erro) {
+   window.alert(erro)
+  } else {
+    const divRegistrar = document.querySelector(".div-registrar");
+
+    btnRegistrar.classList.add("ocultar");
+    divRegistrar.classList.add("registrando");
+
+    setTimeout(() => {
       divRegistrar.classList.remove("registrando");
-      divRegistrar.classList.add("registrou");divRegistrar.innerHTML = 'Registrado✅'
-    }, 1000)
-    const interval2 = setInterval(() => {
+      divRegistrar.classList.add("registrou");
+      divRegistrar.innerHTML = "Registrado✅";
+    }, 3000);
+
+    setTimeout(() => {
       btnRegistrar.classList.remove("ocultar");
       divRegistrar.classList.remove("registrando");
       divRegistrar.classList.remove("registrou");
       divRegistrar.innerHTML = "Agora escolha o carro desejado";
-      
-      divRegistrar.style.height='auto '
-    }, 3000)
-
-    setTimeout(() => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-    }, 3000);
-    
-})
+      divRegistrar.style.height = "auto";
+    }, 8000);
+  }
+});
