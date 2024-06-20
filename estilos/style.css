@@ -487,6 +487,11 @@ footer {
 /* Firefox */
 
 @-moz-document url-prefix() {
+
+    .busca-carro select {
+        text-indent: 1.5rem;
+    }
+
     .busca-carro input:nth-child(3) {
         background-image: url(../icones/calendar-solid.svg);
         background-size: 1rem;
