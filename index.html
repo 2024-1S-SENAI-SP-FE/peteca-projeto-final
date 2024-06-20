@@ -485,14 +485,14 @@
     </footer><!-- Fim footer -->
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+
     <!--Script para definir data mínima-->
     <script>
-
-        let retirada = document.getElementById('retirada').value;
-        while(!retirada) {
-            document.getElementById('devolucao').display = "none";
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             const startDateInput = document.getElementById('retirada');
             const endDateInput = document.getElementById('devolucao');
@@ -506,15 +506,22 @@
             startDateInput.min = todayString;
 
             startDateInput.addEventListener('change', () => {
-                const selectedDate = new Date(startDateInput.value);
-                selectedDate.setDate(selectedDate.getDate() + 2);
+                if (startDateInput.value) {
+                    endDateInput.readOnly = false;
 
-                const yyyy = selectedDate.getFullYear();
-                const mm = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
-                const dd = selectedDate.getDate().toString().padStart(2, '0');
+                    const selectedDate = new Date(startDateInput.value);
+                    selectedDate.setDate(selectedDate.getDate() + 1);
 
-                const nextDayString = `${yyyy}-${mm}-${dd}`;
-                endDateInput.min = nextDayString;
+                    const yyyy = selectedDate.getFullYear();
+                    const mm = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
+                    const dd = (selectedDate.getDate() + 1).toString().padStart(2, '0');
+
+                    const nextDayString = `${yyyy}-${mm}-${dd}`;
+                    endDateInput.min = nextDayString;
+                } else {
+                    endDateInput.readOnly = true;
+                    endDateInput.value = '';
+                }
             });
         });
     </script>
