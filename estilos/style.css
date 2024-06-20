@@ -162,6 +162,7 @@ input::placeholder {
     --bs-tooltip-color: white;
   }
 
+
 .busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     margin-left: 1.2rem;
@@ -481,4 +482,26 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: small;
+}
+
+/* Firefox */
+
+@-moz-document url-prefix() {
+    .busca-carro input:nth-child(3) {
+        background-image: url(../icones/calendar-solid.svg);
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: 96.5% 42%;
+        width: 166px;
+        text-indent: 1.5rem;
+    }
+    
+    .busca-carro input:last-of-type {
+        background-image: url(../icones/calendar-solid.svg);
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: 96.5% 42%;
+        width: 166px;
+        text-indent: 1.5rem;
+    }
 }
