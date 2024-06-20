@@ -13,10 +13,38 @@
             <label for="nome" class="label-login">Nome do Usuário</label>
             <input type="text" id="nome" />
             <label>Senha</label>
-            <input type="password" id="nome" />
-            <button  type="submit" class="btn-login">Entrar</button>
+            <input type="password"  class="senha" />
+            <button  type="button" class="btn-login">Entrar</button>
           </div>
         </form>
+        <script>
+         const dados = [
+          {"usuario": []},
+          {"senha": []},
+        ]
+        const usuario = dados.find(usuario => usuario.usuario ==='usuario')
+        const senha = dados.find(senha => senha.senha ==='senha')
+
+        document.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {executeFunction();}  });
+                    
+      
+
+        
+        function executeFunction() {
+          const inputUser = document.querySelector('#nome').value
+          const inputSenha = document.querySelector('.senha').value 
+          if(usuario){
+            usuario.push(inputUser)
+          }
+          if(senha){
+            senha.push(inputSenha)
+          }
+          console.log(dados.usuario.usuario, dados.senha.senha)
+        }
+         const btnEntrar = document.querySelector('.btn-login')
+        btnEntrar.addEventListener('click', executeFunction)
+        </script>
   </body>
 </html>
 <!-- Nessa pagina serve para colocar o login   -->

@@ -1,4 +1,8 @@
-
+body{
+    display: grid;
+    place-items: center;
+    min-height: 97vh;
+}
 
 .login {
 
@@ -17,10 +21,7 @@
 
 }
 
-body{
-    display: grid;
-    place-items: center;
-}
+
 
 .form-login {
     display: block;
@@ -42,10 +43,10 @@ body{
     margin-bottom: 60px;
 }
 
-.label-login {
+.label-login,label {
     color: #4e56a7;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 16px;
     letter-spacing: 2px;
     padding-left: 10px;
 }
@@ -61,16 +62,60 @@ body{
     color: rgb(0, 0, 0);
     border-color: black;
 }
+.senha{
+    height: 40px;
+    /*tamanho da caixa de botão*/
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    border-color: black;    
+}
 
 .btn-login {
     background: #00095b;
     height: 40px;
     line-height: 40px;
-    border-radius: 40px;
+    /* border-radius: 40px; */
     border: none;
     margin: 10px 0px;
     box-shadow: 0px, 0px 5px rgba(0, 0, 0, 0.3);
     color: white;
     border-radius: 30px;
     
+}
+.btn-login:active{
+    background: #00042c;
+    border:  2px solid black;
+
+}
+
+@media screen and (min-width:250px) and (max-width:600px) {
+    .login{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    label, .label-login{
+        font-size: 23px;
+    }
+}
+@media screen and (min-width:601px) and (max-width:1220px){
+    .login{
+        width: 70vw;
+        height: 70vh;
+        margin: 0 auto;
+    }
+    .titulo-login{
+        text-align: center;
+        font-size: 36px;
+    }
+    label, .label-login{
+        font-size: 30px;
+    }
+    #nome,.senha{
+        height: 80px;
+        padding: 10px;
+        font-size: 30px;
+    }
 }
