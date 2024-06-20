@@ -485,20 +485,37 @@
     </footer><!-- Fim footer -->
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    
     <!--Script para definir data mínima-->
     <script>
-        const dateInputs = document.querySelectorAll('input[type="date"]');
 
-        dateInputs.forEach(dateInput => {
-            const today = new Date(); // Pega a data atual para cada input
+        let retirada = document.getElementById('retirada').value;
+        while(!retirada) {
+            document.getElementById('devolucao').display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const startDateInput = document.getElementById('retirada');
+            const endDateInput = document.getElementById('devolucao');
+
+            const today = new Date();
             const yyyy = today.getFullYear();
-            const mm = today.getMonth() + 1;
-            const dd = today.getDate();
+            const mm = (today.getMonth() + 1).toString().padStart(2, '0');
+            const dd = today.getDate().toString().padStart(2, '0');
 
-            const todayString = `${yyyy}-${mm.toString().padStart(2, '0')}-${dd.toString().padStart(2, '0')}`;
+            const todayString = `${yyyy}-${mm}-${dd}`;
+            startDateInput.min = todayString;
 
-            dateInput.min = todayString;
+            startDateInput.addEventListener('change', () => {
+                const selectedDate = new Date(startDateInput.value);
+                selectedDate.setDate(selectedDate.getDate() + 2);
+
+                const yyyy = selectedDate.getFullYear();
+                const mm = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
+                const dd = selectedDate.getDate().toString().padStart(2, '0');
+
+                const nextDayString = `${yyyy}-${mm}-${dd}`;
+                endDateInput.min = nextDayString;
+            });
         });
     </script>
 
