@@ -107,7 +107,8 @@
             </select>
             <input type="text" placeholder="Local">
             <input type="date" id="retirada">
-            <input type="date" id="devolucao">
+            <input type="date" id="devolucao" readonly data-bs-toggle="tooltip" data-bs-placement="bottom"
+                data-bs-title="Escolha a data de retirada!"  data-bs-custom-class="custom-tooltip">
             <button>Reservar</button>
         </div>
 
@@ -487,8 +488,9 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        // Tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 
     <!--Script para definir data mínima-->
@@ -496,6 +498,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             const startDateInput = document.getElementById('retirada');
             const endDateInput = document.getElementById('devolucao');
+
+            const tooltip = new bootstrap.Tooltip(endDateInput);
 
             const today = new Date();
             const yyyy = today.getFullYear();
@@ -509,6 +513,8 @@
                 if (startDateInput.value) {
                     endDateInput.readOnly = false;
 
+                    tooltip.dispose();
+
                     const selectedDate = new Date(startDateInput.value);
                     selectedDate.setDate(selectedDate.getDate() + 1);
 
@@ -521,6 +527,15 @@
                 } else {
                     endDateInput.readOnly = true;
                     endDateInput.value = '';
+                }
+            });
+
+            endDateInput.addEventListener('focus', () => {
+                if (endDateInput.readOnly) {
+                    tooltip.show();
+                    setTimeout(() => {
+                        tooltip.hide();
+                    }, 3000);
                 }
             });
         });

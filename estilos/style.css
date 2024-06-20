@@ -157,6 +157,11 @@ input::placeholder {
     text-indent: 1.5rem;
 }
 
+.custom-tooltip {
+    --bs-tooltip-bg: red;
+    --bs-tooltip-color: white;
+  }
+
 .busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     margin-left: 1.2rem;
