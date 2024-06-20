@@ -108,8 +108,8 @@
             <input type="text" placeholder="Local">
             <input type="date" id="retirada">
             <input type="date" id="devolucao" readonly data-bs-toggle="tooltip" data-bs-placement="bottom"
-                data-bs-title="Escolha a data de retirada!"  data-bs-custom-class="custom-tooltip">
-            <button>Reservar</button>
+                data-bs-title="Escolha a data de retirada!" data-bs-custom-class="custom-tooltip">
+            <button class="btn-reservar">Reservar</button>
         </div>
 
     </header><!-- Fim cabeçalho-->
@@ -495,6 +495,19 @@
 
     <!--Script para definir data mínima-->
     <script>
+
+        document.querySelector('.btn-reservar').addEventListener('click', () => {
+            
+            const retirada = (document.getElementById('retirada').value).replace(/-/g, "");
+            const devolucao = (document.getElementById('devolucao').value).replace(/-/g, "");
+
+            if(!retirada || !devolucao) {
+                console.log('insira a data!')
+            }
+            
+            const dias = devolucao - retirada;
+        })
+
         document.addEventListener('DOMContentLoaded', () => {
             const startDateInput = document.getElementById('retirada');
             const endDateInput = document.getElementById('devolucao');
