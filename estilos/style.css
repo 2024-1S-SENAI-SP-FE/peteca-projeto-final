@@ -116,7 +116,8 @@ header {
 
 input::placeholder {
     text-align: center;
-    text-indent: 0;
+    /* text-indent: 0; */
+    color: #000000;
 }
 
 .busca-carro select {
@@ -139,11 +140,19 @@ input::placeholder {
 }
 
 .busca-carro input:nth-child(3) {
+    background-image: url(../icones/calendar-regular.svg);
+    background-size: 0.8rem;
+    background-repeat: no-repeat;
+    background-position: 1.4rem;
     width: 166px;
     text-indent: 1.5rem;
 }
 
 .busca-carro input:last-of-type {
+    background-image: url(../icones/calendar-regular.svg);
+    background-size: 0.8rem;
+    background-repeat: no-repeat;
+    background-position: 1.4rem;
     width: 166px;
     text-indent: 1.5rem;
 }
@@ -151,6 +160,7 @@ input::placeholder {
 .busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     margin-left: 1.2rem;
+    opacity: 0;
 }
 
 
