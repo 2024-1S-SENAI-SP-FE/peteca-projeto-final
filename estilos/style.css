@@ -401,20 +401,22 @@ input::placeholder {
 .card {
     background-color: var(--branco-padrao);
     border: none;
+    padding: 1.5rem;
 }
 
 .card img {
     height: 50%;
+    border-radius: 10px;
 }
 
 .card h1 {
     font-weight: 900;
     font-size: 1rem;
-    line-height: 1.1rem;
+    line-height: 1.4rem;
 }
 
 .card p {
-    line-height: 1.1rem;
+    line-height: 1.4rem;
 }
 
 .card a {
