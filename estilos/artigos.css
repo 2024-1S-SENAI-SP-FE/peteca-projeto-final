@@ -44,34 +44,6 @@ p{
    padding: 10px;
   text-align: justify;
 }
-.blocos img {
-  width: 100%;
-  height: 385px;
-}
-.blocos h2 {
-    margin-bottom: 1rem;
-    font-weight: 900;
-    font-size: 16px;
-    margin: 1rem;
-}
-.blocos p{
-    margin-bottom: 1rem;
-}
-#bloco-img {
-    display: flex;
-    gap: 15rem;
-    justify-content: center;
-}
-.class-size-img {
-  width: 36rem;
-  height: 20rem;
-  display: flex;
-  justify-content: center;
-}
-
-#p-bloco {
-  margin-left: 60px;
-}
 .class-size-img{
     width: 36rem;
     height: 20rem;
@@ -90,6 +62,8 @@ p{
     text-align: justify;
     padding-left: 10rem;
     padding-right: 10rem;
+    font-size: 18px;
+    
 }
 .imgCar2{
     width: 83.5rem;
