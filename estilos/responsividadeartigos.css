@@ -1,10 +1,12 @@
 
 h1{
     font-size: 2.5em;
+    color: #002366;
 }
 
 h2, h3{
     font-size: 2.0em;
+    color: #002366;
 }
 /* imagem banner */
 .imgCar {
@@ -49,6 +51,7 @@ text-align: center;
 /*justify-content: space-between; caso quiser que o final do texto fique alinhado um com o outro, porém desalinha o inicio*/
 }
 .blocos h2 {
+    color: #002366;
     margin-bottom: 10px;
     font-size: 2.0em;
     text-align: center;
