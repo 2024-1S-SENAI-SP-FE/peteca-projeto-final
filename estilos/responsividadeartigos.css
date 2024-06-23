@@ -104,6 +104,8 @@ text-align: center;
     .imgCar2 {
         max-width: 100%;
         height: 15em;
+        min-height: 100px; /* Altura mínima do banner para telas menores */
+        padding: 10px; /* Padding adicional para evitar conteúdo comprimido */
     }
 }
 
@@ -124,7 +126,6 @@ text-align: center;
     width: 800rem;
     height: 23em;
     max-width: 100%;
-    height: auto;
     display: block;
     border-radius: 10px;
 }
