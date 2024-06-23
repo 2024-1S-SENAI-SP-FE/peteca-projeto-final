@@ -7,6 +7,8 @@ h1{
 h2, h3{
     font-size: 2.0em;
     color: #002366;
+    line-height: 1.0;  /* Altura da linha para evitar encavalamento */
+word-break: break-word; /* Quebra de palavras longas */
 }
 /* imagem banner */
 .imgCar {
@@ -71,7 +73,7 @@ text-align: center;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.5em;
     display: flex;
 }
 /* divisão de imagem */
@@ -95,8 +97,15 @@ text-align: center;
     .blocos p {
         padding: 10px; /* Adiciona padding interno ao texto para espaçamento */
     }
+    .imgCar {
+        max-width: 100%;
+        height: 15em;
+    }
+    .imgCar2 {
+        max-width: 100%;
+        height: 15em;
+    }
 }
-
 
 #bloco-img{
     padding: 20px;
@@ -127,7 +136,7 @@ text-align: center;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.5em;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
