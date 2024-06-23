@@ -219,6 +219,44 @@ ancorasFlip.forEach((ancora) => {
 });
 
 
+function criaElementosDetalhes(teste) {
+  const containerCarro = document.createElement('div')
+  containerCarro.classList.add('container-carro')
+  const containerDetalhes = document.createElement('div')
+  containerDetalhes.classList.add('container-detalhes')
+  const ladoALado1 = document.createElement('div')
+  const ladoALado2 = document.createElement('div')
+  const ladoALado3 = document.createElement('div')
+  const ladoALado4 = document.createElement('div')
+  const ladoALado5 = document.createElement('div')
+  ladoALado1,ladoALado2,ladoALado3,ladoALado4,ladoALado5.classList.add('lado-a-lado')
+  const img = document.createElement('img')
+  const span = document.createElement('span')
+  ladoALado1.append(
+    img.classList.add("img-boneco"),
+    (img.src = "icones/bonecos 2.svg"),
+    span.innerHTML = '4 pessoas',
+    span.classList.add('pessoas')
+  );
+  containerDetalhes.append(ladoALado1,ladoALado2,ladoALado3,ladoALado4,ladoALado5)
+  console.log(ladoALado1)
+}
+criaElementosDetalhes()
+const teste = ancorasFlip.forEach(ancora => {
+  const nomeCarro = document.querySelectorAll('.nome-carro')
+  const paiAncora = ancora.parentElement;
+  const avoAncora = paiAncora.parentElement;
+  // if (avoAncora.querySelector('.nome-carro')) {
+  //   const nomeCarro = avoAncora.querySelector('.nome-carro')
+  //   let naoTem
+  //   if (detalhesCarro.includes(nomeCarro)) {
+  //     criaElementosDetalhes()
+  //   } else {
+  //     naoTem = 'Carro não encontrado'
+  //   }
+  // }
+})
+
 // ógica botão registrar -----------------------------------------------------------
 
 
@@ -263,3 +301,4 @@ btnRegistrar.addEventListener("click", () => {
     }, 8000);
   }
 });
+
