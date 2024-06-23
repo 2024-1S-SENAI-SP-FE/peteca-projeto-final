@@ -102,10 +102,11 @@ text-align: center;
         height: 15em;
     }
     .imgCar2 {
-        max-width: 100%;
-        height: 15em;
+        
         min-height: 100px; /* Altura mínima do banner para telas menores */
         padding: 10px; /* Padding adicional para evitar conteúdo comprimido */
+        width: 83.5rem;
+        height: 23em;
     }
 }
 
@@ -128,6 +129,7 @@ text-align: center;
     max-width: 100%;
     display: block;
     border-radius: 10px;
+    
 }
 /* texto acima e depois da imagem estilo banner2 */
 #p-container {
