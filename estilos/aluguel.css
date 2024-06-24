@@ -436,11 +436,21 @@ a {
     width: 100vw;
     margin: 100px 30px;
   }
+  .btn-registrar,.registrando,.registrou,.div-registrar{
+    position: absolute;
+    top: 10%;
+    right: 8%;
+  }
+  .img-localizacao{
+    display: none;
+  }
+  
   .check-in {
     width: 650px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
   .container-data-retirada,
   .container-hora-retirada,
