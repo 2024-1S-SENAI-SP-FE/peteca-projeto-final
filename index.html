@@ -92,7 +92,7 @@
                 <option selected disabled>Veículo</option>
                 <option value="carro1">F-150 Shelby</option>
                 <option value="carro2">Mustang Mach 1</option>
-                <option value="carro3">Ford Territory Titanium</option>
+                <!-- <option value="carro3">Ford Territory Titanium</option>
                 <option value="carro4">Ranger Raptor</option>
                 <option value="carro5">Mustang GT</option>
                 <option value="carro6">Ford Super Duty F-450 DRW</option>
@@ -104,12 +104,12 @@
                 <option value="carro12">Maverick</option>
                 <option value="carro13">Ford Ranger 3.2</option>
                 <option value="carro14">Ranger P703</option>
-                <option value="carro15">Bronco Sport</option>
+                <option value="carro15">Bronco Sport</option> -->
             </select>
-            <input type="text" id="local" placeholder="Local" data-bs-content="Informe um local!" data-bs-placement="bottom"
-            data-bs-custom-class="custom-popover">
+            <input type="text" id="local" placeholder="Local" data-bs-content="Informe um local!"
+                data-bs-placement="bottom" data-bs-custom-class="custom-popover">
             <input type="date" id="retirada" data-bs-content="Informe uma data para retirada!" data-bs-placement="top"
-            data-bs-custom-class="custom-popover">
+                data-bs-custom-class="custom-popover">
             <input type="date" id="devolucao" readonly data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-title="Escolha a data de retirada!" data-bs-custom-class="custom-tooltip">
             <button class="btn-reservar">Reservar</button>
@@ -499,11 +499,13 @@
     <!--Script para definir data mínima-->
     <script>
 
+        const botaoEnviar = document.querySelector('.btn-reservar');
 
-        document.querySelector('.btn-reservar').addEventListener('click', () => {
+        botaoEnviar.addEventListener('click', () => {
 
             const local = document.querySelector('#local');
             const retirada = document.querySelector('#retirada');
+            const devolucao = document.querySelector('#devolucao');
             const select = document.querySelector('select');
 
             const popoverLocal = new bootstrap.Popover(local, {
@@ -512,6 +514,9 @@
             const popoverRetirada = new bootstrap.Popover(retirada, {
                 trigger: 'manual'
             });
+
+            const tooltip = new bootstrap.Tooltip(devolucao);
+
             const popoverSelect = new bootstrap.Popover(select, {
                 trigger: 'manual'
             });
@@ -532,6 +537,13 @@
                 popoverRetirada.hide();
             }
 
+            if (!devolucao.value) {
+                tooltip.show();
+                valid = false;
+            } else {
+                tooltip.dispose();
+            }
+
             if (select.value === "Veículo") {
                 popoverSelect.show();
                 valid = false;
@@ -540,11 +552,16 @@
             }
 
             if (!valid) {
+                event.preventDefault();
                 setTimeout(() => {
                     popoverLocal.hide();
                     popoverRetirada.hide();
                     popoverSelect.hide();
+                    tooltip.dispose();
                 }, 3000);
+            } else {
+                // Chama uma função
+                window.open('reserva.html')
             }
 
             local.addEventListener('input', function () {
@@ -561,7 +578,7 @@
 
             devolucao.addEventListener('input', function () {
                 if (devolucao.value) {
-                    popoverDevolucao.hide();
+                    tooltip.hide();
                 }
             });
 
