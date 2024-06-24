@@ -47,4 +47,4 @@ containerFooter.appendChild(criaUl(ancoras));
 footer.append(containerFooter);
 
 document.body.appendChild(footer);
-console.log("teste");
+// console.log("teste");
