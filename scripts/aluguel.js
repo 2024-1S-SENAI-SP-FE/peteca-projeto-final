@@ -185,13 +185,6 @@ dadosCarros.forEach((dados) => {
 console.log("Carros adicionados:", dadosCarros.length);
 
 
-
-
-
-
-
-
-
 // Logica da execução da animação de flip-------------------------------------------------------------------
 
 let ancorasFlip = document.querySelectorAll('.detalhes')
@@ -219,47 +212,128 @@ ancorasFlip.forEach((ancora) => {
 });
 
 
+
 function criaElementosDetalhes(teste) {
   const containerCarro = document.createElement('div')
   containerCarro.classList.add('container-carro')
   const containerDetalhes = document.createElement('div')
   containerDetalhes.classList.add('container-detalhes')
-  const ladoALado1 = document.createElement('div')
-  const ladoALado2 = document.createElement('div')
-  const ladoALado3 = document.createElement('div')
-  const ladoALado4 = document.createElement('div')
-  const ladoALado5 = document.createElement('div')
-  ladoALado1,ladoALado2,ladoALado3,ladoALado4,ladoALado5.classList.add('lado-a-lado')
-  const img = document.createElement('img')
-  const span = document.createElement('span')
-  ladoALado1.append(
-    img.classList.add("img-boneco"),
-    (img.src = "icones/bonecos 2.svg"),
-    span.innerHTML = '4 pessoas',
-    span.classList.add('pessoas')
-  );
-  containerDetalhes.append(ladoALado1,ladoALado2,ladoALado3,ladoALado4,ladoALado5)
-  console.log(ladoALado1)
+
+  function criaConsumo() {
+    const divConsumo = document.createElement('div')
+    divConsumo.classList.add('consumo-litragem')
+    const span1 = document.createElement('span')
+    span1.classList.add('tipo-consumo')
+    const span2 = document.createElement('span')
+    span2.classList.add("tipo-consumo");
+    const span3 = document.createElement('span')
+    span3.classList.add('litragem')
+    const span4 = document.createElement('span')
+    span4.classList.add('litragem')
+    divConsumo.append(span1, span2, span3, span4)
+   
+
+    return divConsumo
+}
+  function criaLadoALado1() {
+    const ladoALado1 = document.createElement('div')
+    ladoALado1.classList.add('lado-a-lado')
+    const img1 = document.createElement('img')
+    img1.classList.add("img-boneco");
+    img1.src = "icones/bonecos 2.svg";
+    const span1 = document.createElement('span')
+    span1.classList.add('pessoas')
+    span1.innerHTML='4 pessoas'
+    ladoALado1.append(img1, span1);
+    containerDetalhes.append(ladoALado1);
+    return containerDetalhes;
+}
+  function criaLadoALado2() {
+    const ladoALado2 = document.createElement('div')
+    ladoALado2.classList.add("lado-a-lado");
+    const img2 = document.createElement('img')
+    img2.classList.add("img-boneco");
+    img2.src = "icones/bonecos 2.svg";
+    const span2 = document.createElement('span')
+    span2.classList.add('pessoas')
+    span2.innerHTML='4 pessoas'
+    ladoALado2.append(img2, span2);
+    containerDetalhes.append(ladoALado2);
+    return containerDetalhes;
+}
+  function criaLadoALado3() {
+    const ladoALado3 = document.createElement('div')
+    ladoALado3.classList.add("lado-a-lado");
+    const img3 = document.createElement('img')
+    img3.classList.add("img-boneco");
+    img3.src = "icones/bonecos 2.svg";
+    const span3 = document.createElement('span')
+    span3.classList.add('pessoas')
+    span3.innerHTML='4 pessoas'
+    ladoALado3.append(img3, span3);
+    containerDetalhes.appendChild(ladoALado3);
+    return containerDetalhes;
+}
+  function criaLadoALado4() {
+    const ladoALado4 = document.createElement('div')
+    ladoALado4.classList.add("lado-a-lado");
+    const img4 = document.createElement('img')
+    img4.classList.add("img-boneco");
+    img4.src = "icones/bonecos 2.svg";
+    const span4 = document.createElement('span')
+    span4.classList.add('pessoas')
+    span4.innerHTML='4 pessoas'
+    ladoALado4.append(img4, span4);
+    containerDetalhes.append(ladoALado4);
+    return containerDetalhes;
+}
+  function criaLadoALado5() {
+    const ladoALado5 = document.createElement('div')
+    ladoALado5.classList.add("lado-a-lado");
+    const img5 = document.createElement('img')
+    img5.classList.add("img-boneco");
+    img5.src = "icones/bonecos 2.svg";
+    const span5 = document.createElement('span')
+    span5.classList.add('pessoas')
+    span5.innerHTML='4 pessoas'
+    ladoALado5.append(img5, span5);
+    containerDetalhes.append(ladoALado5)
+    return containerDetalhes
+}
+
+   
+
+const retorno1 = criaLadoALado1()
+const retorno2 = criaLadoALado2()
+const retorno3 = criaLadoALado3()
+const retorno4 = criaLadoALado4()
+const retorno5 = criaLadoALado5()
+const retornoConsumo = criaConsumo();
+console.log(containerCarro)
+  containerCarro.appendChild(retorno1,retorno2,retorno3,retorno4,retorno5,retornoConsumo )
+  return containerCarro;
 }
 criaElementosDetalhes()
-const teste = ancorasFlip.forEach(ancora => {
-  const nomeCarro = document.querySelectorAll('.nome-carro')
-  const paiAncora = ancora.parentElement;
-  const avoAncora = paiAncora.parentElement;
-  // if (avoAncora.querySelector('.nome-carro')) {
-  //   const nomeCarro = avoAncora.querySelector('.nome-carro')
-  //   let naoTem
-  //   if (detalhesCarro.includes(nomeCarro)) {
-  //     criaElementosDetalhes()
-  //   } else {
-  //     naoTem = 'Carro não encontrado'
-  //   }
-  // }
-})
 
-// ógica botão registrar -----------------------------------------------------------
+const voltarDetalhes = document.querySelectorAll('.voltar-detalhes')
+voltarDetalhes.forEach((ancora) => {
+  ancora.addEventListener("click", () => {
+    const nomeCarro = document.querySelectorAll(".nome-carro");
+    const paiAncora = ancora.parentElement;
+    const avoAncora = paiAncora.parentElement;
+    if (avoAncora.querySelector(".nome-carro")) {
+      const nomeCarro = avoAncora.querySelector(".nome-carro");
+      let naoTem;
+      if (nomeCarro) {
+        criaElementosDetalhes();
+      } else {
+        console.log("não tem");
+      }
+    }
+  });
+});
 
-
+// Lógica botão registrar -----------------------------------------------------------
 
 const btnRegistrar = document.querySelector(".btn-registrar");
 btnRegistrar.addEventListener("click", () => {
