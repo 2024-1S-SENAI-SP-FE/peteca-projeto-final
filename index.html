@@ -87,7 +87,8 @@
         </div>
 
         <div class="busca-carro">
-            <select name="modelo" id="modelo">
+            <select name="modelo" id="modelo" data-bs-content="Informe um carro!" data-bs-placement="top"
+                data-bs-custom-class="custom-popover">
                 <option selected disabled>Veículo</option>
                 <option value="carro1">F-150 Shelby</option>
                 <option value="carro2">Mustang Mach 1</option>
@@ -105,8 +106,10 @@
                 <option value="carro14">Ranger P703</option>
                 <option value="carro15">Bronco Sport</option>
             </select>
-            <input type="text" placeholder="Local">
-            <input type="date" id="retirada">
+            <input type="text" id="local" placeholder="Local" data-bs-content="Informe um local!" data-bs-placement="bottom"
+            data-bs-custom-class="custom-popover">
+            <input type="date" id="retirada" data-bs-content="Informe uma data para retirada!" data-bs-placement="top"
+            data-bs-custom-class="custom-popover">
             <input type="date" id="devolucao" readonly data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-title="Escolha a data de retirada!" data-bs-custom-class="custom-tooltip">
             <button class="btn-reservar">Reservar</button>
@@ -496,16 +499,78 @@
     <!--Script para definir data mínima-->
     <script>
 
-        document.querySelector('.btn-reservar').addEventListener('click', () => {
-            
-            const retirada = (document.getElementById('retirada').value).replace(/-/g, "");
-            const devolucao = (document.getElementById('devolucao').value).replace(/-/g, "");
 
-            if(!retirada || !devolucao) {
-                console.log('insira a data!')
+        document.querySelector('.btn-reservar').addEventListener('click', () => {
+
+            const local = document.querySelector('#local');
+            const retirada = document.querySelector('#retirada');
+            const select = document.querySelector('select');
+
+            const popoverLocal = new bootstrap.Popover(local, {
+                trigger: 'manual'
+            });
+            const popoverRetirada = new bootstrap.Popover(retirada, {
+                trigger: 'manual'
+            });
+            const popoverSelect = new bootstrap.Popover(select, {
+                trigger: 'manual'
+            });
+
+            let valid = true;
+
+            if (!local.value) {
+                popoverLocal.show();
+                valid = false;
+            } else {
+                popoverLocal.hide();
             }
-            
-            const dias = devolucao - retirada;
+
+            if (!retirada.value) {
+                popoverRetirada.show();
+                valid = false;
+            } else {
+                popoverRetirada.hide();
+            }
+
+            if (select.value === "Veículo") {
+                popoverSelect.show();
+                valid = false;
+            } else {
+                popoverSelect.hide();
+            }
+
+            if (!valid) {
+                setTimeout(() => {
+                    popoverLocal.hide();
+                    popoverRetirada.hide();
+                    popoverSelect.hide();
+                }, 3000);
+            }
+
+            local.addEventListener('input', function () {
+                if (local.value) {
+                    popoverLocal.hide();
+                }
+            });
+
+            retirada.addEventListener('input', function () {
+                if (retirada.value) {
+                    popoverRetirada.hide();
+                }
+            });
+
+            devolucao.addEventListener('input', function () {
+                if (devolucao.value) {
+                    popoverDevolucao.hide();
+                }
+            });
+
+            select.addEventListener('change', function () {
+                if (select.value !== "Veículo") {
+                    popoverSelect.hide();
+                }
+            });
+
         })
 
         document.addEventListener('DOMContentLoaded', () => {
