@@ -501,12 +501,24 @@
 
         const botaoEnviar = document.querySelector('.btn-reservar');
 
-        botaoEnviar.addEventListener('click', () => {
+        botaoEnviar.addEventListener('click', (event) => {
 
             const local = document.querySelector('#local');
             const retirada = document.querySelector('#retirada');
             const devolucao = document.querySelector('#devolucao');
+            let diferenca = (devolucao.value.replace(/-/g, "") - retirada.value.replace(/-/g, ""));
+
+            const data = {
+                local: local.value,
+                retirada: retirada.value,
+                devolucao: devolucao.value,
+                diferenca: diferenca
+            };
+
+            localStorage.setItem('data', JSON.stringify(data));
+
             const select = document.querySelector('select');
+
 
             const popoverLocal = new bootstrap.Popover(local, {
                 trigger: 'manual'
@@ -561,7 +573,7 @@
                 }, 3000);
             } else {
                 // Chama uma função
-                window.open('reserva.html')
+                modeloEscolhido(select.value);
             }
 
             local.addEventListener('input', function () {
@@ -634,6 +646,21 @@
                 }
             });
         });
+
+        function modeloEscolhido(idCarro) {
+            fetch('data/carros.json')
+                .then(response => response.json())
+                .then(data => {
+                    const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
+                    if (carroSelecionado) {
+                        localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
+                        window.open('reserva.html')
+                    } else {
+                        console.error('Carro não encontrado no arquivo JSON.');
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar dados do arquivo JSON:', error));
+        }
     </script>
 
 </body>
