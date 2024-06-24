@@ -130,6 +130,13 @@ input::placeholder {
     text-indent: 3rem;
 }
 
+.custom-popover {
+    --bs-popover-border-color: red;
+    --bs-popover-body-color: red;
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+}
+
 .busca-carro input:nth-child(2) {
     background-image: url(../icones/location-dot-solid.svg);
     background-size: 1rem;
@@ -160,7 +167,7 @@ input::placeholder {
 .custom-tooltip {
     --bs-tooltip-bg: red;
     --bs-tooltip-color: white;
-  }
+}
 
 
 .busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
@@ -502,7 +509,7 @@ footer {
         width: 166px;
         text-indent: 1.5rem;
     }
-    
+
     .busca-carro input:last-of-type {
         background-image: url(../icones/calendar-solid.svg);
         background-size: 1rem;
