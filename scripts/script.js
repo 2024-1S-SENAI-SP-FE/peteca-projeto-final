@@ -22,16 +22,28 @@ inputs.forEach(input => {
 
 const carroEscolhido = JSON.parse(localStorage.getItem('carroEscolhido'));
 
+function formatarDataParaExibicao(dataString) {
+    const date = new Date(dataString);
+    const dia = String(date.getDate() + 1).padStart(2, '0');
+    const mes = String(date.getMonth() + 1).padStart(2, '0');
+    const ano = date.getFullYear();
+    return `${dia}-${mes}-${ano}`;
+}
+
 const infosReserva = localStorage.getItem('data');
 
 if (infosReserva) {
     const infos = JSON.parse(infosReserva);
-    document.querySelector('.qntd-dias').innerHTML = `<strong>Período do contrato:</strong> ${infos.diferenca} dia(s)`;
+
+    const retiradaFormatada = formatarDataParaExibicao(infos.retirada);
+    const devolucaoFormatada = formatarDataParaExibicao(infos.devolucao);
+
+    document.querySelector('.qntd-dias').innerHTML = `<strong>Período do contrato:</strong> ${infos.intervalo} dia(s)`;
     document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infos.local}`;
-    document.querySelector('.dia-retirada').innerHTML = `<strong>Data:</strong> ${infos.retirada}`;
+    document.querySelector('.dia-retirada').innerHTML = `<strong>Data:</strong> ${retiradaFormatada}`;
     document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infos.local}`;
     document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infos.local}`;
-    document.querySelector('.dia-devolucao').innerHTML = `<strong>Data:</strong> ${infos.devolucao}`;
+    document.querySelector('.dia-devolucao').innerHTML = `<strong>Data:</strong> ${devolucaoFormatada}`;
 }
 
 if (carroEscolhido) { 
@@ -39,3 +51,5 @@ if (carroEscolhido) {
     document.querySelector('.carro-imagem').src = `${carroEscolhido.imagem}`;
     document.querySelector('.preco').innerHTML = `R$${carroEscolhido.preco}`;
 }
+
+

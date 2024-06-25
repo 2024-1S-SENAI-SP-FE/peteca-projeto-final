@@ -506,13 +506,19 @@
             const local = document.querySelector('#local');
             const retirada = document.querySelector('#retirada');
             const devolucao = document.querySelector('#devolucao');
-            let diferenca = (devolucao.value.replace(/-/g, "") - retirada.value.replace(/-/g, ""));
+
+            const retiradaData = new Date(retirada.value);
+            const devolucaoData = new Date(devolucao.value);
+
+            let intervaloMilissegundos = devolucaoData - retiradaData;
+
+            let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
 
             const data = {
                 local: local.value,
                 retirada: retirada.value,
                 devolucao: devolucao.value,
-                diferenca: diferenca
+                intervalo: intervaloDias
             };
 
             localStorage.setItem('data', JSON.stringify(data));
@@ -603,6 +609,8 @@
         })
 
         document.addEventListener('DOMContentLoaded', () => {
+            
+            // Definir datas mínimas
             const startDateInput = document.getElementById('retirada');
             const endDateInput = document.getElementById('devolucao');
 
@@ -647,6 +655,7 @@
             });
         });
 
+        // Função para buscar as informações do carro escolhido no objeto 'carros.json'
         function modeloEscolhido(idCarro) {
             fetch('data/carros.json')
                 .then(response => response.json())
