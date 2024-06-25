@@ -38,7 +38,7 @@ main {
 }
 
 /* ------------------------------------------------------------------------------------- */
- 
+
 /* ------------------------------ FORMA DE PAGAMENTO ------------------------------------ */
 
 .forma-pagamento section {
@@ -68,7 +68,7 @@ main {
     cursor: pointer;
     width: 100%;
     margin-bottom: 10px;
-    
+
 }
 
 .forma-pagamento input[type="radio"] {
@@ -178,7 +178,7 @@ main {
     /* background-color: #f9f9f9; */
 }
 
-.kit input[type="radio"]:checked + label {
+.kit input[type="radio"]:checked+label {
     background-color: #eee;
     border-left: 5px solid #001f5b;
 }
@@ -205,13 +205,18 @@ main {
     margin: -20px;
 }
 
-.reserva, .carro-selecionado, .kit-selecionado, .valor-total {
+.reserva,
+.carro-selecionado,
+.kit-selecionado,
+.valor-total {
     margin-top: 10px;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
 
-.carro-selecionado h3, .kit-selecionado h3, .valor-total h3 {
+.carro-selecionado h3,
+.kit-selecionado h3,
+.valor-total h3 {
     font-size: 1.5rem;
     color: #000;
     font-weight: bold;
@@ -219,14 +224,20 @@ main {
 
 }
 
-.reserva p, .carro-selecionado p, .kit-selecionado p, .valor-total p {
+.reserva p,
+.carro-selecionado p,
+.kit-selecionado p,
+.valor-total p {
     text-align: justify;
     line-height: 1.6;
     margin: 5px 0;
     color: #000;
 }
 
-.reserva strong, .carro-selecionado strong, .kit-selecionado strong, .valor-total strong {
+.reserva strong,
+.carro-selecionado strong,
+.kit-selecionado strong,
+.valor-total strong {
     font-weight: bold;
     color: #000;
     margin-top: 5px;
@@ -238,7 +249,9 @@ main {
     border-radius: 5px;
 }
 
-.carro-selecionado .preco, .kit-selecionado .preco, .valor-total .preco {
+.carro-selecionado .preco,
+.kit-selecionado .preco,
+.valor-total .preco-final {
     font-size: 24px;
     font-weight: bold;
     color: #333;
