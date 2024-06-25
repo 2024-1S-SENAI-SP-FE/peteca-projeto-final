@@ -234,6 +234,8 @@ a {
   color: black;
   font-weight: 600;
   font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .ano-carro {
@@ -286,12 +288,25 @@ a {
 .consumo-litragem {
   display: flex;
   flex-flow: column wrap;
-  height: 40px;
-  margin-bottom: 30px;
+  height: 50px;
+  margin:10px 0 30px;
 }
-.tipo-consumo {
-  margin: 0 30px;
+.testespan{
+  width: 100px;
+  height: 30px;
+  background-color:rgba(1, 0, 37, 0.925);
+  color: white;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom:3px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.spanMargin{
+  margin-left: 30px;
+}
+
 @media screen and (max-width: 600px) {
   body {
     min-height: 100vh;
@@ -398,7 +413,7 @@ a {
   }
 
   .container-detalhes .lado-a-lado {
-    /* width: 100px; */
+    width: 80px;
     height: auto;
     margin: 0 0 10px;
     display: flex;
