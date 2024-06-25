@@ -663,7 +663,7 @@
                     const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
                     if (carroSelecionado) {
                         localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
-                        window.open('reserva.html')
+                        window.location.href = "reserva.html";
                     } else {
                         console.error('Carro não encontrado no arquivo JSON.');
                     }
