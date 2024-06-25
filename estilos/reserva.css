@@ -4,7 +4,7 @@ body {
     font-family: "Inter", sans-serif;
     padding: 1rem 1rem;
     margin: 1rem 1rem;
-    /* display: flex; */
+ 
 }
 
 main {
@@ -96,7 +96,6 @@ main {
 .kits {
     margin-right: 40px;
     max-width: 832px;
-    /* width: 100%; */
     align-items: flex-start;
     background-color: #fff;
 }
@@ -117,9 +116,7 @@ main {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 2px;
-    /* border-top: 1px solid #ccc; */
     display: flex;
-    /* align-items:flex-start; */
     padding: 20px;
     cursor: pointer;
 }
@@ -136,15 +133,10 @@ main {
 }
 
 .kit label {
-    /* display: flex; */
     justify-content: space-evenly;
     width: 100%;
     cursor: pointer;
     display: block;
-    /* padding: 20px; */
-    /* border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #e8e8e8; */
     position: relative;
 }
 
