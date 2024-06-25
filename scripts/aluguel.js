@@ -336,17 +336,18 @@ const arrayDetalhes = [
   },
 ];
 let ancorasFlip = document.querySelectorAll(".detalhes");
+const containerPadrao = document.querySelector('.container-carro')
 
 ancorasFlip.forEach((ancora) => {
   ancora.addEventListener("click", () => {
     const paiAncora = ancora.parentElement;
     const avoAncora = paiAncora.parentElement;
+    const newContainer = criaElementosDetalhes()
 
-    if (avoAncora.classList.contains("flip-card")) {
-      avoAncora.classList.remove("flip-card");
-      avoAncora.classList.add("flip-card-normal");
-      const newContainer = criaElementosDetalhes();
-      avoAncora.parentNode.replaceChild(avoAncora, newContainer);
+    if (paiAncora.classList.contains("flip-card-normal")) {
+      // avoAncora.classList.remove("flip-card");
+      paiAncora.classList.add("flip-card");
+      avoAncora.parentNode.replaceChild(containerPadrao, newContainer);
       ancora.innerHTML = "detalhes";
     } else if (avoAncora.classList.contains("flip-card-normal")) {
       avoAncora.classList.remove("flip-card-normal");
@@ -357,11 +358,10 @@ ancorasFlip.forEach((ancora) => {
       avoAncora.classList.add("flip-card");
       
       
-      setTimeout(() => {
-        const newContainer = criaElementosDetalhes()
-        console.log(criaElementosDetalhes());
-      avoAncora.parentNode.replaceChild(newContainer, avoAncora)
-      },390)
+        avoAncora.parentNode.replaceChild(newContainer, avoAncora)
+       
+     
+     
       ancora.innerHTML = "voltar";
     }
   });
@@ -370,6 +370,7 @@ ancorasFlip.forEach((ancora) => {
 function criaElementosDetalhes() {
   const containerCarro = document.createElement("div");
   containerCarro.classList.add("container-carro");
+  containerCarro.classList.add("flip-card-normal");
   const containerDetalhes = document.createElement("div");
   containerDetalhes.classList.add("container-detalhes");
 
@@ -444,16 +445,20 @@ function criaElementosDetalhes() {
     divConsumo.classList.add("consumo-litragem");
     const span1 = document.createElement("span");
     span1.classList.add("tipo-consumo");
+    span1.classList.add("testespan");
     const span2 = document.createElement("span");
     span2.classList.add("tipo-consumo");
+    span2.classList.add("spanMargin");
     const span3 = document.createElement("span");
     span3.classList.add("litragem");
+    span3.classList.add("testespan");
     const span4 = document.createElement("span");
     span4.classList.add("litragem");
-    span1.innerHTML='teste'
-    span2.innerHTML='teste'
-    span3.innerHTML='teste'
-    span4.innerHTML='teste'
+    span4.classList.add("spanMargin");
+    span1.innerHTML='Cidade'
+    span2.innerHTML = "10km/L";
+    span3.innerHTML='Estrada'
+    span4.innerHTML = "10km/L";
     divConsumo.append(span1, span2, span3, span4);
 
     return divConsumo;
@@ -461,8 +466,8 @@ function criaElementosDetalhes() {
   function criaA() {
     const a = document.createElement('a')
     a.classList.add('detalhes')
-    a.innerHTML = 'Voltar(Acho que vai dar ruim)'
-    a.href='#'
+    a.innerHTML = 'Voltar'
+    // a.href=''
     return a
   }
 
