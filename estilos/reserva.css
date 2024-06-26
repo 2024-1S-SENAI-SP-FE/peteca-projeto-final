@@ -38,6 +38,32 @@ main {
 }
 
 /* ------------------------------------------------------------------------------------- */
+.acessibilidade {
+    position: fixed;
+    right: 0.5rem;
+    top: 7rem;
+    z-index: 10;
+}
+
+.acessibilidade button{
+    border-radius: 8px;
+    background-color: #030841;
+}
+
+.acessibilidade button:hover {
+    background-color: #101553;
+}
+
+video {
+    height: 100%;
+    width: 250px;
+}
+
+.collapse-horizontal {
+    position: absolute;
+    top: -3rem;
+    right: 3.6rem;
+}
 
 /* ------------------------------ FORMA DE PAGAMENTO ------------------------------------ */
 
