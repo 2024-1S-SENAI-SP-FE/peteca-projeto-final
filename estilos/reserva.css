@@ -75,6 +75,10 @@ main {
     margin-right: 10px;
 }
 
+.forma-pagamento span {
+    margin-inline-start: 0.5rem;
+}
+
 .tipo-pagamento {
     margin-left: 10px;
     display: flex;
