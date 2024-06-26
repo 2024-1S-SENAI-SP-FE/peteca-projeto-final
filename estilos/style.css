@@ -289,6 +289,11 @@ input::placeholder {
     font-size: 15px;
 }
 
+.modal-dialog {
+    max-width: 430px;
+    margin-left: 3.5rem;
+}
+
 .modal-header {
     padding: 1rem;
 }
