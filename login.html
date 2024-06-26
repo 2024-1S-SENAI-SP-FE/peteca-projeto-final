@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
-    <link rel="stylesheet" href="/estilos/login.css" />
-  </head>
-  <body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste login 2</title>
+    <link rel="stylesheet" href="/estilos/login.css">
+  
+    
+</head>
+<body>
+    
     <div class="login">
+        <div class="form-image">
+            <img src="imagens/imagem fundo.jpg" alt="100%" width="100%">
+        </div>
+        <div class="form">
+            <label for="nome" class="titulo-login"> Faça seu Login</label><br>
+            <form action="#">
+                <div class="form-header">
+            </form>
+        </div>
+
         <form action="" class="form-login">
-            <h1 class="titulo-login">LOGIN</h1>
-            <label for="nome" class="label-login">Nome do Usuário</label>
-            <input type="text" id="nome" />
-            <label>Senha</label>
-            <input type="password"  class="senha" />
-            <button  type="button" class="btn-login">Entrar</button>
-          </div>
+
+
+            <label for="nome" class="label-login"> E-mail:</label><br>
+            <input type="text" id="nome" placeholder="Coloque seu e-mail"><br>
+
+
+
+            <label for="nome" class="label-login">Senha</label><br>
+            <input type="text" id="nome" placeholder="Digite sua senha"><br>
+
+            <button type="submit" class="btn-login">Entrar</button>
+
+            
+            <!-- //* colocar um link para o html cadastro -->
+
+           <button class="btn-link"> Já tem conta? ><a href="login.html">faça o seu login</a> </button >
+
         </form>
-        <script>
-         const dados = [
-          {"usuario": []},
-          {"senha": []},
-        ]
-        const usuario = dados.find(usuario => usuario.usuario ==='usuario')
-        const senha = dados.find(senha => senha.senha ==='senha')
+    </div>
+    </div>
 
-        document.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter') {executeFunction();}  });
-                    
-      
 
-        
-        function executeFunction() {
-          const inputUser = document.querySelector('#nome').value
-          const inputSenha = document.querySelector('.senha').value 
-          if(usuario){
-            usuario.push(inputUser)
-          }
-          if(senha){
-            senha.push(inputSenha)
-          }
-          console.log(dados.usuario.usuario, dados.senha.senha)
-        }
-         const btnEntrar = document.querySelector('.btn-login')
-        btnEntrar.addEventListener('click', executeFunction)
-        </script>
-  </body>
+
+    </div>
+
+
+
+
+
+
+
+</body>
 </html>
-<!-- Nessa pagina serve para colocar o login   -->
