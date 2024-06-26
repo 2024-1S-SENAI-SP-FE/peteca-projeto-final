@@ -13,6 +13,27 @@
             "preco": "514.81",
             "modelo": "Mustang Mach 1",
             "ano": "2024"
+        },
+        {
+            "id": "carro3",
+            "imagem": "imagens/territory.jpg",
+            "preco": "161.53",
+            "modelo": "Ford Territory Titanium",
+            "ano": "2024"
+        },
+        {
+            "id": "carro4",
+            "imagem": "imagens/ranger_raptor2024.png",
+            "preco": "345.07",
+            "modelo": "Ranger Raptor",
+            "ano": "2024"
+        },
+        {
+            "id": "carro5",
+            "imagem": "imagens/Ford_Mustang_Shelby_GT500.png",
+            "preco": "1153.07",
+            "modelo": "Shelby GT500",
+            "ano": "2024"
         }
     ]
 }
