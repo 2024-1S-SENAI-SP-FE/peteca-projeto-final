@@ -183,6 +183,7 @@ main {
 
 /* --------------------- Estilo do bloco de resumo da reserva -------------------------- */
 .resumo-reserva {
+    width: 55%;
     margin: 10px;
     background-color: #fff;
     padding: 20px;
@@ -256,6 +257,10 @@ main {
 .carro-selecionado .preco {
     display: block;
     margin-top: 10px;
+}
+
+.kit-selecionado {
+    height: 178px;
 }
 
 .kit-selecionado .preco {
