@@ -30,6 +30,18 @@
         padding: 10px;
     }
 
+    main {
+        flex-direction: column;
+    }
+
+    .forma-pagamento {
+        margin-bottom: 2rem;
+    }
+
+    .kits {
+        width: 100%;
+    }
+
   .dados-pessoais, .forma-pagamento, .kits, .resumo-reserva  h2 {
         font-size: 1.2em;
     }
