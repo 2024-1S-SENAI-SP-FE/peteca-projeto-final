@@ -335,35 +335,47 @@ const arrayDetalhes = [
     estrada: "10,5 km/L",
   },
 ];
-let ancorasFlip = document.querySelectorAll(".detalhes");
-const containerPadrao = document.querySelector('.container-carro')
 
+const containerPadrao = document.querySelector(".container-carro");
+let flip2;
+const newContainer = criaElementosDetalhes();
+
+let ancorasFlip = document.querySelectorAll(".detalhes");
 ancorasFlip.forEach((ancora) => {
+  criaElementosDetalhes();
   ancora.addEventListener("click", () => {
     const paiAncora = ancora.parentElement;
     const avoAncora = paiAncora.parentElement;
-    const newContainer = criaElementosDetalhes()
+    const avoAncora2 = paiAncora.parentElement;
 
-    if (paiAncora.classList.contains("flip-card-normal")) {
-      // avoAncora.classList.remove("flip-card");
-      paiAncora.classList.add("flip-card");
-      avoAncora.parentNode.replaceChild(containerPadrao, newContainer);
-      ancora.innerHTML = "detalhes";
-    } else if (avoAncora.classList.contains("flip-card-normal")) {
-      avoAncora.classList.remove("flip-card-normal");
-      avoAncora.classList.add("flip-card");
-      
-      ancora.innerHTML = "voltar";
-    } else {
-      avoAncora.classList.add("flip-card");
-      
-      
-        avoAncora.parentNode.replaceChild(newContainer, avoAncora)
-       
-     
-     
-      ancora.innerHTML = "voltar";
+    if (avoAncora.classList.contains("flip-card-normal")) {
+      console.log('tem o flip normal');
+    } else if (!avoAncora.classList.contains("flip-card-normal")) {
+      avoAncora.parentNode.replaceChild(newContainer, avoAncora);
+      console.log("primeiro");
     }
+
+    flip2 = document.querySelectorAll(".detalhes");
+    flip2.forEach((ancora) => {
+      ancora.addEventListener("click", () => {
+        novoPaiA = ancora.parentElement;
+        novoAvoA = novoPaiA.parentElement;
+
+
+        if (novoAvoA.classList.contains("flip-card-normal")) {
+          novoAvoA.classList.remove("flip-card-normal");
+          novoAvoA.classList.add('flip-card-normal')
+          newContainer.parentNode.replaceChild(containerPadrao, newContainer);
+          console.log('segundo');
+
+
+        } else if(novoAvoA.classList.contains('container-carro')) {
+          containerPadrao.parentNode.replaceChild(avoAncora, containerPadrao);
+          console.log('terceiro');
+        }
+        // else if()
+      });
+    });
   });
 });
 
@@ -374,7 +386,6 @@ function criaElementosDetalhes() {
   const containerDetalhes = document.createElement("div");
   containerDetalhes.classList.add("container-detalhes");
 
- 
   function criaLadoALado1() {
     const ladoALado1 = document.createElement("div");
     ladoALado1.classList.add("lado-a-lado");
@@ -455,20 +466,22 @@ function criaElementosDetalhes() {
     const span4 = document.createElement("span");
     span4.classList.add("litragem");
     span4.classList.add("spanMargin");
-    span1.innerHTML='Cidade'
+    span1.innerHTML = "Cidade";
     span2.innerHTML = "10km/L";
-    span3.innerHTML='Estrada'
+    span3.innerHTML = "Estrada";
     span4.innerHTML = "10km/L";
     divConsumo.append(span1, span2, span3, span4);
 
     return divConsumo;
   }
   function criaA() {
-    const a = document.createElement('a')
-    a.classList.add('detalhes')
-    a.innerHTML = 'Voltar'
+    const a = document.createElement("a");
+    const paiA = document.createElement("div");
+    a.classList.add("detalhes");
+    a.innerHTML = "Voltar";
+    paiA.appendChild(a);
     // a.href=''
-    return a
+    return paiA;
   }
 
   const retorno1 = criaLadoALado1();
@@ -488,9 +501,9 @@ function criaElementosDetalhes() {
     retornoConsumo,
     retornoA
   );
+  let ancorasFlip = document.querySelectorAll(".detalhes");
   return containerCarro;
 }
-// criaElementosDetalhes();
 
 // Lógica botão registrar -----------------------------------------------------------
 
