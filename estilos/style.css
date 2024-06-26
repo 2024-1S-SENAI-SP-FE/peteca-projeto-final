@@ -195,6 +195,34 @@ input::placeholder {
     background-color: #02052b;
 }
 
+/* Acessibilidade */
+.acessibilidade {
+    position: fixed;
+    right: 1rem;
+    top: 10rem;
+    z-index: 10;
+}
+
+.acessibilidade button{
+    border-radius: 8px;
+    background-color: var(--azul-padrao);
+}
+
+.acessibilidade button:hover {
+    background-color: #0b0f3b;
+}
+
+video {
+    height: 100%;
+    width: 250px;
+}
+
+.collapse-horizontal {
+    position: absolute;
+    top: -3rem;
+    right: 3.6rem;
+}
+
 /* Carrossel */
 #carrossel {
     background-color: rgb(255, 255, 255);
