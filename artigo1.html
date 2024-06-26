@@ -4,18 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu js -->
+    <script src="scripts/menu.js"></script>
+    <!-- Folhas de estilos -->
+    <link rel="stylesheet" href="/estilos/menu.css">
     <link rel="stylesheet" href="estilos/artigos.css">
     <link rel="stylesheet" href="estilos/reset.css">
     <link rel="stylesheet" href="estilos/responsividadeartigos.css">
     <title>Ford Mustang 2024</title>
 </head>
+
 <body>
-    <br>
-    <br>
+
+    <div class="navbar">
+
+        <div class="container-fluid">
+            <button class="btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-3x" style="color: #1e1eb3; margin: 0;"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a data-bs-dismiss="offcanvas" aria-label="Close" class="btn-fechar"><i
+                                    class="fa-solid fa-xmark fa-xl" style="color: #f5f5f9;"></i>Fechar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-car"
+                                    style="color: #f5f5f9;"></i>Carros</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-newspaper" style="color: #f5f5f9;"></i>Artigos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Ford Mustang 2024</a></li>
+                                <li><a href="#">O Impacto da Sustentabilidade nos Carros de Luxo da Ford</a></li>
+                                <li><a href="#">A Fusão Perfeita de Tecnologia, Segurança e Potência</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="sobre-nos.html"><i class="fa-solid fa-address-card"
+                                    style="color: #f5f5f9;"></i>Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contato.html"><i class="fa-solid fa-phone-volume"
+                                    style="color: #f5f5f9;"></i>Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i
+                                    class="fa-solid fa-arrow-right-to-bracket" style="color: #f5f5f9;"></i>Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
     <h1>Ford Mustang 2024</h1>
     <br>
     <h3>Promete Elevar o Conceito de Performance e Tecnologia.</h3>
-<br>
+    <br>
     <div id="id-img">
         <img class="imgCar" src="imagens/mustang-artigo1.jpg">
     </div>
@@ -23,10 +81,12 @@
     <div class="div-centro">
         <div class="blocos">
             <h2>Mesma performance, ainda mais potente</h2>
-            <p id="p-container2">No mundo automobilístico, poucos nomes evocam tanta paixão e emoção quanto o lendário Ford Mustang.
+            <p id="p-container2">No mundo automobilístico, poucos nomes evocam tanta paixão e emoção quanto o lendário
+                Ford Mustang.
                 Agora, em 2024, a espera acabou para os aficionados por carros esportivos em todo o mundo, com a
                 revelação do novíssimo Mustang da Ford, que promete elevar os padrões de performance e tecnologia para
-                uma nova era. Com um design arrojado e aerodinâmico, o Mustang 2024 é uma interpretação moderna e futurista do icônico
+                uma nova era. Com um design arrojado e aerodinâmico, o Mustang 2024 é uma interpretação moderna e
+                futurista do icônico
                 muscle car americano. Suas linhas elegantes e agressivas capturam a essência do Mustang, enquanto
                 introduzem elementos inovadores que o destacam como um verdadeiro carro do século XXI.
             </p>
@@ -35,7 +95,8 @@
         <div class="blocos">
             <br>
             <h2>Conforto, luxo e tecnologia</h2>
-            <p id="p-container2"> Equipado com uma gama de opções de motorização, desde potentes motores V6 até impressionantes motores
+            <p id="p-container2"> Equipado com uma gama de opções de motorização, desde potentes motores V6 até
+                impressionantes motores
                 V8, os entusiastas terão a opção de escolher a configuração que melhor se adapta às suas necessidades de
                 desempenho. Seu interior foi meticulosamente projetado para proporcionar conforto, luxo e tecnologia de
                 ponta. Com características como um painel de instrumentos digital personalizável, sistema de
@@ -49,28 +110,43 @@
         <img class="class-size-img" src="/imagens/liquidcarbonfordgt04.webp.jpg">
         <img class="class-size-img" src="/imagens/ford-Mustang-MachE.jpg">
     </div>
-<br>
+    <br>
     <h2>Motor de alta performance </h2>
     <br>
-    <p id="p-container">Um Mustang não seria um Mustang sem o seu motor V8. Sob o capô aparece a nova interação do Coyote, nome da
-        família 5.0 V8 aspirada da Ford. Ele foi retrabalhado, diminuindo atritos internos, além de ter recebido duplo corpo de borboletas para melhorar 
-        o controle de fluxo de ar e novos dutos de admissão e escape. Agora, ele entrega 488 cv de potência e 58 kgfm de torque, sendo que 80% da força 
-        aparece a 2.000 rpm. Esse refinamento não apenas melhorou o desempenho, mas também a eficiência do motor, tornando-o mais responsivo e potente em 
-        uma ampla faixa de rotações. Essa nova versão do Coyote é um testemunho do compromisso contínuo da Ford em inovar e melhorar um ícone 
-        automobilístico. Além disso, uma tecnologia avançada incorporada no motor permite uma entrega de potência mais suave e consistente, o que resulta 
+    <p id="p-container">Um Mustang não seria um Mustang sem o seu motor V8. Sob o capô aparece a nova interação do
+        Coyote, nome da
+        família 5.0 V8 aspirada da Ford. Ele foi retrabalhado, diminuindo atritos internos, além de ter recebido duplo
+        corpo de borboletas para melhorar
+        o controle de fluxo de ar e novos dutos de admissão e escape. Agora, ele entrega 488 cv de potência e 58 kgfm de
+        torque, sendo que 80% da força
+        aparece a 2.000 rpm. Esse refinamento não apenas melhorou o desempenho, mas também a eficiência do motor,
+        tornando-o mais responsivo e potente em
+        uma ampla faixa de rotações. Essa nova versão do Coyote é um testemunho do compromisso contínuo da Ford em
+        inovar e melhorar um ícone
+        automobilístico. Além disso, uma tecnologia avançada incorporada no motor permite uma entrega de potência mais
+        suave e consistente, o que resulta
         em uma experiência de condução.
     </p>
 
     <div id="id-img">
-    <img class="imgCar2" src="/imagens/image (1).webp.jpg">
-    </div> 
-    
-    <br>                                                                                               
+        <img class="imgCar2" src="/imagens/image (1).webp.jpg">
+    </div>
+
+    <br>
     <h2>O sonho acessível</h2>
     <br>
-    <p id="p-container">Apesar de seu status como um ícone automobilístico, a Ford está comprometida em garantir que o Mustang 2024 seja
+    <p id="p-container">Apesar de seu status como um ícone automobilístico, a Ford está comprometida em garantir que o
+        Mustang 2024 seja
         acessível a uma ampla gama de consumidores, mantendo-se fiel à sua missão de democratizar a emoção da direção
-        esportiva. Com preços competitivos e uma variedade de opções de modelos, o Mustang 2024 promete ser uma escolha emocionante para aqueles que buscam um carro esportivo que ofereça desempenho lendário a um valor excepcional.
-        Além de sua acessibilidade, o Mustang 2024 vem equipado com uma gama de tecnologias modernas que melhoram tanto a segurança quanto a conveniência do motorista. Entre essas inovações, destaca-se o sistema Ford Co-Pilot360™, que inclui recursos como controle de cruzeiro adaptativo, assistência de manutenção de faixa, frenagem automática de emergência e monitoramento de ponto cego.</p>                                             
+        esportiva. Com preços competitivos e uma variedade de opções de modelos, o Mustang 2024 promete ser uma escolha
+        emocionante para aqueles que buscam um carro esportivo que ofereça desempenho lendário a um valor excepcional.
+        Além de sua acessibilidade, o Mustang 2024 vem equipado com uma gama de tecnologias modernas que melhoram tanto
+        a segurança quanto a conveniência do motorista. Entre essas inovações, destaca-se o sistema Ford Co-Pilot360™,
+        que inclui recursos como controle de cruzeiro adaptativo, assistência de manutenção de faixa, frenagem
+        automática de emergência e monitoramento de ponto cego.
+    </p>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
