@@ -475,11 +475,7 @@ a {
     height: 60px;
     border-radius: 6px;
   }
-   .container-data-retirada,
-  .container-hora-retirada,
-  .container-data-entrega,
-  .container-hora-entrega input {
-  } 
+   
   input {
     height: 80%;
     width: 100%;
@@ -533,6 +529,9 @@ a {
 .flip-card-normal {
   animation: FlipReverse 800ms forwards;
 }
+.flip3{
+  animation: flipTerceiro 800ms forwards;
+}
 @keyframes Flip {
   from {
     transform: rotateY(0deg);
@@ -547,6 +546,14 @@ a {
   }
   to {
     transform: rotateY(0deg);
+  }
+}
+@keyframes flipTerceiro {
+  from{
+    transform:transate(180deg);
+  }
+  to{
+    transform:transate(-180deg);
   }
 }
  @keyframes registrado {
