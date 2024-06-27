@@ -9,7 +9,7 @@ const dadosCarros = [
   {
     nome: "Mustang Mach 1",
     ano: "2023",
-    imgSrc: "imagens/mustang.jpg",
+    imgSrc: "../imagens/mustang.webp",
     valorAluguel: "$450/month",
     detalhesLink: "#detalhesB",
   },
@@ -37,7 +37,7 @@ const dadosCarros = [
   {
     nome: "Ford Super Duty F-450 DRW",
     ano: "2023",
-    imgSrc: "imagens/f450 1.png",
+    imgSrc: "imagens/Duty.webp",
     valorAluguel: "$450/month",
     detalhesLink: "#detalhesB",
   },
@@ -66,14 +66,14 @@ const dadosCarros = [
   {
     nome: "Ford Explores St",
     ano: "2023",
-    imgSrc: "imagens/image-Ford Explorer.png",
+    imgSrc: "imagens/ExploresSt.webp",
     valorAluguel: "$450/month",
     detalhesLink: "#detalhesB",
   },
   {
     nome: "Shelby GT500",
     ano: "2023",
-    imgSrc: "imagens/ford-shelbygt500.jpg",
+    imgSrc: "imagens/ShelbyGT500.webp",
     valorAluguel: "$450/month",
     detalhesLink: "#detalhesB",
   },
@@ -336,43 +336,27 @@ const arrayDetalhes = [
   },
 ];
 
-const containerPadrao = document.querySelector(".container-carro");
 let flip2;
-const newContainer = criaElementosDetalhes();
 
 let ancorasFlip = document.querySelectorAll(".detalhes");
 ancorasFlip.forEach((ancora) => {
-  criaElementosDetalhes();
+  const newContainer = criaElementosDetalhes();
   ancora.addEventListener("click", () => {
     const paiAncora = ancora.parentElement;
     const avoAncora = paiAncora.parentElement;
-    const avoAncora2 = paiAncora.parentElement;
-
-    if (avoAncora.classList.contains("flip-card-normal")) {
-      console.log('tem o flip normal');
-    } else if (!avoAncora.classList.contains("flip-card-normal")) {
-      avoAncora.parentNode.replaceChild(newContainer, avoAncora);
-      console.log("primeiro");
-    }
-
-    flip2 = document.querySelectorAll(".detalhes");
-    flip2.forEach((ancora) => {
-      ancora.addEventListener("click", () => {
-        novoPaiA = ancora.parentElement;
+    // const avoAncora2 = paiAncora.parentElement;
+    avoAncora.parentNode.replaceChild(newContainer, avoAncora);
+    
+    flip2 = document.querySelectorAll(".detalhes2");
+    // const containerPadrao = document.querySelector(".container-carro");
+    flip2.forEach((ancora2) => {
+      ancora2.addEventListener("click", () => {
+        novoPaiA = ancora2.parentElement;
         novoAvoA = novoPaiA.parentElement;
 
+        novoAvoA.parentNode.replaceChild(avoAncora, newContainer);
 
-        if (novoAvoA.classList.contains("flip-card-normal")) {
-          novoAvoA.classList.remove("flip-card-normal");
-          novoAvoA.classList.add('flip-card-normal')
-          newContainer.parentNode.replaceChild(containerPadrao, newContainer);
-          console.log('segundo');
-
-
-        } else if(novoAvoA.classList.contains('container-carro')) {
-          containerPadrao.parentNode.replaceChild(avoAncora, containerPadrao);
-          console.log('terceiro');
-        }
+        
         // else if()
       });
     });
@@ -477,7 +461,7 @@ function criaElementosDetalhes() {
   function criaA() {
     const a = document.createElement("a");
     const paiA = document.createElement("div");
-    a.classList.add("detalhes");
+    a.classList.add("detalhes2");
     a.innerHTML = "Voltar";
     paiA.appendChild(a);
     // a.href=''
