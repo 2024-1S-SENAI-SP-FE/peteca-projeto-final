@@ -127,7 +127,7 @@
 
     #carrossel {
         /* display: none; */
-        height: 68vh;
+        height: 65vh;
     }
 
     #carrossel>h1 {
@@ -325,14 +325,27 @@
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (width: 360px){
+    #carrossel {
+        height: 76.5vh;
+    }
+}
+
+@media screen and (width: 375px){
     #carrossel {
         height: 78vh;
     }
 }
 
-@media screen and (min-width: 361px) and (max-width: 390px){
+@media screen and (width: 390px){
     #carrossel {
         height: 72vh;
     }
 }
+
+@media screen and (width: 393px){
+    #carrossel {
+        height: 68vh;
+    }
+}
+
