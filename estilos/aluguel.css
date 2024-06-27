@@ -263,10 +263,13 @@ a {
   font-size: 20px;
   margin-left: 10px;
 }
-.detalhes {
+.detalhes,.detalhes2 {
   position: absolute;
   bottom: 50px;
   font-size: 1.1rem;
+}
+.detalhes2{
+  right: 150px;
 }
 /* Fim carrros aluguel */
 
@@ -403,6 +406,10 @@ a {
     /* margin-bottom: 20px; */
   }
   .detalhes {
+    top: 280px;
+    bottom: 30px;
+  }
+  .detalhes2{
     bottom: 30px;
   }
   .container-detalhes {
