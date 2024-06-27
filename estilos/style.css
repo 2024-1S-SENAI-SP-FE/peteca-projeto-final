@@ -520,10 +520,28 @@ footer {
 }
 
 .footer-copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
     background-color: #f5f5f9;
     text-align: center;
-    padding: 10px;
     font-size: small;
+}
+
+.footer-copy span {
+    margin-inline-start: 2rem;
+}
+.selo-ibama {
+    display: flex;
+    align-items: center;
+    margin-inline-end: 2rem;
+}
+
+.selo-ibama img{
+    width: 70px;
+    height: 70px;
 }
 
 /* Firefox */
