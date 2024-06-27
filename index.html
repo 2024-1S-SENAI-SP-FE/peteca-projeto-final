@@ -88,7 +88,7 @@
             <h1>Ford Drive</h1>
         </div>
 
-        <div class="busca-carro">
+        <div class="busca-carro" id="buscaCarro">
             <select name="modelo" id="modelo" data-bs-content="Informe um carro!" data-bs-placement="top"
                 data-bs-custom-class="custom-popover">
                 <option selected disabled>Veículo</option>
@@ -110,16 +110,16 @@
             </select>
             <input type="text" id="local" placeholder="Local" data-bs-content="Informe um local!"
                 data-bs-placement="bottom" data-bs-custom-class="custom-popover">
-            <input type="date" id="retirada" data-bs-content="Informe uma data para retirada!" data-bs-placement="top"
-                data-bs-custom-class="custom-popover">
+            <input type="date" id="retirada" data-bs-content="Informe uma data para retirada!"
+                data-bs-placement="bottom" data-bs-custom-class="custom-popover">
             <input type="date" id="devolucao" readonly data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-title="Escolha a data de retirada!" data-bs-custom-class="custom-tooltip">
             <button class="btn-reservar">Reservar</button>
         </div>
 
         <div class="acessibilidade">
-            <button class="btn" data-bs-toggle="collapse" data-bs-target="#video-acessibilidade"
-                aria-expanded="false" aria-controls="collapseWidthExample" title="Transcrição desta página em Libras"><i
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#video-acessibilidade" aria-expanded="false"
+                aria-controls="collapseWidthExample" title="Transcrição desta página em Libras"><i
                     class="fa-solid fa-hands fa-lg" style="color: #fff;"></i></button>
             <div id="video-acessibilidade" class="collapse collapse-horizontal">
                 <video src="videos-transcricao/Transcricao_PagInicial.mp4" controls></video>
@@ -161,7 +161,8 @@
                         a versão mais potente da marca Mustang, sendo uma homenagem a um ex-piloto automobilístico
                         Carroll Shelby,
                         criador do modelo Cobra.</p>
-                    <button type="button" class="btn btn-primary">Alugue já</button>
+                    <button type="button" class="btn btn-primary" onclick="escolhaCarrossel('carro5'), validarCampos();">Alugue
+                        já</button>
                     <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalShelby">Exibir
                         detalhes</a>
 
@@ -206,7 +207,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary" value="carro12">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
                     <p class="text-body text-start">Versão mais poderosa da picape tem motor diesel de 213 cv e câmbio
                         automático
                         de dez marchas; Ranger Raptor foi inspirada na ‘irmã’ F-150 Raptor</p>
-                    <button type="button" class="btn btn-primary" value="carro5">Alugue já</button>
+                    <button type="button" class="btn btn-primary" value="carro5" onclick="escolhaCarrossel('carro4'), validarCampos()">Alugue já</button>
                     <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalRaptor">Exibir
                         detalhes</a>
 
@@ -265,7 +265,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +280,7 @@
                         picape do
                         mundo.
                         Equipada com Faróis Full LED e rodas de liga leve de 20" nas duas versões.</p>
-                    <button type="button" class="btn btn-primary">Alugue já</button>
+                    <button type="button" class="btn btn-primary"  onclick="escolhaCarrossel('carro1'), validarCampos()">Alugue já</button>
                     <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalF150">Exibir
                         detalhes</a>
 
@@ -325,7 +324,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -385,7 +383,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -463,7 +460,7 @@
                 <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
                 <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
             </ul>
-            
+
             <ul class="footer-ul">
                 <li class="footer-title">
                     <h3>Artigos</h3>
@@ -490,7 +487,8 @@
         <div class="footer-copy">
             <span>Copyright &copy; 2024 Ford Drive Company - Todos os direitos reservados</span>
             <div class="selo-ibama">
-                <p>Paz no trânsito começa por você</p><img src="https://www.riozen.com.br/assets/img/site/common/img/ibama_500x500.png?v=1.1" alt="">
+                <p>Paz no trânsito começa por você</p><img
+                    src="https://www.riozen.com.br/assets/img/site/common/img/ibama_500x500.png?v=1.1" alt="">
             </div>
         </div>
     </footer><!-- Fim footer -->
@@ -506,10 +504,18 @@
     <!--Script para definir data mínima-->
     <script>
 
+        function escolhaCarrossel(id) {
+            document.getElementById('buscaCarro').scrollIntoView({ behavior: 'smooth' });
+            document.querySelector('select').value = id;
+        }
+
         const botaoEnviar = document.querySelector('.btn-reservar');
 
         botaoEnviar.addEventListener('click', (event) => {
+            validarCampos();
+        })
 
+        function validarCampos() {
             const local = document.querySelector('#local');
             const retirada = document.querySelector('#retirada');
             const devolucao = document.querySelector('#devolucao');
@@ -612,8 +618,7 @@
                     popoverSelect.hide();
                 }
             });
-
-        })
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
 
