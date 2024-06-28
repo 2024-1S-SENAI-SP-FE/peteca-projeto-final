@@ -215,6 +215,7 @@ input::placeholder {
 video {
     height: 100%;
     width: 250px;
+    border-radius: 10px;
 }
 
 .collapse-horizontal {
