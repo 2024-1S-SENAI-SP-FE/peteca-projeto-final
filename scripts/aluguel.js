@@ -352,12 +352,13 @@ ancorasFlip.forEach((ancora) => {
     flip2.forEach((ancora2) => {
       ancora2.addEventListener("click", () => {
         novoPaiA = ancora2.parentElement;
+
         novoAvoA = novoPaiA.parentElement;
 
+        avoAncora.classList.add('flip-card-normal')
         novoAvoA.parentNode.replaceChild(avoAncora, newContainer);
-
         
-        // else if()
+      
       });
     });
   });
