@@ -48,6 +48,13 @@
             "preco": "216.92",
             "modelo": "Ford Explorer St",
             "ano": "2024"
+        },
+        {
+            "id": "carro11",
+            "imagem": "imagens/mustang_gt_frente.webp",
+            "preco": "406.92",
+            "modelo": "Mustang GT",
+            "ano": "2024"
         }
     ]
 }
