@@ -4,7 +4,7 @@ body {
     font-family: "Inter", sans-serif;
     padding: 1rem 1rem;
     margin: 1rem 1rem;
-    display: flex;
+ 
 }
 
 main {
@@ -38,7 +38,33 @@ main {
 }
 
 /* ------------------------------------------------------------------------------------- */
- 
+.acessibilidade {
+    position: fixed;
+    right: 0.5rem;
+    top: 7rem;
+    z-index: 10;
+}
+
+.acessibilidade button{
+    border-radius: 8px;
+    background-color: #030841;
+}
+
+.acessibilidade button:hover {
+    background-color: #101553;
+}
+
+video {
+    height: 100%;
+    width: 250px;
+}
+
+.collapse-horizontal {
+    position: absolute;
+    top: -3rem;
+    right: 3.6rem;
+}
+
 /* ------------------------------ FORMA DE PAGAMENTO ------------------------------------ */
 
 .forma-pagamento section {
@@ -68,11 +94,15 @@ main {
     cursor: pointer;
     width: 100%;
     margin-bottom: 10px;
-    
+
 }
 
 .forma-pagamento input[type="radio"] {
     margin-right: 10px;
+}
+
+.forma-pagamento span {
+    margin-inline-start: 0.5rem;
 }
 
 .tipo-pagamento {
@@ -95,7 +125,7 @@ main {
 
 .kits {
     margin-right: 40px;
-    width: 100%;
+    max-width: 832px;
     align-items: flex-start;
     background-color: #fff;
 }
@@ -116,9 +146,7 @@ main {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 2px;
-    /* border-top: 1px solid #ccc; */
     display: flex;
-    align-items:flex-start;
     padding: 20px;
     cursor: pointer;
 }
@@ -135,15 +163,10 @@ main {
 }
 
 .kit label {
-    /* display: flex; */
     justify-content: space-evenly;
     width: 100%;
     cursor: pointer;
     display: block;
-    /* padding: 20px; */
-    /* border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #e8e8e8; */
     position: relative;
 }
 
@@ -177,7 +200,7 @@ main {
     /* background-color: #f9f9f9; */
 }
 
-.kit input[type="radio"]:checked + label {
+.kit input[type="radio"]:checked+label {
     background-color: #eee;
     border-left: 5px solid #001f5b;
 }
@@ -186,6 +209,7 @@ main {
 
 /* --------------------- Estilo do bloco de resumo da reserva -------------------------- */
 .resumo-reserva {
+    width: 55%;
     margin: 10px;
     background-color: #fff;
     padding: 20px;
@@ -204,13 +228,18 @@ main {
     margin: -20px;
 }
 
-.reserva, .carro-selecionado, .kit-selecionado, .valor-total {
+.reserva,
+.carro-selecionado,
+.kit-selecionado,
+.valor-total {
     margin-top: 10px;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
 
-.carro-selecionado h3, .kit-selecionado h3, .valor-total h3 {
+.carro-selecionado h3,
+.kit-selecionado h3,
+.valor-total h3 {
     font-size: 1.5rem;
     color: #000;
     font-weight: bold;
@@ -218,14 +247,20 @@ main {
 
 }
 
-.reserva p, .carro-selecionado p, .kit-selecionado p, .valor-total p {
+.reserva p,
+.carro-selecionado p,
+.kit-selecionado p,
+.valor-total p {
     text-align: justify;
     line-height: 1.6;
     margin: 5px 0;
     color: #000;
 }
 
-.reserva strong, .carro-selecionado strong, .kit-selecionado strong, .valor-total strong {
+.reserva strong,
+.carro-selecionado strong,
+.kit-selecionado strong,
+.valor-total strong {
     font-weight: bold;
     color: #000;
     margin-top: 5px;
@@ -237,7 +272,9 @@ main {
     border-radius: 5px;
 }
 
-.carro-selecionado .preco, .kit-selecionado .preco, .valor-total .preco {
+.carro-selecionado .preco,
+.kit-selecionado .preco,
+.valor-total .preco-final {
     font-size: 24px;
     font-weight: bold;
     color: #333;
@@ -246,6 +283,10 @@ main {
 .carro-selecionado .preco {
     display: block;
     margin-top: 10px;
+}
+
+.kit-selecionado {
+    height: 178px;
 }
 
 .kit-selecionado .preco {

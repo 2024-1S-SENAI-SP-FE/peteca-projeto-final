@@ -17,8 +17,8 @@
 3. Página Sobre nós - <span style="color: #03C03c">Feito</span>  
     3.1 - Responsividade - <span style="color: #03C03c">Feito</span>  
 
-4. Página de contato - <span style="color: orange">Em progresso</span>  
-    4.1 - Responsividade - <span style="color: orange">Em progresso</span>  
+4. Página de contato - <span style="color: #03C03c">Feito</span>  
+    4.1 - Responsividade - <span style="color: #03C03c">Feito</span>  
 
 5. Página de login - <span style="color: #03C03c">Feito</span>  
     5.1 - Responsividade - <span style="color: orange">Em progresso</span>  
@@ -29,22 +29,21 @@
     6.2 - Validação de dados inseridos - <span style="color: #fa3e3e">A fazer</span>  
 
 7. Página de Artigo 1 - <span style="color: #03C03c">Feito</span>  
-    7.1 - Responsividade - <span style="color: orange">Em progresso</span>  
+    7.1 - Responsividade - <span style="color: #03C03c">Feito</span>  
 
 8. Página de Artigo 2 - <span style="color: #03C03c">Feito</span>  
-    8.1 - Responsividade - <span style="color: orange">Em progresso</span>  
+    8.1 - Responsividade - <span style="color: #03C03c">Feito</span>  
 
 9. Página de Artigo 3 - <span style="color: #03C03c">Feito</span>  
-    9.1 - Responsividade - <span style="color: orange">Em progresso</span>  
+    9.1 - Responsividade - <span style="color: #03C03c">Feito</span>  
 
 10. Rodapé dinâmico com Javascript - <span style="color: orange">Em progresso</span>  
 
 11. Documentação de IDs e Classes - <span style="color: orange">Em progresso</span>  
 
 12. Página de reserva e pagamento - <span style="color: #03C03c">Feito</span>  
-    12.1 - Responsividade - <span style="color: orange">Em progresso</span>  
-
-13. Página do Usuário - <span style="color: #fa3e3e">A fazer</span>  
+    12.1 Confirmação de reserva - <span style="color: #fa3e3e">A fazer</span>  
+    12.2 Responsividade - <span style="color: #03C03c">Feito</span> 
 
 14. Acessibilidade - <span style="color: #fa3e3e">A fazer</span>  
 
@@ -82,9 +81,6 @@
 
 11. Página do Usuário - <span style="color: #fa3e3e">A fazer</span>  
 
-12. Acessibilidade - <span style="color: #fa3e3e">A fazer</span>  
+12. Acessibilidade - <span style="color: orange">Em progresso</span>  
 
-13. Interações entre as páginas - <span style="color: #fa3e3e">A fazer</span>  
-    13.1 - Cadastro de usuário - <span style="color: #fa3e3e">A fazer</span>  
-    13.2 - Login de usuário - <span style="color: #fa3e3e">A fazer</span>  
-    13.3 - Aluguel do carro - <span style="color: #fa3e3e">A fazer</span> 
+

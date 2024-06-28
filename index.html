@@ -26,8 +26,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="">Carros</a></li>
                 <li><a href="sobre-nos.html">Sobre nós</a></li>
-                <li><a href="">Contatos</a></li>
-                <li><a href="login.html"><img src="icones/arrow-right-to-bracket-solid copy.svg" alt="">Log In</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+                <li><a href="login.html"><img src="../icones/arrow-right-to-bracket-solid.svg" alt="">Log In</a></li>
             </ul>
         </nav>
 
@@ -57,19 +57,21 @@
                                     <i class="fa-solid fa-newspaper" style="color: #f5f5f9;"></i>Artigos
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Artigo 1</a></li>
-                                    <li><a href="#">Artigo 2</a></li>
-                                    <li><a href="#">Artigo 3</a></li>
+                                    <li><a href="artigo1.html">Ford Mustang 2024</a></li>
+                                    <li><a href="artigo2.html">O Impacto da Sustentabilidade nos Carros de Luxo da
+                                            Ford</a></li>
+                                    <li><a href="artigo3.html">A Fusão Perfeita de Tecnologia, Segurança e Potência</a>
+                                    </li>
                                 </ul>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-address-card"
-                                        style="color: #f5f5f9;"></i>Sobre nós</a>
+                                <a class="nav-link" aria-current="page" href="sobre-nos.html"><i
+                                        class="fa-solid fa-address-card" style="color: #f5f5f9;"></i>Sobre nós</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-phone-volume"
-                                        style="color: #f5f5f9;"></i>Contato</a>
+                                <a class="nav-link" aria-current="page" href="contato.html"><i
+                                        class="fa-solid fa-phone-volume" style="color: #f5f5f9;"></i>Contato</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="#"><i
@@ -86,33 +88,45 @@
             <h1>Ford Drive</h1>
         </div>
 
-        <div class="busca-carro">
-            <select name="modelo" id="modelo">
-                <option value="" selected disabled>Veículo</option>
-                <option value="">F-150 Shelby</option>
-                <option value="">Mustang Mach 1</option>
-                <option value="">Ford Territory Titanium</option>
-                <option value="">Ranger Raptor</option>
-                <option value="">Mustang GT</option>
-                <option value="">Ford Super Duty F-450 DRW</option>
-                <option value="">Ranger XLS</option>
-                <option value="">Ford GT</option>
-                <option value="">Mustang Mach-E</option>
-                <option value="">Ford Explorer St</option>
-                <option value="">Shelby GT500</option>
-                <option value="">Maverick</option>
-                <option value="">Ford Ranger 3.2</option>
-                <option value="">Ranger P703</option>
-                <option value="">Bronco Sport</option>
+        <div class="busca-carro" id="buscaCarro">
+            <select name="modelo" id="modelo" data-bs-content="Informe um carro!" data-bs-placement="top"
+                data-bs-custom-class="custom-popover">
+                <option selected disabled>Veículo</option>
+                <option value="carro1">F-150 Shelby</option>
+                <option value="carro2">Mustang Mach 1</option>
+                <option value="carro3">Ford Territory Titanium</option>
+                <option value="carro4">Ranger Raptor</option>
+                <option value="carro5">Shelby GT500</option>
+                <!-- <option value="carro6">Ford Super Duty F-450 DRW</option> -->
+                <!-- <option value="carro7">Ranger XLS</option> -->
+                <!-- <option value="carro8">Ford GT</option> -->
+                <option value="carro9">Mustang Mach-E</option>
+                <option value="carro10">Ford Explorer St</option>
+                <option value="carro11">Mustang GT</option>
+                <!-- <option value="carro12">Maverick</option> -->
+                <!-- <option value="carro13">Ford Ranger 3.2</option> -->
+                <!-- <option value="carro14">Ranger P703</option> -->
+                <!-- <option value="carro15">Bronco Sport</option> -->
             </select>
-            <input type="text" placeholder="Local">
-            <input type="date">
-            <input type="date">
-            <button>Reservar</button>
+            <input type="text" id="local" placeholder="Local" data-bs-content="Informe um local!"
+                data-bs-placement="bottom" data-bs-custom-class="custom-popover">
+            <input type="date" id="retirada" data-bs-content="Informe uma data para retirada!"
+                data-bs-placement="bottom" data-bs-custom-class="custom-popover">
+            <input type="date" id="devolucao" readonly data-bs-toggle="tooltip" data-bs-placement="bottom"
+                data-bs-title="Escolha a data de retirada!" data-bs-custom-class="custom-tooltip">
+            <button class="btn-reservar">Reservar</button>
+        </div>
+
+        <div class="acessibilidade">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#video-acessibilidade" aria-expanded="false"
+                aria-controls="collapseWidthExample" title="Transcrição desta página em Libras"><i
+                    class="fa-solid fa-hands fa-lg" style="color: #fff;"></i></button>
+            <div id="video-acessibilidade" class="collapse collapse-horizontal">
+                <video src="videos-transcricao/Transcricao_PagInicial.mp4" controls></video>
+            </div>
         </div>
 
     </header><!-- Fim cabeçalho-->
-
 
     <section id="carrossel" class="carousel slide"><!-- Início carrossel-->
 
@@ -147,7 +161,8 @@
                         a versão mais potente da marca Mustang, sendo uma homenagem a um ex-piloto automobilístico
                         Carroll Shelby,
                         criador do modelo Cobra.</p>
-                    <button type="button" class="btn btn-primary">Alugue já</button>
+                    <button type="button" class="btn btn-primary" onclick="escolhaCarrossel('carro5'), validarCampos();">Alugue
+                        já</button>
                     <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalShelby">Exibir
                         detalhes</a>
 
@@ -192,7 +207,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -201,14 +215,13 @@
             </div>
 
             <div class="carousel-item">
-                <img src="imagens/iloveimg-resized/ford_23rangerraptor4wdtc4b_angularfront.png"
-                    alt="">
+                <img src="imagens/iloveimg-resized/ford_23rangerraptor4wdtc4b_angularfront.png" alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="text-body">Range Raptor</h1>
                     <p class="text-body text-start">Versão mais poderosa da picape tem motor diesel de 213 cv e câmbio
                         automático
                         de dez marchas; Ranger Raptor foi inspirada na ‘irmã’ F-150 Raptor</p>
-                    <button type="button" class="btn btn-primary">Alugue já</button>
+                    <button type="button" class="btn btn-primary" value="carro5" onclick="escolhaCarrossel('carro4'), validarCampos()">Alugue já</button>
                     <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalRaptor">Exibir
                         detalhes</a>
 
@@ -252,7 +265,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +280,7 @@
                         picape do
                         mundo.
                         Equipada com Faróis Full LED e rodas de liga leve de 20" nas duas versões.</p>
-                    <button type="button" class="btn btn-primary">Alugue já</button>
+                    <button type="button" class="btn btn-primary"  onclick="escolhaCarrossel('carro1'), validarCampos()">Alugue já</button>
                     <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalF150">Exibir
                         detalhes</a>
 
@@ -312,7 +324,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -372,7 +383,6 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Alugue já</button>
                                 </div>
                             </div>
                         </div>
@@ -393,18 +403,19 @@
 
     <section id="artigos"><!-- Início da sessão artigos-->
 
-    <div class="card">
-      <img src="imagens/img-artigo3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h1 class="card-title">Ford Mustang 2024 
-          Promete Elevar o Conceito de Performance e Tecnologia
-        </h1>
-        <p class="card-text">O Ford Mustang 2024 promete elevar o padrão de desempenho e tecnologia com inovações revolucionárias. 
-        Com melhorias significativas no motor, transmissão e aerodinâmica, este icônico modelo promete uma experiência de direção 
-        ainda mais emocionante e dinâmica.</p>
-        <a href="artigo1.html" class="btn btn-primary">Saiba mais</a>
-      </div>
-    </div>
+        <div class="card">
+            <img src="imagens/img-artigo3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">Ford Mustang 2024
+                    Promete Elevar o Conceito de Performance e Tecnologia</h1>
+                <p class="card-text">O Ford Mustang 2024 promete elevar o padrão de desempenho e tecnologia com
+                    inovações revolucionárias.
+                    Com melhorias significativas no motor, transmissão e aerodinâmica, este icônico modelo promete uma
+                    experiência de direção
+                    ainda mais emocionante e dinâmica</p>
+                <a href="artigo1.html" class="btn btn-primary">Saiba mais</a>
+            </div>
+        </div>
 
     <div class="card">
       <img src="imagens/img-artigo2.jpg" class="card-img-top" alt="...">
@@ -419,18 +430,22 @@
       </div>
     </div>
 
-    <div class="card">
-      <img src="imagens/img-artigo.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h1 class="card-title">A Fusão Perfeita de Tecnologia, Segurança e Potência</h1>
-        <p class="card-text">Os carros de luxo disponíveis para aluguel vêm equipados com uma série de recursos de
-          segurança avançados. Neste artigo você verá alguns exemplos de recursos que os carros de luxo para aluguel
-          podem oferecer, trazendo aos clientes uma experiência de condução segura e tranquila.</p>
-        <a href="artigo3.html" class="btn btn-primary">Saiba mais</a>
-      </div>
-    </div>
+        <div class="card">
+            <img src="imagens/img-artigo2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">A Fusão Perfeita de Tecnologia, Segurança e Potência</h1>
+                <p class="card-text">Os carros de luxo disponíveis para aluguel vêm equipados com uma série de recursos
+                    de
+                    segurança avançados. Neste artigo você verá alguns exemplos de recursos que os carros de luxo para
+                    aluguel
+                    podem oferecer, trazendo aos clientes uma experiência de condução segura e tranquila.</p>
+                <a href="artigo3.html" class="btn btn-primary">Saiba mais</a>
+            </div>
+        </div>
 
     </section><!-- Fim da sessão artigos-->
+
+    <script src="scripts/footer.js"></script>
 
     <footer><!-- Início footer-->
         <div class="footer-container">
@@ -438,31 +453,25 @@
                 <li class="footer-title">
                     <h3>Veiculos</h3>
                 </li>
+                <li class="footer-li"><a href="#" class="footer-a">Login</a></li>
                 <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
                 <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
             </ul>
-            <ul class="footer-ul">
-                <li class="footer-title">
-                    <h3>Aluguel</h3>
-                </li>
-                <li class="footer-li"><a href="#" class="footer-a">Cadastro</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Escolha do Modelo</a></li>
-            </ul>
+
             <ul class="footer-ul">
                 <li class="footer-title">
                     <h3>Artigos</h3>
                 </li>
-                <li class="footer-li"><a href="#" class="footer-a">Descontos para PCD</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Tecnologia,Segurança e Potência</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Ford Mustang 2024 </a></li>
+                <li class="footer-li"><a href="artigo2.html" class="footer-a">O Impacto da Sustentabilidade</a></li>
+                <li class="footer-li"><a href="artigo3.html" class="footer-a">Tecnologia,Segurança e Potência</a></li>
+                <li class="footer-li"><a href="artigo1.html" class="footer-a">Ford Mustang 2024 </a></li>
             </ul>
             <ul class="footer-ul">
                 <li class="footer-title">
-                    <h3>Sobre Nós</h3>
+                    <h3>Quem somos</h3>
                 </li>
-                <li class="footer-li"><a href="#" class="footer-a">Ford Drive </a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Projeto Ford Academy</a></li>
-                <li class="footer-li"><a href="#" class="footer-a">Contatos</a></li>
+                <li class="footer-li"><a href="sobre-nos.html" class="footer-a">Sobre nós</a></li>
+                <li class="footer-li"><a href="contato.html" class="footer-a">Fale conosco</a></li>
             </ul>
         </div>
         <div class="footer-socialmidia">
@@ -472,11 +481,206 @@
             <a href="#" class="footer-link"><i class="fa-brands fa-youtube"></i></a>
 
         </div>
-        <div class="footer-copy"><span>Copyright &copy; 2024 Ford Drive Company - Todos os direitos reservados</span>
+        <div class="footer-copy">
+            <span>Copyright &copy; 2024 Ford Drive Company - Todos os direitos reservados</span>
+            <div class="selo-ibama">
+                <p>Paz no trânsito começa por você</p><img
+                    src="https://www.riozen.com.br/assets/img/site/common/img/ibama_500x500.png?v=1.1" alt="">
+            </div>
         </div>
     </footer><!-- Fim footer -->
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+    <!--Script para definir data mínima-->
+    <script>
+
+        function escolhaCarrossel(id) {
+            document.getElementById('buscaCarro').scrollIntoView({ behavior: 'smooth' });
+            document.querySelector('select').value = id;
+        }
+
+        const botaoEnviar = document.querySelector('.btn-reservar');
+
+        botaoEnviar.addEventListener('click', (event) => {
+            validarCampos();
+        })
+
+        function validarCampos() {
+            const local = document.querySelector('#local');
+            const retirada = document.querySelector('#retirada');
+            const devolucao = document.querySelector('#devolucao');
+
+            const retiradaData = new Date(retirada.value);
+            const devolucaoData = new Date(devolucao.value);
+
+            let intervaloMilissegundos = devolucaoData - retiradaData;
+
+            let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
+
+            const data = {
+                local: local.value,
+                retirada: retirada.value,
+                devolucao: devolucao.value,
+                intervalo: intervaloDias
+            };
+
+            localStorage.setItem('data', JSON.stringify(data));
+
+            const select = document.querySelector('select');
+
+
+            const popoverLocal = new bootstrap.Popover(local, {
+                trigger: 'manual'
+            });
+            const popoverRetirada = new bootstrap.Popover(retirada, {
+                trigger: 'manual'
+            });
+
+            const tooltip = new bootstrap.Tooltip(devolucao);
+
+            const popoverSelect = new bootstrap.Popover(select, {
+                trigger: 'manual'
+            });
+
+            let valid = true;
+
+            if (!local.value) {
+                popoverLocal.show();
+                valid = false;
+            } else {
+                popoverLocal.hide();
+            }
+
+            if (!retirada.value) {
+                popoverRetirada.show();
+                valid = false;
+            } else {
+                popoverRetirada.hide();
+            }
+
+            if (!devolucao.value) {
+                tooltip.show();
+                valid = false;
+            } else {
+                tooltip.dispose();
+            }
+
+            if (select.value === "Veículo") {
+                popoverSelect.show();
+                valid = false;
+            } else {
+                popoverSelect.hide();
+            }
+
+            if (!valid) {
+                event.preventDefault();
+                setTimeout(() => {
+                    popoverLocal.hide();
+                    popoverRetirada.hide();
+                    popoverSelect.hide();
+                    tooltip.dispose();
+                }, 3000);
+            } else {
+                // Chama uma função
+                modeloEscolhido(select.value);
+            }
+
+            local.addEventListener('input', function () {
+                if (local.value) {
+                    popoverLocal.hide();
+                }
+            });
+
+            retirada.addEventListener('input', function () {
+                if (retirada.value) {
+                    popoverRetirada.hide();
+                }
+            });
+
+            devolucao.addEventListener('input', function () {
+                if (devolucao.value) {
+                    tooltip.hide();
+                }
+            });
+
+            select.addEventListener('change', function () {
+                if (select.value !== "Veículo") {
+                    popoverSelect.hide();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Definir datas mínimas
+            const startDateInput = document.getElementById('retirada');
+            const endDateInput = document.getElementById('devolucao');
+
+            const tooltip = new bootstrap.Tooltip(endDateInput);
+
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = (today.getMonth() + 1).toString().padStart(2, '0');
+            const dd = today.getDate().toString().padStart(2, '0');
+
+            const todayString = `${yyyy}-${mm}-${dd}`;
+            startDateInput.min = todayString;
+
+            startDateInput.addEventListener('change', () => {
+                if (startDateInput.value) {
+                    endDateInput.readOnly = false;
+
+                    tooltip.dispose();
+
+                    const selectedDate = new Date(startDateInput.value);
+                    selectedDate.setDate(selectedDate.getDate() + 1);
+
+                    const yyyy = selectedDate.getFullYear();
+                    const mm = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
+                    const dd = (selectedDate.getDate() + 1).toString().padStart(2, '0');
+
+                    const nextDayString = `${yyyy}-${mm}-${dd}`;
+                    endDateInput.min = nextDayString;
+                } else {
+                    endDateInput.readOnly = true;
+                    endDateInput.value = '';
+                }
+            });
+
+            endDateInput.addEventListener('focus', () => {
+                if (endDateInput.readOnly) {
+                    tooltip.show();
+                    setTimeout(() => {
+                        tooltip.hide();
+                    }, 3000);
+                }
+            });
+        });
+
+        // Função para buscar as informações do carro escolhido no objeto 'carros.json'
+        function modeloEscolhido(idCarro) {
+            fetch('data/carros.json')
+                .then(response => response.json())
+                .then(data => {
+                    const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
+                    if (carroSelecionado) {
+                        localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
+                        window.location.href = "reserva.html";
+                    } else {
+                        console.error('Carro não encontrado no arquivo JSON.');
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar dados do arquivo JSON:', error));
+        }
+    </script>
+
 </body>
 
 </html>

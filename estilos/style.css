@@ -116,7 +116,8 @@ header {
 
 input::placeholder {
     text-align: center;
-    text-indent: 0;
+    /* text-indent: 0; */
+    color: #000000;
 }
 
 .busca-carro select {
@@ -129,6 +130,13 @@ input::placeholder {
     text-indent: 3rem;
 }
 
+.custom-popover {
+    --bs-popover-border-color: red;
+    --bs-popover-body-color: red;
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+}
+
 .busca-carro input:nth-child(2) {
     background-image: url(../icones/location-dot-solid.svg);
     background-size: 1rem;
@@ -139,18 +147,33 @@ input::placeholder {
 }
 
 .busca-carro input:nth-child(3) {
+    background-image: url(../icones/calendar-regular.svg);
+    background-size: 0.8rem;
+    background-repeat: no-repeat;
+    background-position: 1.4rem;
     width: 166px;
     text-indent: 1.5rem;
 }
 
 .busca-carro input:last-of-type {
+    background-image: url(../icones/calendar-regular.svg);
+    background-size: 0.8rem;
+    background-repeat: no-repeat;
+    background-position: 1.4rem;
     width: 166px;
     text-indent: 1.5rem;
 }
 
+.custom-tooltip {
+    --bs-tooltip-bg: red;
+    --bs-tooltip-color: white;
+}
+
+
 .busca-carro input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     margin-left: 1.2rem;
+    opacity: 0;
 }
 
 
@@ -170,6 +193,35 @@ input::placeholder {
 
 .busca-carro button:hover {
     background-color: #02052b;
+}
+
+/* Acessibilidade */
+.acessibilidade {
+    position: fixed;
+    right: 1rem;
+    top: 10rem;
+    z-index: 10;
+}
+
+.acessibilidade button{
+    border-radius: 8px;
+    background-color: var(--azul-padrao);
+}
+
+.acessibilidade button:hover {
+    background-color: #0b0f3b;
+}
+
+video {
+    height: 100%;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.collapse-horizontal {
+    position: absolute;
+    top: -3rem;
+    right: 3.6rem;
 }
 
 /* Carrossel */
@@ -264,6 +316,11 @@ input::placeholder {
 
 .carousel-caption a {
     font-size: 15px;
+}
+
+.modal-dialog {
+    max-width: 430px;
+    margin-left: 3.5rem;
 }
 
 .modal-header {
@@ -378,28 +435,29 @@ input::placeholder {
 #artigos {
     background-color: var(--azul-padrao);
     display: flex;
-    padding: 1rem;
-    gap: 1rem;
 }
 
 .card {
     background-color: var(--azul-padrao);
     border: none;
+    padding: 1.5rem;
 }
 
 .card img {
-    height: 50%;
+    height: 45%;
+    border-radius: 10px;
 }
 
 .card h1 {
-    font-weight: 900;
-    line-height: 1.1rem;
     color: var(--branco-padrao);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
 
 .card p {
     color: var(--branco-padrao);
-    line-height: 1.1rem;
+    line-height: 1.5rem;
 }
 
 .card a {
@@ -463,8 +521,53 @@ footer {
 }
 
 .footer-copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
     background-color: #f5f5f9;
     text-align: center;
-    padding: 10px;
     font-size: small;
+}
+
+.footer-copy span {
+    margin-inline-start: 2rem;
+}
+.selo-ibama {
+    display: flex;
+    align-items: center;
+    margin-inline-end: 2rem;
+}
+
+.selo-ibama img{
+    width: 70px;
+    height: 70px;
+}
+
+/* Firefox */
+
+@-moz-document url-prefix() {
+
+    .busca-carro select {
+        text-indent: 1.5rem;
+    }
+
+    .busca-carro input:nth-child(3) {
+        background-image: url(../icones/calendar-solid.svg);
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: 96.5% 42%;
+        width: 166px;
+        text-indent: 1.5rem;
+    }
+
+    .busca-carro input:last-of-type {
+        background-image: url(../icones/calendar-solid.svg);
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: 96.5% 42%;
+        width: 166px;
+        text-indent: 1.5rem;
+    }
 }
