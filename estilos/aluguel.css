@@ -432,6 +432,10 @@ a {
   .container-detalhes span {
     margin: 0;
   }
+  .detalhes,.detalhes2{
+    top: auto;
+    bottom:20px;
+  }
 }
 
 @media screen and (min-width: 300px) and (max-width: 360px) {
@@ -523,6 +527,24 @@ a {
     display: flex;
     flex-flow: column;
   }
+  .img-carros{
+    padding: 0;
+    width: auto;
+  }
+  .lado-a-lado{
+    width: 150px;
+  }
+  .button-alugue{
+    width: 230px;
+  }
+  .valor-aluguel{
+    bottom: 80px;
+    left: 90px;
+    margin-top: 10px;
+  }
+  .detalhes2{
+    right: 130px;
+  }
 }
 
 /* Animação de transição do Flip */
@@ -557,10 +579,10 @@ a {
 }
 @keyframes flipTerceiro {
   from{
-    transform:transate(180deg);
+    transform:translate(0deg);
   }
   to{
-    transform:transate(-180deg);
+    transform:translate(280deg);
   }
 }
  @keyframes registrado {
