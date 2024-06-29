@@ -80,7 +80,6 @@ input {
   margin-bottom: 30px;
 }
 .input {
-  margin-bottom: 10px;
   margin-top: 5px;
 }
 
@@ -93,6 +92,15 @@ input::placeholder {
   margin-top: 20px;
   margin-left: 70px;
   background-color: #ffffff;
+}
+br{
+    margin-bottom: 100px;
+}
+.invalido{
+    visibility: hidden;
+    margin: 0 0 50px;
+    font-size: 16px;
+    color: rgb(228, 41, 41);
 }
 
 @media (max-width: 450px) {
