@@ -1,0 +1,36 @@
+
+@media (min-width: 600px) {
+    .bloco-contato {
+        max-width: 700px;
+    }
+
+    .blocos-contato {
+        gap: 15px;
+    }
+
+    .info-contato img {
+        width: 40px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .bloco-contato {
+        max-width: 900px;
+    }
+
+    .blocos-contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .info-contato {
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+    }
+
+    .info-contato img {
+        width: 50px;
+    }
+}

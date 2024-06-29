@@ -1,0 +1,70 @@
+@media (max-width: 1200px) {
+    .container-dados-pag-kit, .resumo-reserva {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-kits {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-kits span {
+        margin-bottom: 5px;
+    }
+
+    .kit {
+        padding: 10px 5px;
+    }
+
+    .resumo-reserva img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .acessibilidade {
+        top: 6rem;
+    }
+
+    .resumo-reserva {
+        width: 100%;
+    }
+
+    .forma-pagamento {
+        margin-bottom: 2rem;
+    }
+
+    .kits {
+        width: 100%;
+    }
+
+  .dados-pessoais, .forma-pagamento, .kits, .resumo-reserva  h2 {
+        font-size: 1.2em;
+    }
+
+    .preco {
+        font-size: 1em;
+    }
+
+    .resumo-reserva button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .kit {
+        padding: 5px;
+    }
+}

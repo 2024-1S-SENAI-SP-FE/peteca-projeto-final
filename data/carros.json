@@ -1,0 +1,60 @@
+{
+    "carros": [
+        {
+            "id": "carro1",
+            "imagem": "/imagens/iloveimg-resized/83db8adb14077b609539478ca6023c80.png",
+            "preco": "427.27",
+            "modelo": "F-150 Shelby",
+            "ano": "2023"
+        },
+        {
+            "id": "carro2",
+            "imagem": "imagens/Mach1.png",
+            "preco": "514.81",
+            "modelo": "Mustang Mach 1",
+            "ano": "2024"
+        },
+        {
+            "id": "carro3",
+            "imagem": "imagens/territory.jpg",
+            "preco": "161.53",
+            "modelo": "Ford Territory Titanium",
+            "ano": "2024"
+        },
+        {
+            "id": "carro4",
+            "imagem": "imagens/ranger_raptor2024.png",
+            "preco": "345.07",
+            "modelo": "Ranger Raptor",
+            "ano": "2024"
+        },
+        {
+            "id": "carro5",
+            "imagem": "imagens/Ford_Mustang_Shelby_GT500.png",
+            "preco": "1153.07",
+            "modelo": "Shelby GT500",
+            "ano": "2024"
+        },
+        {
+            "id": "carro9",
+            "imagem": "imagens/Mustang_Mach_E_frente.png",
+            "preco": "373.84",
+            "modelo": "Mustang Mach-E",
+            "ano": "2024"
+        },
+        {
+            "id": "carro10",
+            "imagem": "imagens/Ford_Explorer_St_frente.png",
+            "preco": "216.92",
+            "modelo": "Ford Explorer St",
+            "ano": "2024"
+        },
+        {
+            "id": "carro11",
+            "imagem": "imagens/mustang_gt_frente.webp",
+            "preco": "406.92",
+            "modelo": "Mustang GT",
+            "ano": "2024"
+        }
+    ]
+}
