@@ -1,0 +1,1 @@
+const usuario = document.querySelector('.')
