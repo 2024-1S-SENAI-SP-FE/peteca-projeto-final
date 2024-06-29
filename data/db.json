@@ -1,4 +1,115 @@
-
 {
-    "teste": 1
+  "usuarios": [
+    {
+      "nome": "a",
+      "cpf": 1,
+      "email": "email",
+      "num": 1,
+      "senha": 1
+    },
+    {
+      "id": "6b7f",
+      "user": "Rodrigo henrique fonseca estrela",
+      "cpf": "241432423",
+      "email": "rodrigo@asfhkajb",
+      "num": "2342342434",
+      "senha": "3423234"
+    },
+    {
+      "id": "86fb",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "5983",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "26e3",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "02eb",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "9127",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "ab1b",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "a748",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "cada",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "469b",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "8b65",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "ebb0",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    },
+    {
+      "id": "ee7d",
+      "user": "",
+      "cpf": "",
+      "email": "",
+      "num": "",
+      "senha": ""
+    }
+  ]
 }
