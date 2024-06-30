@@ -11,7 +11,16 @@ const botaoEnviar = document.querySelector('.btn-reservar');
 
 botaoEnviar.addEventListener('click', () => {
     validarCampos();
+    pesquisarCep();
 })
+
+const pesquisarCep = async () => {
+    const cep = document.querySelector('#cep').value;
+    const url = `http://viacep.com.br/ws/${cep}/json/`;
+    const dados = await fetch(url);
+    const endereco = await dados.json();
+    localStorage.setItem('endereco', JSON.stringify(endereco));
+}
 
 function validarCampos() {
     const cep = document.querySelector('#cep');
@@ -37,7 +46,7 @@ function validarCampos() {
     const select = document.querySelector('select');
 
     const tooltipCep = new bootstrap.Tooltip(cep);
-    
+
     const tooltipEntrega = new bootstrap.Tooltip(entrega);
 
     const tooltip = new bootstrap.Tooltip(devolucao);

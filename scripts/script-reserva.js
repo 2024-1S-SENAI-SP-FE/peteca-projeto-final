@@ -2,6 +2,7 @@ const carroEscolhido = JSON.parse(localStorage.getItem('carroEscolhido'));
 const infosReserva = localStorage.getItem('data');
 const infos = JSON.parse(infosReserva);
 
+
 function formatarDataParaExibicao(dataString) {
     const date = new Date(dataString);
     const dia = String(date.getDate() + 1).padStart(2, '0');
@@ -10,16 +11,20 @@ function formatarDataParaExibicao(dataString) {
     return `${dia}-${mes}-${ano}`;
 }
 
+const infoEndereco = JSON.parse(localStorage.getItem('endereco'));
+if (!infoEndereco) {
+    console.log('Nenhum endereço encontrado no localStorage.');
+}
+
 if (infosReserva) {
 
-    const retiradaFormatada = formatarDataParaExibicao(infos.retirada);
+    const retiradaFormatada = formatarDataParaExibicao(infos.entrega);
     const devolucaoFormatada = formatarDataParaExibicao(infos.devolucao);
 
     document.querySelector('.qntd-dias').innerHTML = `<strong>Período do contrato:</strong> ${infos.intervalo} dia(s)`;
-    document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infos.local}`;
+    document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
     document.querySelector('.dia-retirada').innerHTML = `<strong>Data:</strong> ${retiradaFormatada}`;
-    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infos.local}`;
-    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infos.local}`;
+    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
     document.querySelector('.dia-devolucao').innerHTML = `<strong>Data:</strong> ${devolucaoFormatada}`;
 }
 
