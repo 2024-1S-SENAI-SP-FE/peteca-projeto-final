@@ -14,7 +14,7 @@ botaoEnviar.addEventListener('click', () => {
 })
 
 function validarCampos() {
-    const local = document.querySelector('#local');
+    const cep = document.querySelector('#cep');
     const entrega = document.querySelector('#entrega');
     const devolucao = document.querySelector('#devolucao');
 
@@ -26,7 +26,7 @@ function validarCampos() {
     let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
 
     const data = {
-        local: local.value,
+        cep: cep.value,
         entrega: entrega.value,
         devolucao: devolucao.value,
         intervalo: intervaloDias
@@ -36,7 +36,7 @@ function validarCampos() {
 
     const select = document.querySelector('select');
 
-    const tooltipLocal = new bootstrap.Tooltip(local);
+    const tooltipCep = new bootstrap.Tooltip(cep);
     
     const tooltipEntrega = new bootstrap.Tooltip(entrega);
 
@@ -46,11 +46,11 @@ function validarCampos() {
 
     let valid = true;
 
-    if (!local.value) {
-        tooltipLocal.show();
+    if (!cep.value) {
+        tooltipCep.show();
         valid = false;
     } else {
-        tooltipLocal.hide();
+        tooltipCep.hide();
     }
 
     if (!entrega.value) {
@@ -76,7 +76,7 @@ function validarCampos() {
 
     if (!valid) {
         setTimeout(() => {
-            tooltipLocal.dispose();
+            tooltipCep.dispose();
             tooltipEntrega.dispose();
             tooltipSelect.dispose();
             tooltip.dispose();
@@ -86,9 +86,9 @@ function validarCampos() {
         modeloEscolhido(select.value);
     }
 
-    local.addEventListener('input', function () {
+    cep.addEventListener('input', function () {
         if (local.value) {
-            tooltipLocal.dispose();
+            tooltipCep.dispose();
         }
     });
 
@@ -112,7 +112,6 @@ function validarCampos() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
     // Definir datas mínimas
     const startDateInput = document.getElementById('entrega');
     const endDateInput = document.getElementById('devolucao');
@@ -129,19 +128,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startDateInput.addEventListener('change', () => {
         if (startDateInput.value) {
+            endDateInput.value = '';
             endDateInput.readOnly = false;
 
             tooltip.dispose();
 
             const selectedDate = new Date(startDateInput.value);
-            selectedDate.setDate(selectedDate.getDate() + 1);
+            selectedDate.setDate(selectedDate.getDate() + 2);
 
             const yyyy = selectedDate.getFullYear();
             const mm = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
-            const dd = (selectedDate.getDate()).toString().padStart(2, '0');
+            const dd = selectedDate.getDate().toString().padStart(2, '0');
 
             const nextDayString = `${yyyy}-${mm}-${dd}`;
             endDateInput.min = nextDayString;
+
         } else {
             endDateInput.readOnly = true;
             endDateInput.value = '';
