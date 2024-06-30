@@ -116,7 +116,7 @@ async function cadastrar(event) {
         console.error("Erro ao cadastrar:", error);
     }
     window.location='index.html'
-        }, 3000)
+        }, 500)
       document.querySelector('.form-login').style.visibility='hidden'
       document.querySelector('h1').style.visibility='hidden'
       document.querySelector('.btn-login').style.visibility='hidden'
