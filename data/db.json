@@ -3,9 +3,9 @@
     {
       "nome": "a",
       "cpf": 1,
-      "email": "email",
+      "email": "email@email.com",
       "num": 1,
-      "senha": 1
+      "senha": 123
     },
     {
       "id": "8f92",
@@ -14,6 +14,14 @@
       "email": "rodrigo@asfhkajb.com",
       "num": "12313212341",
       "senha": "11111111"
+    },
+    {
+      "id": "7afc",
+      "user": "grace",
+      "cpf": "12312312311",
+      "email": "grace@gmail.com",
+      "num": "12313212341",
+      "senha": "12312311"
     }
   ]
 }
