@@ -77,7 +77,10 @@ async function logIn() {
             inputs.forEach((input, index) => {
               if (input) {
                 
-                bordaVermelha(index, 'Algo deu errado');
+                bordaVermelha(
+                  index,
+                  "Algo deu errado. Verifique seu cadastro"
+                );
 
             
               } else {
