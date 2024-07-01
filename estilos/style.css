@@ -5,6 +5,24 @@
     --branco-padrao: #f5f5f9;
 }
 
+::-webkit-scrollbar {
+  width: 8px;  
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
     font-family: "Inter", sans-serif;
     font-size: 0.9rem;
