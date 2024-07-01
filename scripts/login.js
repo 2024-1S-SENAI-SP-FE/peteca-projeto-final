@@ -69,7 +69,7 @@ async function logIn() {
               document.querySelector('.logado').classList.add('logou')
               setTimeout(() => {
                window.location='index.html'
-            },1000)
+            },2000)
             } else {
                 window.alert("Email ou senha incorretos");
             }
