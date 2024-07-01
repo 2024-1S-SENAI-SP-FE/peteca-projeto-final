@@ -9,9 +9,13 @@ function escolhaCarrossel(id) {
 
 const botaoEnviar = document.querySelector('.btn-reservar');
 
-botaoEnviar.addEventListener('click', () => {
-    validarCampos();
-    pesquisarCep();
+botaoEnviar.addEventListener('click', async () => {
+    const cepValido = await pesquisarCep();
+    if (cepValido) {
+        validarCampos();
+    } else {
+        alert('CEP não encontrado. Por favor, verifique e tente novamente.');
+    }
 })
 
 const pesquisarCep = async () => {
@@ -27,8 +31,10 @@ const pesquisarCep = async () => {
             throw new Error('CEP não encontrado');
         }
         localStorage.setItem('endereco', JSON.stringify(endereco));
+        return true; 
     } catch (error) {
         console.error(error.message);
+        return false; 
     }
 }
 
@@ -45,7 +51,6 @@ function validarCampos() {
     let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
 
     const data = {
-        cep: cep.value,
         entrega: entrega.value,
         devolucao: devolucao.value,
         intervalo: intervaloDias
