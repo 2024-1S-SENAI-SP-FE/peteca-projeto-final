@@ -2,13 +2,13 @@
 let usuario, executou = false
 
 
-function bordaVermelha(index) {
+function bordaVermelha(index,text) {
   const input = document.querySelectorAll("input");
   const span = document.querySelectorAll(".invalido")
   input[index].style.border = "2px solid red";
     span[index].style.visibility = "visible";
-    span[index].innerHTML='teste'
-  console.log("cor vermelha");
+    span[index].innerHTML=text
+  // console.log("cor vermelha");
 }
 
 function bordaAzul(index) {
@@ -16,7 +16,7 @@ function bordaAzul(index) {
   const span = document.querySelectorAll(".invalido");
   input[index].style.border = "2px solid blue"; // Alterado para azul
   span[index].style.visibility = "hidden";
-  console.log("cor azul");
+  // console.log("cor azul");
 }
 
 function validaInputs() {
@@ -30,7 +30,8 @@ function validaInputs() {
             bordaAzul(index)
         }
         })
-    } else {
+      } else {
+        
       validade = false
     }
   });
@@ -60,21 +61,33 @@ async function logIn() {
                     usuario.email === emailUsuario && usuario.senha === senhaUsuario
             );
             console.log(usuarioEncontrado);
-            if (usuarioEncontrado) {
+          if (usuarioEncontrado) {
                 
                 
             
-              document.querySelector('.form-login').style.visibility = 'hidden'
-              document.querySelector('.titulo-login').style.visibility = 'hidden'
-              document.querySelector('.logado').classList.add('logou')
-              setTimeout(() => {
-               window.location='index.html'
-            },2000)
-            } else {
-                window.alert("Email ou senha incorretos");
-            }
+            document.querySelector('.form-login').style.visibility = 'hidden'
+            document.querySelector('.titulo-login').style.visibility = 'hidden'
+            document.querySelector('.logado').classList.add('logou')
+            setTimeout(() => {
+              window.location = 'index.html'
+            }, 2000)
+          } else {
+
+            const inputs = document.querySelectorAll('input')
+            inputs.forEach((input, index) => {
+              if (input) {
+                
+                bordaVermelha(index, 'Algo deu errado');
+
+            
+              } else {
+                console.log('teste 2');
+              }
+              // window.alert("Email ou senha incorretos");
+            })
             usuario = usuarioEncontrado
             executou = true
+          }
         
       } catch (error) {
         console.error("Erro ao acessar o servidor:", error);
@@ -82,13 +95,16 @@ async function logIn() {
       }
     }
     else {
-        document.querySelector('.invalido').style.visibility = 'visible'
-        document.querySelector(".invalido").innerHTML = 'Por favor preencha os campos'
+       
         const inputs = document.querySelectorAll('input')
-    inputs.forEach((input, index)=> {
-        if (input.value) {
-          bordaVermelha(index);
-        }
+      inputs.forEach((input, index) => {
+          if (input.value == '') {
+            bordaVermelha(index, 'Por favor digite algo');
+            
+          } else {
+            console.log('teste 2');
+          }
+         
     })
     }
 }
