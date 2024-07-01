@@ -69,7 +69,7 @@ async function logIn() {
               document.querySelector('.logado').classList.add('logou')
               setTimeout(() => {
                window.location='index.html'
-            },500)
+            },1000)
             } else {
                 window.alert("Email ou senha incorretos");
             }
@@ -93,4 +93,3 @@ async function logIn() {
     }
 }
 document.querySelector(".btn-login").addEventListener("click", logIn);
-export default (usuario, executou)
