@@ -11,10 +11,15 @@ function formatarDataParaExibicao(dataString) {
     return `${dia}-${mes}-${ano}`;
 }
 
-const infoEndereco = JSON.parse(localStorage.getItem('endereco'));
-if (!infoEndereco) {
-    console.log('Nenhum endereço encontrado no localStorage.');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const infoEndereco = JSON.parse(localStorage.getItem('endereco'));
+    if (!infoEndereco) {
+        console.log('Nenhum endereço encontrado no localStorage.');
+        return;
+    }
+    document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
+    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
+});
 
 if (infosReserva) {
 
@@ -22,9 +27,9 @@ if (infosReserva) {
     const devolucaoFormatada = formatarDataParaExibicao(infos.devolucao);
 
     document.querySelector('.qntd-dias').innerHTML = `<strong>Período do contrato:</strong> ${infos.intervalo} dia(s)`;
-    document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
+    // document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
     document.querySelector('.dia-retirada').innerHTML = `<strong>Data:</strong> ${retiradaFormatada}`;
-    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
+    // document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
     document.querySelector('.dia-devolucao').innerHTML = `<strong>Data:</strong> ${devolucaoFormatada}`;
 }
 

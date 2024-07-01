@@ -17,9 +17,19 @@ botaoEnviar.addEventListener('click', () => {
 const pesquisarCep = async () => {
     const cep = document.querySelector('#cep').value;
     const url = `http://viacep.com.br/ws/${cep}/json/`;
-    const dados = await fetch(url);
-    const endereco = await dados.json();
-    localStorage.setItem('endereco', JSON.stringify(endereco));
+    try {
+        const dados = await fetch(url);
+        if (!dados.ok) {
+            throw new Error('Erro ao buscar CEP');
+        }
+        const endereco = await dados.json();
+        if (endereco.erro) {
+            throw new Error('CEP não encontrado');
+        }
+        localStorage.setItem('endereco', JSON.stringify(endereco));
+    } catch (error) {
+        console.error(error.message);
+    }
 }
 
 function validarCampos() {
@@ -176,7 +186,9 @@ function modeloEscolhido(idCarro) {
             const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
             if (carroSelecionado) {
                 localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
-                window.location.href = "reserva.html";
+                setInterval(()=> {
+                    window.location.href = "reserva.html";
+                }, 3000)
             } else {
                 console.error('Carro não encontrado no arquivo JSON.');
             }
