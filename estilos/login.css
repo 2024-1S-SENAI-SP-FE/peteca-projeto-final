@@ -64,6 +64,7 @@ input{
   margin-top: 20px;
   width: 180px;
   height: 50px;
+  cursor: pointer;
 }
 .label-login{
   justify-content: center;
@@ -90,6 +91,7 @@ input::placeholder {
   margin-top: 20px;
   margin-left: 90px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .invalido{
   visibility: hidden;
