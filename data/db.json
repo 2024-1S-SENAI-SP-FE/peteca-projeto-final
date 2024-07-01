@@ -22,6 +22,22 @@
       "email": "grace@gmail.com",
       "num": "12313212341",
       "senha": "12312311"
+    },
+    {
+      "id": "9f99",
+      "user": "magno",
+      "cpf": "12312312311",
+      "email": "magno@gmail.com",
+      "num": "12312312311",
+      "senha": "12312311"
+    },
+    {
+      "id": "58b3",
+      "user": "magno",
+      "cpf": "13123123131",
+      "email": "magno@gmail.com",
+      "num": "12313212341",
+      "senha": "12312311"
     }
   ]
 }
