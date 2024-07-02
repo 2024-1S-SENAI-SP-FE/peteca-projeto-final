@@ -157,6 +157,13 @@ input::placeholder {
 }
 
 @media (min-width:450px) and (max-width:840px){
+  .login {
+    transform: translate(5%, 70%);
+
+  }
+  .form-image{
+    display: none;
+  }
     
   img{
     width: 0px;    
