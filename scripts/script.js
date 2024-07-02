@@ -45,17 +45,13 @@ function validarCampos() {
 
     const entregaData = new Date(entrega.value);
     const devolucaoData = new Date(devolucao.value);
-
     let intervaloMilissegundos = devolucaoData - entregaData;
-
     let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
-
     const data = {
         entrega: entrega.value,
         devolucao: devolucao.value,
         intervalo: intervaloDias
     };
-
     localStorage.setItem('data', JSON.stringify(data));
 
     const select = document.querySelector('select');
@@ -96,6 +92,11 @@ function validarCampos() {
         valid = false;
     } else {
         tooltipSelect.dispose();
+    }
+
+    if (intervaloDias < 1 || intervaloDias > 31) {
+        alert('O período de aluguel deve ser entre 1 a 31 dias!');
+        valid = false;
     }
 
     if (!valid) {
