@@ -6,21 +6,21 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;  
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
+    background: #888;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }
 
 body {
@@ -33,6 +33,16 @@ header {
     background-image: url("../imagens/mustang_updated.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.alert {
+    display: none;
+    color: #fff;
+    position: absolute;
+    top: 3.7rem;
+    left: 38%;
+    background-color: rgb(31, 160, 31);
+    width: 330px;
 }
 
 #menu {
@@ -221,7 +231,7 @@ input::placeholder {
     z-index: 10;
 }
 
-.acessibilidade button{
+.acessibilidade button {
     border-radius: 8px;
     background-color: var(--azul-padrao);
 }
@@ -552,13 +562,14 @@ footer {
 .footer-copy span {
     margin-inline-start: 2rem;
 }
+
 .selo-ibama {
     display: flex;
     align-items: center;
     margin-inline-end: 2rem;
 }
 
-.selo-ibama img{
+.selo-ibama img {
     width: 70px;
     height: 70px;
 }

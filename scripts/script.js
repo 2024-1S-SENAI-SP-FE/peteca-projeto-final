@@ -191,6 +191,7 @@ function modeloEscolhido(idCarro) {
             const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
             if (carroSelecionado) {
                 localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
+                document.querySelector('.alert').style.display = "flex";
                 setInterval(()=> {
                     window.location.href = "reserva.html";
                 }, 3000)
