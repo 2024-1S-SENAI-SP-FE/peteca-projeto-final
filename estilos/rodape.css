@@ -4,6 +4,13 @@ footer {
     background-color: rgb(182, 182, 182);
 }
 
+footer h3 {
+    font-size: 1.4rem;
+    color: #505050;
+    text-align: start;
+    line-height: 1rem;
+}
+
 .footer-container {
     display: grid;
     grid-auto-flow: column;
