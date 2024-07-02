@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Nenhum endereço encontrado no localStorage.');
         return;
     }
-    document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
+    document.querySelector('.local-retirada').innerHTML = `<strong>Entrega:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
     document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
 });
 
@@ -34,7 +34,7 @@ if (infosReserva) {
 if (carroEscolhido) {
     document.querySelector('.nome-carro').innerHTML = `${carroEscolhido.modelo}`;
     document.querySelector('.carro-imagem').src = `${carroEscolhido.imagem}`;
-    document.querySelector('.preco').innerHTML = `R$${carroEscolhido.preco.replace('.', ',')}`;
+    document.querySelector('.preco').innerHTML = `R$${carroEscolhido.preco.replace('.', ',')}/dia`;
 }
 
 const kitSelecionado = document.querySelector('.kit-selecionado');
