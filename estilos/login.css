@@ -41,7 +41,7 @@ img{
 }  
 .form-login{
   margin: 0 0 0 200px;
-  width: 300px;
+  /* width: 300px; */
   /* display: flex;   
   flex-flow: column;
   justify-content: center;
@@ -114,10 +114,15 @@ input::placeholder {
 }
 
 @media  (max-width:450px) {
-   
-  img{
-    width: 0px;
+
+  .login {
+    transform: translate(5%, 50%);
   }
+   
+  .form-image{
+    display: none;
+  }
+
   .titulo-login{
     font-size: 25px;
     margin-bottom: 20px; 
