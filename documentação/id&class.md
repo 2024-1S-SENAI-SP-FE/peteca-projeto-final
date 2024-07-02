@@ -23,7 +23,7 @@ O objetivo desse arquivo é criar uma documentação de todas as IDs e Class usa
 | .carousel-control-prev | index.html | 168 | Bootstrap - botão indicador do controle esquerdo do carrossel |
 | .carousel-control-next | index.html | 172 | Bootstrap - botão indicador do controle direito do carrossel |
 | #artigos | index.html | 179 | Identifica a sessão de artigos |
-| .card | index.html | 181 | Bootstrap - cria um cartão na página | 
+| .card | index.html | 181 | Bootstrap - cria um cartão na página |
 | .card-body | index.html | 183 | Bootstrap - identifica o corpo do cartão e tudo o que deve conter nele |
 | .card-title | index.html | 184 | Bootstrap - define o título do cartão |
 | .card-text | index.html | 185 | Bootstrap - define o texto do cartão |

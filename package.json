@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "json-server": "^1.0.0-beta.1"
+  },
+  "scripts": {
+    "start": "npx json-server data/db.json --watch --port 3000"
   }
 }
