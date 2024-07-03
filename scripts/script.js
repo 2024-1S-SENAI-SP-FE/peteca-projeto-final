@@ -1,3 +1,19 @@
+document.querySelector('#introVideo').addEventListener('ended', () => {
+    document.querySelector('.video-introdutorio').style.display = 'none';
+    document.querySelector('header').style.display = 'block';
+    document.querySelector('#carrossel').style.display = 'block';
+    document.querySelector('section#artigos').style.display = 'flex';
+    document.querySelector('footer').style.display = 'block';
+})
+
+document.querySelector('.skip-video').addEventListener('click', () => {
+    document.querySelector('.video-introdutorio').style.display = 'none';
+    document.querySelector('header').style.display = 'block';
+    document.querySelector('#carrossel').style.display = 'block';
+    document.querySelector('section#artigos').style.display = 'flex';
+    document.querySelector('footer').style.display = 'block';
+})
+
 // Tooltip
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -9,17 +25,33 @@ function escolhaCarrossel(id) {
 
 const botaoEnviar = document.querySelector('.btn-reservar');
 
-botaoEnviar.addEventListener('click', () => {
-    validarCampos();
-    pesquisarCep();
+botaoEnviar.addEventListener('click', async () => {
+    const cepValido = await pesquisarCep();
+    if (cepValido) {
+        validarCampos();
+    } else {
+        alert('CEP não encontrado. Por favor, verifique e tente novamente.');
+    }
 })
 
 const pesquisarCep = async () => {
     const cep = document.querySelector('#cep').value;
     const url = `http://viacep.com.br/ws/${cep}/json/`;
-    const dados = await fetch(url);
-    const endereco = await dados.json();
-    localStorage.setItem('endereco', JSON.stringify(endereco));
+    try {
+        const dados = await fetch(url);
+        if (!dados.ok) {
+            throw new Error('Erro ao buscar CEP');
+        }
+        const endereco = await dados.json();
+        if (endereco.erro) {
+            throw new Error('CEP não encontrado');
+        }
+        localStorage.setItem('endereco', JSON.stringify(endereco));
+        return true; 
+    } catch (error) {
+        console.error(error.message);
+        return false; 
+    }
 }
 
 function validarCampos() {
@@ -29,18 +61,13 @@ function validarCampos() {
 
     const entregaData = new Date(entrega.value);
     const devolucaoData = new Date(devolucao.value);
-
     let intervaloMilissegundos = devolucaoData - entregaData;
-
     let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
-
     const data = {
-        cep: cep.value,
         entrega: entrega.value,
         devolucao: devolucao.value,
         intervalo: intervaloDias
     };
-
     localStorage.setItem('data', JSON.stringify(data));
 
     const select = document.querySelector('select');
@@ -81,6 +108,11 @@ function validarCampos() {
         valid = false;
     } else {
         tooltipSelect.dispose();
+    }
+
+    if (intervaloDias < 1 || intervaloDias > 31) {
+        alert('O período de aluguel deve ser entre 1 a 31 dias!');
+        valid = false;
     }
 
     if (!valid) {
@@ -176,7 +208,11 @@ function modeloEscolhido(idCarro) {
             const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
             if (carroSelecionado) {
                 localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
-                window.location.href = "reserva.html";
+                document.querySelector('.alert').style.display = "flex";
+                setInterval(()=> {
+                document.querySelector('.alert').style.display = "none";
+                    window.location.href = "reserva.html";
+                }, 3000)
             } else {
                 console.error('Carro não encontrado no arquivo JSON.');
             }

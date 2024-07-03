@@ -11,10 +11,15 @@ function formatarDataParaExibicao(dataString) {
     return `${dia}-${mes}-${ano}`;
 }
 
-const infoEndereco = JSON.parse(localStorage.getItem('endereco'));
-if (!infoEndereco) {
-    console.log('Nenhum endereço encontrado no localStorage.');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const infoEndereco = JSON.parse(localStorage.getItem('endereco'));
+    if (!infoEndereco) {
+        console.log('Nenhum endereço encontrado no localStorage.');
+        return;
+    }
+    document.querySelector('.local-retirada').innerHTML = `<strong>Entrega:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
+    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
+});
 
 if (infosReserva) {
 
@@ -22,16 +27,14 @@ if (infosReserva) {
     const devolucaoFormatada = formatarDataParaExibicao(infos.devolucao);
 
     document.querySelector('.qntd-dias').innerHTML = `<strong>Período do contrato:</strong> ${infos.intervalo} dia(s)`;
-    document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
     document.querySelector('.dia-retirada').innerHTML = `<strong>Data:</strong> ${retiradaFormatada}`;
-    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infoEndereco.logradouro}, ${infoEndereco.bairro}, ${infoEndereco.uf}`;
     document.querySelector('.dia-devolucao').innerHTML = `<strong>Data:</strong> ${devolucaoFormatada}`;
 }
 
 if (carroEscolhido) {
     document.querySelector('.nome-carro').innerHTML = `${carroEscolhido.modelo}`;
     document.querySelector('.carro-imagem').src = `${carroEscolhido.imagem}`;
-    document.querySelector('.preco').innerHTML = `R$${carroEscolhido.preco.replace('.', ',')}`;
+    document.querySelector('.preco').innerHTML = `R$${carroEscolhido.preco.replace('.', ',')}/dia`;
 }
 
 const kitSelecionado = document.querySelector('.kit-selecionado');
@@ -48,15 +51,20 @@ inputs.forEach(input => {
     input.addEventListener('change', () => {
         if (input.checked) {
             const label = input.nextElementSibling;
-            const titulo = label.querySelector('.kit-titulo').textContent;
+            const titulo = label.querySelector('.kit-titulo') ? label.querySelector('.kit-titulo').textContent : "";
             const descricao = label.querySelector('p').textContent;
-            const preco = label.querySelector('.kit-preco').textContent;
+            const preco = label.querySelector('.kit-preco') ? label.querySelector('.kit-preco').textContent : "";
 
             pacoteKit.innerHTML = titulo;
             descricaoKit.innerHTML = descricao;
             precoKit.innerHTML = preco;
+
             let conversaoDePreco = Number(preco.slice(2));
-            precoFinal.innerHTML = `R$${(conversaoDePreco + valorBase).toFixed(2)}`.replace('.', ',');
+            if (input.id === 'kit1') {
+                precoFinal.innerHTML = `R$${valorBase.toFixed(2)}`.replace('.', ',');
+            } else {
+                precoFinal.innerHTML = `R$${(conversaoDePreco + valorBase).toFixed(2)}`.replace('.', ',');
+            }
         }
-    })
-})
+    });
+});
