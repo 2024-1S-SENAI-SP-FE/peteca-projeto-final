@@ -178,6 +178,7 @@ video {
     display: flex;
     cursor: pointer;
     align-items: center;
+    margin-inline-end: 0.5rem;
 }
 
 .kit label {
@@ -304,7 +305,7 @@ video {
 }
 
 .kit-selecionado {
-    height: 178px;
+    height: 180px;
 }
 
 .kit-selecionado .preco {

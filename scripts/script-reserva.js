@@ -51,15 +51,20 @@ inputs.forEach(input => {
     input.addEventListener('change', () => {
         if (input.checked) {
             const label = input.nextElementSibling;
-            const titulo = label.querySelector('.kit-titulo').textContent;
+            const titulo = label.querySelector('.kit-titulo') ? label.querySelector('.kit-titulo').textContent : "";
             const descricao = label.querySelector('p').textContent;
-            const preco = label.querySelector('.kit-preco').textContent;
+            const preco = label.querySelector('.kit-preco') ? label.querySelector('.kit-preco').textContent : "";
 
             pacoteKit.innerHTML = titulo;
             descricaoKit.innerHTML = descricao;
             precoKit.innerHTML = preco;
+
             let conversaoDePreco = Number(preco.slice(2));
-            precoFinal.innerHTML = `R$${(conversaoDePreco + valorBase).toFixed(2)}`.replace('.', ',');
+            if (input.id === 'kit1') {
+                precoFinal.innerHTML = `R$${valorBase.toFixed(2)}`.replace('.', ',');
+            } else {
+                precoFinal.innerHTML = `R$${(conversaoDePreco + valorBase).toFixed(2)}`.replace('.', ',');
+            }
         }
-    })
-})
+    });
+});
