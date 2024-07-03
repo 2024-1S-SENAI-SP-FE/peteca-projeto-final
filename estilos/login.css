@@ -64,6 +64,7 @@ input{
   margin-top: 20px;
   width: 180px;
   height: 50px;
+  cursor: pointer;
 }
 .label-login{
   justify-content: center;
@@ -90,6 +91,7 @@ input::placeholder {
   margin-top: 20px;
   margin-left: 90px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .invalido{
   visibility: hidden;
@@ -112,7 +114,7 @@ input::placeholder {
     right: 200px;
 }
 .logou {
-    animation: logou 1.3s cubic-bezier(0.445, 0.155, 0.1055, 0.999) forwards;
+    animation: logou 700ms cubic-bezier(0.445, 0.155, 0.1055, 0.999) forwards;
     display: flex;
     justify-content: center;
 }
