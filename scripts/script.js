@@ -1,3 +1,19 @@
+document.querySelector('#introVideo').addEventListener('ended', () => {
+    document.querySelector('.video-introdutorio').style.display = 'none';
+    document.querySelector('header').style.display = 'block';
+    document.querySelector('#carrossel').style.display = 'block';
+    document.querySelector('section#artigos').style.display = 'flex';
+    document.querySelector('footer').style.display = 'block';
+})
+
+document.querySelector('.skip-video').addEventListener('click', () => {
+    document.querySelector('.video-introdutorio').style.display = 'none';
+    document.querySelector('header').style.display = 'block';
+    document.querySelector('#carrossel').style.display = 'block';
+    document.querySelector('section#artigos').style.display = 'flex';
+    document.querySelector('footer').style.display = 'block';
+})
+
 // Tooltip
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

@@ -28,6 +28,46 @@ body {
     font-size: 0.9rem;
 }
 
+.video-introdutorio {
+    display: block;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+}
+
+.video-introdutorio video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.skip-video {
+    position: absolute;
+    bottom: 5rem;
+    right: 8rem;
+    border: none;
+    background-color: transparent;
+    color: var(--branco-padrao);
+    font-size: 24px;
+}
+
+.skip-video i {
+    color: var(--branco-padrao);
+    margin-inline-start: 0.5rem;
+}
+
+.skip-video:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+header,
+#carrossel,
+section#artigos,
+footer {
+    display: none;
+}
+
 header {
     min-height: 100vh;
     background-image: url("../imagens/mustang_updated.jpg");
