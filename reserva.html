@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/estilos/reserva.css">
     <link rel="stylesheet" href="/estilos/responsividade-reserva.css">
     <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/rodape.css">
 </head>
 
 <body>
@@ -114,8 +115,15 @@
                 <h2> Selecione um Kit </h2>
 
                 <div class="kit">
-                    <input type="radio" id="kit1" name="kit">
+                    <input type="radio" id="kit1" name="kit" checked>
                     <label for="kit1">
+                        <p>Não quero nenhum Kit</p>
+                    </label>
+                </div>
+
+                <div class="kit">
+                    <input type="radio" id="kit2" name="kit">
+                    <label for="kit2">
                         <div class="header-kits">
                             <span class="kit-titulo">KIT 1 - PACOTE KIDS</span>
                             <span class="kit-preco">$ 50</span>
@@ -125,8 +133,8 @@
                 </div>
 
                 <div class="kit">
-                    <input type="radio" id="kit2" name="kit">
-                    <label for="kit2">
+                    <input type="radio" id="kit3" name="kit">
+                    <label for="kit3">
                         <div class="header-kits">
                             <span class="kit-titulo">KIT 2 - AVENTUREIRO</span>
                             <span class="kit-preco">$ 30</span>
@@ -136,8 +144,8 @@
                 </div>
 
                 <div class="kit">
-                    <input type="radio" id="kit3" name="kit">
-                    <label for="kit3">
+                    <input type="radio" id="kit4" name="kit">
+                    <label for="kit4">
                         <div class="header-kits">
                             <span class="kit-titulo">KIT 3 - MORO EM SÃO PAULO</span>
                             <span class="kit-preco">$ 40</span>
@@ -146,6 +154,7 @@
                             Prova de Balas (Opcional)</p>
                     </label>
                 </div>
+                
 
             </section>
         </div>
@@ -170,8 +179,8 @@
             </div>
 
             <div class="kit-selecionado">
-                <h3>Kit Selecionado</h3>
-                <p class="pacote-kit"></p>
+                <h3>Kit Selecionado:</h3>
+                <p class="pacote-kit">Não quero nenhum kit</p>
                 <p class="descricao-kit"></p>
                 <span class="preco"></span>
             </div>
@@ -185,7 +194,8 @@
 
     </main>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/script-reserva.js" defer></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
