@@ -194,6 +194,7 @@ function modeloEscolhido(idCarro) {
                 localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
                 document.querySelector('.alert').style.display = "flex";
                 setInterval(()=> {
+                document.querySelector('.alert').style.display = "none";
                     window.location.href = "reserva.html";
                 }, 3000)
             } else {

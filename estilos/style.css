@@ -37,12 +37,15 @@ header {
 
 .alert {
     display: none;
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    font-weight: 700;
+    border: none;
     position: absolute;
-    top: 3.7rem;
+    top: 4rem;
     left: 38%;
-    background-color: rgb(31, 160, 31);
-    width: 330px;
+    width: 340px;
+    height: 45px;
 }
 
 #menu {
