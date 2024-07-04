@@ -248,7 +248,8 @@ a {
 }
 .button-alugue {
   position: absolute;
-  left: 40px;
+  left: 35px;
+  top: 16.9rem;
   background-color: #06163e;
   color: white;
   border: none;
