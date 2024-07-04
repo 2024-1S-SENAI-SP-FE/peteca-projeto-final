@@ -399,16 +399,16 @@ button:hover {
 
    font-size: 20px;
    color: rgb(238, 237, 237);
-   border-right: 2px solid black;
+   /* border-right: 2px solid black; */
    
-   animation: marcador .5s linear infinite;
 }
 .texto-finalizado{
+    animation: marcador .5s linear infinite;
     display: none;
     overflow: hidden;
     width: 40ch;
     white-space: nowrap ;
-    /* border-right: 2px solid black; */
+    border-right: 2px solid black;
 }
 .finalizou-texto{
     animation: textosteps steps(47) 3s ;
