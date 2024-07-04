@@ -1,57 +1,221 @@
-const carroEscolhido = JSON.parse(localStorage.getItem('carroEscolhido'));
-const infosReserva = localStorage.getItem('data');
-const infos = JSON.parse(infosReserva);
-
-function formatarDataParaExibicao(dataString) {
-    const date = new Date(dataString);
-    const dia = String(date.getDate() + 1).padStart(2, '0');
-    const mes = String(date.getMonth() + 1).padStart(2, '0');
-    const ano = date.getFullYear();
-    return `${dia}-${mes}-${ano}`;
-}
-
-if (infosReserva) {
-
-    const retiradaFormatada = formatarDataParaExibicao(infos.retirada);
-    const devolucaoFormatada = formatarDataParaExibicao(infos.devolucao);
-
-    document.querySelector('.qntd-dias').innerHTML = `<strong>Período do contrato:</strong> ${infos.intervalo} dia(s)`;
-    document.querySelector('.local-retirada').innerHTML = `<strong>Retirada:</strong> ${infos.local}`;
-    document.querySelector('.dia-retirada').innerHTML = `<strong>Data:</strong> ${retiradaFormatada}`;
-    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infos.local}`;
-    document.querySelector('.local-devolucao').innerHTML = `<strong>Devolução:</strong> ${infos.local}`;
-    document.querySelector('.dia-devolucao').innerHTML = `<strong>Data:</strong> ${devolucaoFormatada}`;
-}
-
-if (carroEscolhido) {
-    document.querySelector('.nome-carro').innerHTML = `${carroEscolhido.modelo}`;
-    document.querySelector('.carro-imagem').src = `${carroEscolhido.imagem}`;
-    document.querySelector('.preco').innerHTML = `R$${carroEscolhido.preco.replace('.', ',')}`;
-}
-
-const kitSelecionado = document.querySelector('.kit-selecionado');
-pacoteKit = kitSelecionado.querySelector('.pacote-kit');
-descricaoKit = kitSelecionado.querySelector('.descricao-kit');
-precoKit = kitSelecionado.querySelector('.preco');
-let precoFinal = document.querySelector('.preco-final');
-precoFinal.innerHTML = `R$${(carroEscolhido.preco * infos.intervalo).toFixed(2)}`.replace('.', ',');
-let valorBase = Number(`${(carroEscolhido.preco * infos.intervalo)}`);
-
-const inputs = document.querySelectorAll('.kits input[name="kit"]');
-
-inputs.forEach(input => {
-    input.addEventListener('change', () => {
-        if (input.checked) {
-            const label = input.nextElementSibling;
-            const titulo = label.querySelector('.kit-titulo').textContent;
-            const descricao = label.querySelector('p').textContent;
-            const preco = label.querySelector('.kit-preco').textContent;
-
-            pacoteKit.innerHTML = titulo;
-            descricaoKit.innerHTML = descricao;
-            precoKit.innerHTML = preco;
-            let conversaoDePreco = Number(preco.slice(2));
-            precoFinal.innerHTML = `R$${(conversaoDePreco + valorBase).toFixed(2)}`.replace('.', ',');
-        }
-    })
+document.querySelector('#introVideo').addEventListener('ended', () => {
+    document.querySelector('.video-introdutorio').style.display = 'none';
+    document.querySelector('header').style.display = 'block';
+    document.querySelector('#carrossel').style.display = 'block';
+    document.querySelector('section#artigos').style.display = 'flex';
+    document.querySelector('footer').style.display = 'block';
 })
+
+document.querySelector('.skip-video').addEventListener('click', () => {
+    document.querySelector('.video-introdutorio').style.display = 'none';
+    document.querySelector('header').style.display = 'block';
+    document.querySelector('#carrossel').style.display = 'block';
+    document.querySelector('section#artigos').style.display = 'flex';
+    document.querySelector('footer').style.display = 'block';
+})
+
+// Tooltip
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+function escolhaCarrossel(id) {
+    document.getElementById('buscaCarro').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('select').value = id;
+}
+
+const botaoEnviar = document.querySelector('.btn-reservar');
+
+botaoEnviar.addEventListener('click', async () => {
+    const cepValido = await pesquisarCep();
+    if (cepValido) {
+        validarCampos();
+    } else {
+        alert('CEP não encontrado. Por favor, verifique e tente novamente.');
+    }
+})
+
+const pesquisarCep = async () => {
+    const cep = document.querySelector('#cep').value;
+    const url = `http://viacep.com.br/ws/${cep}/json/`;
+    try {
+        const dados = await fetch(url);
+        if (!dados.ok) {
+            throw new Error('Erro ao buscar CEP');
+        }
+        const endereco = await dados.json();
+        if (endereco.erro) {
+            throw new Error('CEP não encontrado');
+        }
+        localStorage.setItem('endereco', JSON.stringify(endereco));
+        return true; 
+    } catch (error) {
+        console.error(error.message);
+        return false; 
+    }
+}
+
+function validarCampos() {
+    const cep = document.querySelector('#cep');
+    const entrega = document.querySelector('#entrega');
+    const devolucao = document.querySelector('#devolucao');
+
+    const entregaData = new Date(entrega.value);
+    const devolucaoData = new Date(devolucao.value);
+    let intervaloMilissegundos = devolucaoData - entregaData;
+    let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
+    const data = {
+        entrega: entrega.value,
+        devolucao: devolucao.value,
+        intervalo: intervaloDias
+    };
+    localStorage.setItem('data', JSON.stringify(data));
+
+    const select = document.querySelector('select');
+
+    const tooltipCep = new bootstrap.Tooltip(cep);
+
+    const tooltipEntrega = new bootstrap.Tooltip(entrega);
+
+    const tooltip = new bootstrap.Tooltip(devolucao);
+
+    const tooltipSelect = new bootstrap.Tooltip(select);
+
+    let valid = true;
+
+    if (!cep.value) {
+        tooltipCep.show();
+        valid = false;
+    } else {
+        tooltipCep.hide();
+    }
+
+    if (!entrega.value) {
+        tooltipEntrega.show();
+        valid = false;
+    } else {
+        tooltipEntrega.dispose();
+    }
+
+    if (!devolucao.value) {
+        tooltip.show();
+        valid = false;
+    } else {
+        tooltip.dispose();
+    }
+
+    if (select.value === "Veículo") {
+        tooltipSelect.show();
+        valid = false;
+    } else {
+        tooltipSelect.dispose();
+    }
+
+    if (intervaloDias < 1 || intervaloDias > 31) {
+        alert('O período de aluguel deve ser entre 1 a 31 dias!');
+        valid = false;
+    }
+
+    if (!valid) {
+        setTimeout(() => {
+            tooltipCep.dispose();
+            tooltipEntrega.dispose();
+            tooltipSelect.dispose();
+            tooltip.dispose();
+        }, 3000);
+    } else {
+        // Chama uma função
+        modeloEscolhido(select.value);
+    }
+
+    cep.addEventListener('input', function () {
+        if (local.value) {
+            tooltipCep.dispose();
+        }
+    });
+
+    entrega.addEventListener('input', function () {
+        if (entrega.value) {
+            tooltipEntrega.dispose();
+        }
+    });
+
+    devolucao.addEventListener('input', function () {
+        if (devolucao.value) {
+            tooltip.hide();
+        }
+    });
+
+    select.addEventListener('change', function () {
+        if (select.value !== "Veículo") {
+            tooltipSelect.dispose();
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Definir datas mínimas
+    const startDateInput = document.getElementById('entrega');
+    const endDateInput = document.getElementById('devolucao');
+
+    const tooltip = new bootstrap.Tooltip(endDateInput);
+
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = (today.getMonth() + 1).toString().padStart(2, '0');
+    const dd = today.getDate().toString().padStart(2, '0');
+
+    const todayString = `${yyyy}-${mm}-${dd}`;
+    startDateInput.min = todayString;
+
+    startDateInput.addEventListener('change', () => {
+        if (startDateInput.value) {
+            endDateInput.value = '';
+            endDateInput.readOnly = false;
+
+            tooltip.dispose();
+
+            const selectedDate = new Date(startDateInput.value);
+            selectedDate.setDate(selectedDate.getDate() + 2);
+
+            const yyyy = selectedDate.getFullYear();
+            const mm = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
+            const dd = selectedDate.getDate().toString().padStart(2, '0');
+
+            const nextDayString = `${yyyy}-${mm}-${dd}`;
+            endDateInput.min = nextDayString;
+
+        } else {
+            endDateInput.readOnly = true;
+            endDateInput.value = '';
+        }
+    });
+
+    endDateInput.addEventListener('focus', () => {
+        if (endDateInput.readOnly) {
+            tooltip.show();
+            setTimeout(() => {
+                tooltip.hide();
+            }, 3000);
+        }
+    });
+});
+
+// Função para buscar as informações do carro escolhido no objeto 'carros.json'
+function modeloEscolhido(idCarro) {
+    fetch('data/carros.json')
+        .then(response => response.json())
+        .then(data => {
+            const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
+            if (carroSelecionado) {
+                localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
+                document.querySelector('.alert').style.display = "flex";
+                setInterval(()=> {
+                document.querySelector('.alert').style.display = "none";
+                    window.location.href = "reserva.html";
+                }, 3000)
+            } else {
+                console.error('Carro não encontrado no arquivo JSON.');
+            }
+        })
+        .catch(error => console.error('Erro ao carregar dados do arquivo JSON:', error));
+}

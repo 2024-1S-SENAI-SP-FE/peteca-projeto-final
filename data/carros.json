@@ -36,6 +36,27 @@
             "ano": "2024"
         },
         {
+            "id": "carro6",
+            "imagem": "imagens/ford_duty_450_frente.png",
+            "preco": "653.07",
+            "modelo": "Ford Super Duty F-450 DRW",
+            "ano": "2024"
+        },
+        {
+            "id": "carro7",
+            "imagem": "imagens/ranger_rls_frente.png",
+            "preco": "187.30",
+            "modelo": "Ranger XLS",
+            "ano": "2024"
+        },
+        {
+            "id": "carro8",
+            "imagem": "imagens/",
+            "preco": "",
+            "modelo": "",
+            "ano": ""
+        },
+        {
             "id": "carro9",
             "imagem": "imagens/Mustang_Mach_E_frente.png",
             "preco": "373.84",
@@ -55,6 +76,34 @@
             "preco": "406.92",
             "modelo": "Mustang GT",
             "ano": "2024"
+        },
+        {
+            "id": "carro12",
+            "imagem": "imagens/maverick_frente.png",
+            "preco": "161.53",
+            "modelo": "Maverick",
+            "ano": "2024"
+        },
+        {
+            "id": "carro13",
+            "imagem": "imagens/ranger_3.2_frente.png",
+            "preco": "206.76",
+            "modelo": "Ford Ranger 3.2",
+            "ano": "2024"
+        },
+        {
+            "id": "carro14",
+            "imagem": "imagens/",
+            "preco": "",
+            "modelo": "",
+            "ano": ""
+        },
+        {
+            "id": "carro15",
+            "imagem": "imagens/",
+            "preco": "",
+            "modelo": "",
+            "ano": ""
         }
     ]
 }
