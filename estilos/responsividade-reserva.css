@@ -44,7 +44,7 @@
     }
 
 }
-@media screen and (min-width:768px) and (max-width:1000px){
+@media screen and (min-width:768px) and (max-width:900px){
     @keyframes deslize {
     to{
         transform:translateX(-22%)
@@ -56,6 +56,9 @@
     .pai-mensagem{
         width: 380px;
         margin-left: 19%;
+    }
+    .mensagem-finalizado{
+        width: 300px;
     }
 }
 
@@ -101,12 +104,13 @@
     .kit {
         padding: 5px;
     }
+    
     .pai-finalizado{
         margin-left: 100px;
     }
     .pai-mensagem{
         width: 330px;
-        margin-left: 208%;
+        /* margin-left: 208%; */
     }
     .mensagem-finalizado{
         width: inherit;
@@ -145,3 +149,26 @@
     }
 }
 
+@media screen and (min-width:900px) and (max-width: 1200px){
+       @keyframes deslize {
+    to{
+        transform:translateX(-22%)
+    }
+}
+    .pai-finalizado{
+        margin-left: 35%;
+    }
+    .pai-mensagem{
+        width: 280px;
+        height: 100px;
+        margin-left: 30%;
+        background-color: #333333;
+    }
+    .mensagem-finalizado{
+        width: 200px;
+    }
+    .texto-finalizado{
+        font-size: 20px;
+        
+    }
+}
