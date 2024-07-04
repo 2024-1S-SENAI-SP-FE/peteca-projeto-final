@@ -5,7 +5,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width:480px) and (max-width: 768px) {
     .header-kits {
         flex-direction: column;
         align-items: flex-start;
@@ -23,9 +23,43 @@
         width: 100%;
         height: auto;
     }
+    @keyframes deslize {
+    to{
+        transform:translateX(-22%)
+    }
+}
+    .pai-finalizado{
+        margin-left: 28%;
+    }
+    .pai-mensagem{
+        width: 330px;
+        margin-left: 19%;
+    }
+    .mensagem-finalizado{
+        width: 300px;
+    }
+    .texto-finalizado{
+        height: 30px;
+
+    }
+
+}
+@media screen and (min-width:768px) and (max-width:1000px){
+    @keyframes deslize {
+    to{
+        transform:translateX(-22%)
+    }
+}
+    .pai-finalizado{
+        margin-left: 35%;
+    }
+    .pai-mensagem{
+        width: 380px;
+        margin-left: 19%;
+    }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     body {
         padding: 10px;
     }
@@ -67,4 +101,47 @@
     .kit {
         padding: 5px;
     }
+    .pai-finalizado{
+        margin-left: 100px;
+    }
+    .pai-mensagem{
+        width: 330px;
+        margin-left: 208%;
+    }
+    .mensagem-finalizado{
+        width: inherit;
+        flex-wrap: wrap; 
+        padding: 20px;
+        
+    }
+    .texto-finalizado{
+        height: 22px;
+
+    }
 }
+@media screen and (min-width:300px) and (max-width:400px) {
+    @keyframes deslize {
+    to{
+        transform:translateX(-22%)
+    }
+}
+    .pai-finalizado{
+        margin-left: 71px;
+    }
+    .pai-mensagem{
+        width: 280px;
+        margin-left: 19%;
+    }
+
+    .mensagem-finalizado{
+        width: 234px;
+        flex-wrap: wrap; 
+        padding: 20px;
+        
+    }
+    .texto-finalizado{
+        height: 22px;
+        
+    }
+}
+
