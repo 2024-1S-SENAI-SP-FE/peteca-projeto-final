@@ -1,0 +1,149 @@
+
+h1{
+    font-size: 2.5em;
+    color: #002366;
+}
+
+h2, h3{
+    font-size: 2.0em;
+    color: #002366;
+    line-height: 1.0;  /* Altura da linha para evitar encavalamento */
+word-break: break-word; /* Quebra de palavras longas */
+}
+/* imagem banner */
+.imgCar {
+    max-width: 100%;
+    height: 30em;
+    display: block;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 800rem;
+    margin-bottom: 2px;
+}
+/* divisão de tema1 */
+.div-centro{
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap; /* Permite que os itens flexíveis quebrem para a próxima linha quando não houver mais espaço */
+    
+     /*coloca o texto abaixo do outro*/
+}
+.blocos{
+display: flex;
+flex: 1; /* cada coluna ocupe um espaço igual */
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: space-between; /* Espaçamento entre colunas */
+margin: 0 10px; /* Espaçamento entre os textos das colunas */
+max-width: 50%;
+padding: 10px;
+margin-bottom: 10px;
+word-wrap: break-word;
+line-height: 1.2;  /* Altura da linha para evitar encavalamento */
+word-break: break-word; /* Quebra de palavras longas */
+letter-spacing: 0.5px;
+width: 100%;
+margin: 5px 0;
+margin: 5px;
+padding: 10px;
+border: 1px solid #000;
+padding: 10px;
+text-align: center;
+
+/*justify-content: space-between; caso quiser que o final do texto fique alinhado um com o outro, porém desalinha o inicio*/
+}
+.blocos h2 {
+    color: #002366;
+    margin-bottom: 10px;
+    font-size: 2.0em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    justify-content: center;
+    line-height: 1.2;  /* Altura da linha para evitar encavalamento */
+    word-break: break-word; /* Quebra de palavras longas */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+#p-container2
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    display: flex;
+}
+/* divisão de imagem */
+
+
+#bloco-img{
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.class-size-img{
+    width: 36rem;
+    height: 20rem;
+}
+/* imagem estilo banner2 */
+.imgCar2 {
+    margin-bottom: 2px;
+    width: 800rem;
+    height: 23em;
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+    
+}
+/* texto acima e depois da imagem estilo banner2 */
+#p-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    justify-content: center;
+    line-height: 1.2;  /* Altura da linha para evitar encavalamento */
+    word-break: break-word; /* Quebra de palavras longas */
+    letter-spacing: 0.5px;
+}
+/* imagem para telas menores */
+@media (max-width: 600px) {
+
+    .div-centro{
+        flex-direction: column;
+        align-items: center; 
+        display: grid;
+      padding: 0; /* Remove padding do container */
+      
+    }
+    .blocos {
+        width: 100%;
+        margin: 0; /* Remove margens dos textos */
+        box-sizing: border-box; /* Garante que padding seja considerado dentro da largura */
+        max-width: 100%; /* Garante que o bloco não ultrapasse a largura máxima da tela */
+        flex-basis: 100%; /* Faz com que cada bloco ocupe 100% da largura disponível */
+    }
+    .blocos p {
+        padding: 10px; /* Adiciona padding interno ao texto para espaçamento */
+    }
+    .imgCar {
+        max-width: 100%;
+        height: 15em;
+    }
+    .imgCar2 {
+        max-width: 100%;
+        height: 15em;
+    }
+}

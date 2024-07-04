@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contato </title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu js -->
+    <script src="scripts/menu.js"></script>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/reset.css">
+    <link rel="stylesheet" href="/estilos/contato.css">
+    <link rel="stylesheet" href="/estilos/responsividade-contato.css">
+    <style>
+        #menu ul a {
+            color: #fff;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="container-fluid">
+            <button class="btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-3x" style="color: #1e1eb3; margin: 0;"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a data-bs-dismiss="offcanvas" aria-label="Close" class="btn-fechar"><i
+                                    class="fa-solid fa-xmark fa-xl" style="color: #f5f5f9;"></i>Fechar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-car"
+                                    style="color: #f5f5f9;"></i>Carros</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-newspaper" style="color: #f5f5f9;"></i>Artigos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Ford Mustang 2024</a></li>
+                                <li><a href="#">O Impacto da Sustentabilidade nos Carros de Luxo da Ford</a></li>
+                                <li><a href="#">A Fusão Perfeita de Tecnologia, Segurança e Potência</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="sobre-nos.html"><i class="fa-solid fa-address-card"
+                                    style="color: #f5f5f9;"></i>Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contato.html"><i class="fa-solid fa-phone-volume"
+                                    style="color: #f5f5f9;"></i>Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i
+                                    class="fa-solid fa-arrow-right-to-bracket" style="color: #f5f5f9;"></i>Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="contato-geral">
+        <div class="bloco-contato">
+            <h1>Entrar em contato</h1>
+            <div class="blocos-contato">
+                <div class="info-contato">
+                    <img src="/icones/telefone (1).png" alt="Ícone de telefone">
+                    <p> 0800 703 3673 </p>
+                </div>
+                <div class="info-contato">
+                    <img src="/icones/o-email.png" alt="Ícone de email">
+                    <p> ford.drive@gmail.com </p>
+                </div>
+                <div class="info-contato">
+                    <img src="/icones/pin.png" alt="Ícone de localização">
+                    <p> Av. Cardoso de Melo, 1336 - Vila Olímpia, São Paulo </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

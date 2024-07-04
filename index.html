@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ford Drive </title>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Links estilos -->
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/style.css" type="text/css">
+    <link rel="stylesheet" href="estilos/responsividade.css" type="text/css">
+    <link rel="stylesheet" href="estilos/rodape.css" type="text/css">
+</head>
+
+<body>
+    
+    <div class="video-introdutorio">
+        <video id="introVideo" src="imagens/video-mustang (online-video-cutter.com).mp4" autoplay muted></video>
+    </div>
+    <button class="skip-video">Pular<i class="fa-solid fa-forward"></i></button>
+
+    <header><!-- Início cabeçalho -->
+
+        <div class="fundo-preto"></div>
+
+        <div class="video-inicial">
+            <video src="imagens/video-mustang (online-video-cutter.com).mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="alert alert-success" role="alert">
+            Redirecionando para a página de reserva...
+        </div>
+
+        <nav id="menu">
+            <div class="logo">
+                <img src="imagens/logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aluguel.html">Carros</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+                <li><a href="login.html"><img src="icones/arrow-right-to-bracket-solid.svg" alt="">Log in</a></li>
+            </ul>
+        </nav>
+
+        <div class="navbar">
+
+            <div class="container-fluid">
+                <button class="btn-dropdown" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                    aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fa-3x" style="color: #f5f5f9; margin: 0;"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a data-bs-dismiss="offcanvas" aria-label="Close" class="btn-fechar"><i
+                                        class="fa-solid fa-xmark fa-xl" style="color: #f5f5f9;"></i>Fechar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="aluguel.html"><i class="fa-solid fa-car"
+                                        style="color: #f5f5f9;"></i>Carros</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa-solid fa-newspaper" style="color: #f5f5f9;"></i>Artigos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="artigo1.html">Ford Mustang 2024</a></li>
+                                    <li><a href="artigo2.html">O Impacto da Sustentabilidade nos Carros de Luxo da
+                                            Ford</a></li>
+                                    <li><a href="artigo3.html">A Fusão Perfeita de Tecnologia, Segurança e Potência</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="sobre-nos.html"><i
+                                        class="fa-solid fa-address-card" style="color: #f5f5f9;"></i>Sobre nós</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="contato.html"><i
+                                        class="fa-solid fa-phone-volume" style="color: #f5f5f9;"></i>Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#"><i
+                                        class="fa-solid fa-arrow-right-to-bracket" style="color: #f5f5f9;"></i>Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="textos-header">
+            <p>Drive your way to the car of your dreams</p>
+            <h1>Ford Drive</h1>
+        </div>
+
+        <div class="busca-carro" id="buscaCarro">
+            <select name="modelo" id="modelo" data-bs-title="Informe um carro!" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip">
+                <option selected disabled>Veículo</option>
+                <option value="carro1">F-150 Shelby</option>
+                <option value="carro2">Mustang Mach 1</option>
+                <option value="carro3">Ford Territory Titanium</option>
+                <option value="carro4">Ranger Raptor</option>
+                <option value="carro5">Shelby GT500</option>
+                <option value="carro6">Ford Super Duty F-450 DRW</option>
+                <option value="carro7">Ranger XLS</option>
+                <!-- <option value="carro8">Ford GT</option> -->
+                <option value="carro9">Mustang Mach-E</option>
+                <option value="carro10">Ford Explorer St</option>
+                <option value="carro11">Mustang GT</option>
+                <option value="carro12">Maverick</option>
+                <option value="carro13">Ford Ranger 3.2</option>
+                <!-- <option value="carro14">Ranger P703</option> -->
+                <!-- <option value="carro15">Bronco Sport</option> -->
+            </select>
+            <input type="text" id="cep" placeholder="Digite seu CEP" data-bs-title="Informe um CEP!"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip">
+            <input type="date" id="entrega" data-bs-title="Informe uma data para entrega!" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip">
+            <input type="date" id="devolucao" readonly data-bs-toggle="tooltip" data-bs-placement="bottom"
+                data-bs-title="Escolha a data de entrega!" data-bs-custom-class="custom-tooltip">
+            <button class="btn-reservar">Reservar</button>
+        </div>
+
+        <div class="acessibilidade">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#video-acessibilidade" aria-expanded="false"
+                aria-controls="collapseWidthExample" title="Transcrição desta página em Libras"><i
+                    class="fa-solid fa-hands fa-lg" style="color: #fff;"></i></button>
+            <div id="video-acessibilidade" class="collapse collapse-horizontal">
+                <video src="videos-transcricao/Transcricao_PagInicial.mp4" controls></video>
+            </div>
+        </div>
+
+    </header><!-- Fim cabeçalho-->
+
+    <section id="carrossel" class="carousel slide"><!-- Início carrossel-->
+
+        <h1 class="carros-destaque"> Carros em destaque </h1>
+        <a class="icon-link icon-link-hover" style="text-decoration: none;" href="aluguel.html  ">
+            Ver todos
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                <path fill-rule="evenodd"
+                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+            </svg>
+        </a>
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carrossel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="imagens/ford-shelbygt500(1).jpg" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="text-body">Ford Mustang Shelby GT500</h1>
+                    <p class="text-start text-body">O Ford Mustang Shelby GT500 é um esportivo da série Mustang da Ford.
+                        Shelby é
+                        a versão mais potente da marca Mustang, sendo uma homenagem a um ex-piloto automobilístico
+                        Carroll Shelby,
+                        criador do modelo Cobra.</p>
+                    <button type="button" class="btn btn-primary"
+                        onclick="escolhaCarrossel('carro5'), validarCampos();">Alugue
+                        já</button>
+                    <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalShelby">Exibir
+                        detalhes</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalShelby" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-body" id="exampleModalLabel">Ford Mustang Shelby
+                                        GT500</h1>
+                                    <p>2024</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="icones-modal">
+                                        <div class="icones-esquerda">
+                                            <i class="fa-solid fa-users"></i><span>5 pessoas</span><br><br>
+                                            <i class="fa-solid fa-gas-pump"></i><span>Gasolina</span><br><br>
+                                            <img src="icones/car-steering-wheel.png"><span>Automático</span>
+                                        </div>
+                                        <div class="icones-direita">
+                                            <img src="icones/car.png" alt=""><span>4 portas</span><br><br>
+                                            <img src="icones/car_10437527.png" alt=""><span>ABS</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="kilometragem">
+                                        <div class="kilometragem-cidade">
+                                            <h6>Cidade</h6>
+                                            <p>6,3 km/L</p>
+                                        </div>
+                                        <div class="kilometragem-estrada">
+                                            <h6>Estrada</h6>
+                                            <p>8,6 km/L</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="imagens/iloveimg-resized/ford_23rangerraptor4wdtc4b_angularfront.png" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="text-body">Range Raptor</h1>
+                    <p class="text-body text-start">Versão mais poderosa da picape tem motor diesel de 213 cv e câmbio
+                        automático
+                        de dez marchas; Ranger Raptor foi inspirada na ‘irmã’ F-150 Raptor</p>
+                    <button type="button" class="btn btn-primary" value="carro5"
+                        onclick="escolhaCarrossel('carro4'), validarCampos()">Alugue já</button>
+                    <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalRaptor">Exibir
+                        detalhes</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalRaptor" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-body" id="exampleModalLabel">Range Raptor</h1>
+                                    <p>2024</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="icones-modal">
+                                        <div class="icones-esquerda">
+                                            <i class="fa-solid fa-users"></i><span>5 pessoas</span><br><br>
+                                            <i class="fa-solid fa-gas-pump"></i><span>Gasolina</span><br><br>
+                                            <img src="icones/car-steering-wheel.png"><span>Automático</span>
+                                        </div>
+                                        <div class="icones-direita">
+                                            <img src="icones/car.png" alt=""><span>4 portas</span><br><br>
+                                            <img src="icones/car_10437527.png" alt=""><span>ABS</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="kilometragem">
+                                        <div class="kilometragem-cidade">
+                                            <h6>Cidade</h6>
+                                            <p>8,3 km/L</p>
+                                        </div>
+                                        <div class="kilometragem-estrada">
+                                            <h6>Estrada</h6>
+                                            <p>10,2 km/L</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="imagens/iloveimg-resized/83db8adb14077b609539478ca6023c80.png" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="text-body">Ford F150</h1>
+                    <p class="text-body text-start">A F-150 possui design robusto, moderno e imponente, digno da maior
+                        picape do
+                        mundo.
+                        Equipada com Faróis Full LED e rodas de liga leve de 20" nas duas versões.</p>
+                    <button type="button" class="btn btn-primary"
+                        onclick="escolhaCarrossel('carro1'), validarCampos()">Alugue já</button>
+                    <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalF150">Exibir
+                        detalhes</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalF150" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-body" id="exampleModalLabel">Ford F150</h1>
+                                    <p>2023</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="icones-modal">
+                                        <div class="icones-esquerda">
+                                            <i class="fa-solid fa-users"></i><span>5 pessoas</span><br><br>
+                                            <i class="fa-solid fa-gas-pump"></i><span>Flex</span><br><br>
+                                            <img src="icones/car-steering-wheel.png"><span>Automático</span>
+                                        </div>
+                                        <div class="icones-direita">
+                                            <img src="icones/car.png" alt=""><span>4 portas</span><br><br>
+                                            <img src="icones/car_10437527.png" alt=""><span>ABS</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="kilometragem">
+                                        <div class="kilometragem-cidade">
+                                            <h6>Cidade</h6>
+                                            <p>6,3 km/L</p>
+                                        </div>
+                                        <div class="kilometragem-estrada">
+                                            <h6>Estrada</h6>
+                                            <p>8,6 km/L</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://alcf.s3.us-west-1.amazonaws.com/_custom/2024/ford/mustang/2024%20ford%20mustang%20%281%29.png"
+                    alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="text-body">Ford Mustang GT</h1>
+                    <p class="text-body text-start">O Ford GT é um superesportivo americano com motor central e tração
+                        traseira produzido
+                        pela Ford.
+                        Seu design é inspirado no Ford GT40</p>
+                    <button type="button" class="btn btn-primary">Alugue já</button>
+                    <a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalMustang">Exibir
+                        detalhes</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalMustang" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-body" id="exampleModalLabel">Ford Mustang GT</h1>
+                                    <p>2024</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="icones-modal">
+                                        <div class="icones-esquerda">
+                                            <i class="fa-solid fa-users"></i><span>4 pessoas</span><br><br>
+                                            <i class="fa-solid fa-gas-pump"></i><span>Gasolina</span><br><br>
+                                            <img src="icones/car-steering-wheel.png"><span>Automático</span>
+                                        </div>
+                                        <div class="icones-direita">
+                                            <img src="icones/car.png" alt=""><span>4 portas</span><br><br>
+                                            <img src="icones/car_10437527.png" alt=""><span>ABS</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="kilometragem">
+                                        <div class="kilometragem-cidade">
+                                            <h6>Cidade</h6>
+                                            <p>6,1 km/L</p>
+                                        </div>
+                                        <div class="kilometragem-estrada">
+                                            <h6>Estrada</h6>
+                                            <p>8,8 km/L</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+            <i class="fa-solid fa-chevron-left fa-2x" style="color: black;"></i>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+            <i class="fa-solid fa-chevron-right fa-2x" style="color: black;"></i>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </section><!-- Fim carrossel-->
+
+    <section id="artigos"><!-- Início da sessão artigos-->
+
+        <div class="card">
+            <img src="imagens/mustang_artigo1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">Ford Mustang 2024
+                    Promete Elevar o Conceito de Performance e Tecnologia</h1>
+                <p class="card-text">O Ford Mustang 2024 promete elevar o padrão de desempenho e tecnologia com
+                    inovações revolucionárias.
+                    Com melhorias significativas no motor, transmissão e aerodinâmica, este icônico modelo promete uma
+                    experiência de direção
+                    ainda mais emocionante e dinâmica</p>
+                <a href="artigo1.html" class="btn btn-primary">Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagens/img-artigo2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">O Impacto da Sustentabilidade nos Carros de Luxo da Ford:
+                    Design Ecológico e Desempenho de Alto Nível</h1>
+                <p class="card-text">Neste artigo, destacamos como a Ford lidera a indústria automotiva de luxo em
+                    direção à
+                    sustentabilidade. Desde o design ecológico até a propulsão limpa e a responsabilidade em toda a
+                    cadeia de
+                    suprimentos, a empresa estabelece novos padrões, mostrando que luxo e responsabilidade ambiental
+                    podem
+                    coexistir. </p>
+                <a href="artigo2.html" class="btn btn-primary">Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagens/img-artigo2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">A Fusão Perfeita de Tecnologia, Segurança e Potência</h1>
+                <p class="card-text">Os carros de luxo disponíveis para aluguel vêm equipados com uma série de recursos
+                    de
+                    segurança avançados. Neste artigo você verá alguns exemplos de recursos que os carros de luxo para
+                    aluguel
+                    podem oferecer, trazendo aos clientes uma experiência de condução segura e tranquila.</p>
+                <a href="artigo3.html" class="btn btn-primary">Saiba mais</a>
+            </div>
+        </div>
+
+    </section><!-- Fim da sessão artigos-->
+
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

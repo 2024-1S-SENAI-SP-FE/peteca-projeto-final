@@ -1,0 +1,162 @@
+.carros-oferta {
+  margin: auto;
+}
+.container-titulo{
+  display: flex;
+  justify-content: center;
+  
+}
+.conteiner-titulo, .conteiner-carros{
+  background-color: rgba(255, 85, 0, 0.516);
+}
+.container-carros {
+  /* border: 1px solid blue; */
+  height: 1000px;
+  display: grid;
+  grid-template-columns: repeat(8, 150px);
+  grid-template-rows: repeat(2, 80px);
+  gap: 1rem;
+}
+.aluguel-de-carros{
+  color: black;
+  align-items: center;
+  font-size: 3rem;
+  margin: 10px;
+}
+.carro {
+ 
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 10px;
+  background-color: rgba(128, 128, 128, 0.601);
+  border-radius: 6px;
+
+}
+
+.carro img {
+
+  background-size: auto;
+  width: 100%;
+  height:150px;  
+  object-fit: cover;
+
+}
+.nome-carro {
+  color: black;
+}
+.carro1 {
+
+  grid-column: 2/ 4;
+  grid-row: 2/4;
+
+}
+.carro2 {
+
+  grid-column: 4/ 6;
+  grid-row: 2/4;
+
+}
+.carro3 {
+
+  grid-column: 6/ 8;
+  grid-row: 2/4;
+
+}
+.carro4 {
+
+  grid-column: 2/ 4;
+  grid-row: 4/6;
+
+}
+
+.carro5 {
+
+  grid-column: 4/ 6;
+  grid-row: 4/6;
+
+}
+.carro6 {
+
+  grid-column: 6/ 8;
+  grid-row: 4/6;
+  margin-bottom: 100px;
+
+}
+
+.nome-carro{
+  font-size: 1.8rem;
+}
+
+.btn-carro-saiba-mais{
+
+  border: none;
+  background-color: rgb(0, 87, 173);
+  color: white;
+  border-radius:6px;
+  width: 100px;
+  height: 30px;
+  transition: all 300ms;
+
+}
+.btn-carro-saiba-mais:hover{
+
+  background-color: rgb(18, 106, 195);
+  transform: scale(1.05);
+  display: inline-block;
+
+}
+.estrelas{
+  color: black;
+}
+
+@media all and (max-width:500px){
+  body{
+    min-width: 100vw;
+    /* overflow-x: hidden; */
+  }
+  .carros-oferta {
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    align-items: center;
+  }
+  .container-carros{
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    height: 300px;
+    overflow-x: scroll;
+    /* overflow-y:auto;   */
+  }
+  .carro{
+    border: 2px solid rgb(159, 159, 159);
+    width: 80%;
+    padding: 0 10px;
+    /* height: 80px; */
+    /* box-shadow:6px 6px 5px black; */
+    border-radius:10px;
+  }
+  .carro1{
+    margin-left: 30px;
+  }
+  .carro img {
+    background-size: auto;
+    height: 30%;
+    /* height:150px;   */
+    object-fit: cover;
+    
+  }
+  .img-oferta{
+    width: 30px;
+  }
+  .nome-carro, .button-saiba{
+    font-size: .8rem;
+    
+}
+.btn-carro-saiba-mais{
+  margin: 10px 0;
+}
+}

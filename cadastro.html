@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/cadastro.css">
+</head>
+
+<body>
+
+    <div class="login">
+        <div class="form-image">
+            <img src="imagens/Design sem nome (4) (2).png" alt="100%" width="100%">
+        </div>
+        <div class="form">
+            <form >
+                <div class="form-header">
+            </form>
+        </div>
+            <h1 class="titulo-login">crie sua conta</h1>
+            
+            <form  class="form-login">
+                
+                
+                
+            <label for="nome" class="label-login"> Nome:</label><br>
+            <input type="text" id="nome" class="input" placeholder="Digite seu nome" oninput="validaNome(0)">
+            <span class="invalido">o nome deve ter mais de 3 caracteres</span><br>
+
+            <label for="cpf" class="label-login"> CPF:</label><br>
+            <input type="number" id="cpf" class="cpf input" placeholder="Insira seu CPF" oninput="validaCpf(1)">
+            <span class="invalido">o cpf deve ter 11 caracteres</span><br>
+
+            <label for="email" class="label-login"> E-mail:</label><br>
+            <input type="email" id="email" class="email input" placeholder="Coloque seu e-mail" oninput="validaEmail(2)">
+            <span class="invalido">digite um e-mail válido</span><br>
+
+            <label for="num" class="label-login">Telefone:</label><br>
+            <input type="text" id="num" class="num input" placeholder="Telefone para contato" oninput="validaNum(3)">
+            <span class="invalido">o numero deve ter 11 digitos</span><br>
+
+
+            <label for="senha" class="label-login">Senha</label><br>
+            <input type="password" id="senha" class="senha input" placeholder="Crie sua senha" oninput="validaSenha(4)">
+            <span class="invalido">a senha deve ter 8 digitos</span><br>
+
+            
+            
+            
+        </form>
+        <button type="button" class="btn-login">Cadastrar</button>
+        <button class="btn-link" type="button">Ja tem cadastro? <a href="login.html">faça login</a> </button>
+        <div class="cadastrou">Usuário cadastrado com sucesso!!</div>
+    </div>
+    </div>
+
+
+
+    </div>
+
+<script src="scripts/cadastro.js"></script>
+
+</body>
+
+</html>
