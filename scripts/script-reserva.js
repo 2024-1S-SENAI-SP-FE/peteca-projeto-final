@@ -68,3 +68,20 @@ inputs.forEach(input => {
         }
     });
 });
+
+document.querySelector('.finalizar').addEventListener('click', () => {
+    
+    document.querySelector(".pai-finalizado").style.display = "flex";
+    document.querySelector(".finalizar").style.display = 'none'
+    document.querySelector(".valor-total").style.display = "none";
+    console.log('deu certo');
+    setTimeout(() => {
+        document.querySelector(".pai-finalizado").style.display = "none";
+        document.querySelector(".pai-mensagem").style.display = "flex";
+        document.querySelector('.pai-mensagem').classList.add('deslize')
+    }, 2300)
+    setTimeout(() => {
+        document.querySelector('.texto-finalizado').style.display='inline'
+        document.querySelector('.texto-finalizado').classList.add('finalizou-texto')
+    }, 2500)
+})
