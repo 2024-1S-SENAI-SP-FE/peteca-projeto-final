@@ -14,7 +14,7 @@
         display: none;
     }
 
-    #menu ul {
+    #menu ul, .fundo-preto {
         display: none;
     }
 
