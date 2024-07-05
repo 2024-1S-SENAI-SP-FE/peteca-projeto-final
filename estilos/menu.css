@@ -1,8 +1,12 @@
 #menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     font-family: "Inter", sans-serif;
+}
+
+.logo {
+    display: none;
 }
 
 .logo img {
@@ -13,6 +17,8 @@
 #menu ul {
     display: flex;
     /* margin-bottom: 1.5rem; */
+    margin-inline-start: 2rem;
+    margin-top: 1rem;
     gap: 3rem;
     height: 52px;
     margin-inline-end: 3rem;
@@ -26,6 +32,8 @@
 
 #menu ul li:last-child img {
     height: 20px;
+    margin-inline-end: 0.5rem;
+    display: none;
 }
 
 #menu ul li:last-child a {
@@ -38,11 +46,13 @@
     justify-content: space-evenly;
     width: 120px;
     height: 70%;
-    padding-bottom: 0;
+    padding: 0;
+    margin-bottom: 0.4rem;
+    box-sizing: border-box;
 }
 
 #menu ul a {
-    color: #000000;
+    color: black;
     font-weight: 700;
     text-decoration: none;
     padding-bottom: 7px;

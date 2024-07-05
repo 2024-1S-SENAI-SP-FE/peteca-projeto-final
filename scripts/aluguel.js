@@ -1,5 +1,6 @@
 const dadosCarros = [
   {
+    id: "carro1",
     nome: "F-150 Shelby",
     ano: "2023",
     imgSrc: "imagens/image-F150 shelby 1.png",
@@ -7,6 +8,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesA",
   },
   {
+    id: "carro2",
     nome: "Mustang Mach 1",
     ano: "2023",
     imgSrc: "../imagens/mustang.webp",
@@ -14,6 +16,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro3",
     nome: "Ford Territory Titanium",
     ano: "2023",
     imgSrc: "imagens/ford-territory-titanium-new.webp",
@@ -21,6 +24,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro4",
     nome: "Ranger Raptor",
     ano: "2023",
     imgSrc: "imagens/ford-next-gen-ranger-raptor-lightning-blue-240522.png",
@@ -28,6 +32,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro11",
     nome: "Mustang GT",
     ano: "2023",
     imgSrc: "imagens/mustang-gt-new.png",
@@ -35,6 +40,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro6",
     nome: "Ford Super Duty F-450 DRW",
     ano: "2023",
     imgSrc: "imagens/Duty.webp",
@@ -42,20 +48,22 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro7",
     nome: "Ranger XLS",
     ano: "2023",
     imgSrc: "imagens/rangerXLS-removebg-preview 1.png",
     valorAluguel: "$450/month",
     detalhesLink: "#detalhesB",
   },
+  // {
+  //   nome: "Ford GT",
+  //   ano: "2023",
+  //   imgSrc: "imagens/LiquidCarbonFordGT_01-1-1024x683-removebg-preview 2.png",
+  //   valorAluguel: "$450/month",
+  //   detalhesLink: "#detalhesB",
+  // },
   {
-    nome: "Ford GT",
-    ano: "2023",
-    imgSrc: "imagens/LiquidCarbonFordGT_01-1-1024x683-removebg-preview 2.png",
-    valorAluguel: "$450/month",
-    detalhesLink: "#detalhesB",
-  },
-  {
+    id: "carro9",
     nome: "Mustang Mach-E",
     ano: "2023",
     imgSrc:
@@ -64,6 +72,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro10",
     nome: "Ford Explores St",
     ano: "2023",
     imgSrc: "imagens/ExploresSt.webp",
@@ -71,6 +80,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro5",
     nome: "Shelby GT500",
     ano: "2023",
     imgSrc: "imagens/ShelbyGT500.webp",
@@ -78,6 +88,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro12",
     nome: "Maverick",
     ano: "2023",
     imgSrc: "imagens/ford-maverick-1160x725-removebg-preview 1.png",
@@ -85,6 +96,7 @@ const dadosCarros = [
     detalhesLink: "#detalhesB",
   },
   {
+    id: "carro13",
     nome: "Ford Ranger 3.2",
     ano: "2023",
     imgSrc: "imagens/image-Ford-Ranger3.2.png",
@@ -141,9 +153,12 @@ function criaContainerInfoCarro(valorAluguel, detalhesLink) {
   const containerInfoCarro = document.createElement("div");
   containerInfoCarro.classList.add("container-info-carro");
 
-  const btnAlugue = document.createElement("button");
-  btnAlugue.classList.add("button-alugue");
-  btnAlugue.textContent = "Alugue";
+  // const btnAlugue = document.createElement("button");
+  // btnAlugue.classList.add("button-alugue");
+  // btnAlugue.textContent = "Alugue";
+  // btnAlugue.addEventListener('click', function() {
+  //   modeloEscolhido('carro1');
+  // });
 
   const spanValorAluguel = document.createElement("span");
   spanValorAluguel.classList.add("valor-aluguel");
@@ -154,7 +169,7 @@ function criaContainerInfoCarro(valorAluguel, detalhesLink) {
   a.classList.add("detalhes");
   a.textContent = "Detalhes";
 
-  containerInfoCarro.append(btnAlugue, spanValorAluguel, a);
+  containerInfoCarro.append(spanValorAluguel, a);
   return containerInfoCarro;
 }
 
@@ -169,7 +184,14 @@ function criaContainerCarro(dados) {
     dados.detalhesLink
   );
 
-  containerCarro.append(containerImg, containerNomeAno, containerInfoCarro);
+  const btnAlugue = document.createElement("button");
+  btnAlugue.classList.add("button-alugue");
+  btnAlugue.textContent = "Alugue";
+  btnAlugue.addEventListener('click', function() {
+    modeloEscolhido(dados.id);
+  });
+
+  containerCarro.append(btnAlugue, containerImg, containerNomeAno, containerInfoCarro);
   return containerCarro;
 }
 
@@ -539,3 +561,19 @@ btnRegistrar.addEventListener("click", () => {
     }, 8000);
   }
 });
+
+function modeloEscolhido(idCarro) {
+  fetch('data/carros.json')
+      .then(response => response.json())
+      .then(data => {
+          const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
+          if (carroSelecionado) {
+              localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
+              window.location.href = "reserva.html";
+          } else {
+              console.error('Carro não encontrado no arquivo JSON.');
+          }
+      })
+      .catch(error => console.error('Erro ao carregar dados do arquivo JSON:', error));
+}
+

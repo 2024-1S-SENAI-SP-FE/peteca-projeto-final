@@ -27,7 +27,7 @@ body {
   /* height: 300px; */
   width: 85vw;
   font-size: 20px;
-  margin: 100px 80px;
+  margin: 50px 80px;
 }
 .check-in {
   display: flex;
@@ -233,7 +233,7 @@ a {
   margin-top: 10px;
   color: black;
   font-weight: 600;
-  font-size: 20px;
+  /* font-size: 20px;; */
   text-decoration: underline;
   cursor: pointer;
 }
@@ -248,7 +248,8 @@ a {
 }
 .button-alugue {
   position: absolute;
-  left: 40px;
+  left: 35px;
+  top: 16.9rem;
   background-color: #06163e;
   color: white;
   border: none;

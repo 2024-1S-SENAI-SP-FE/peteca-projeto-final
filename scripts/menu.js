@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const links = [
         {"url": "index.html", "texto": "Home"},
-        {"url": "carros.html", "texto": "Carros"},
+        {"url": "aluguel.html", "texto": "Carros"},
         {"url": "sobre-nos.html", "texto": "Sobre nós"},
         {"url": "contato.html", "texto": "Contatos"},
         {"url": "login.html", "texto": '<img src="../icones/arrow-right-to-bracket-solid copy.svg" alt="">Log in'}
