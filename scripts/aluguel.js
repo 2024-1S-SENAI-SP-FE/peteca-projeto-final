@@ -1,3 +1,5 @@
+let dadosValidados = false;
+
 const dadosCarros = [
   {
     id: "carro1",
@@ -187,8 +189,16 @@ function criaContainerCarro(dados) {
   const btnAlugue = document.createElement("button");
   btnAlugue.classList.add("button-alugue");
   btnAlugue.textContent = "Alugue";
-  btnAlugue.addEventListener('click', function() {
-    modeloEscolhido(dados.id);
+  btnAlugue.addEventListener('click', function () {
+    if (dadosValidados) {
+      modeloEscolhido(dados.id);
+    } else {
+      alert('Por favor, registre os dados antes!')
+      window.scrollBy({
+        top: -10000,
+        behavior: 'smooth'
+      });
+    }
   });
 
   containerCarro.append(btnAlugue, containerImg, containerNomeAno, containerInfoCarro);
@@ -368,7 +378,7 @@ ancorasFlip.forEach((ancora) => {
     const avoAncora = paiAncora.parentElement;
     // const avoAncora2 = paiAncora.parentElement;
     avoAncora.parentNode.replaceChild(newContainer, avoAncora);
-    
+
     flip2 = document.querySelectorAll(".detalhes2");
     // const containerPadrao = document.querySelector(".container-carro");
     flip2.forEach((ancora2) => {
@@ -379,8 +389,8 @@ ancorasFlip.forEach((ancora) => {
 
         avoAncora.classList.add('flip-card-normal')
         novoAvoA.parentNode.replaceChild(avoAncora, newContainer);
-        
-      
+
+
       });
     });
   });
@@ -514,66 +524,138 @@ function criaElementosDetalhes() {
 
 // Lógica botão registrar -----------------------------------------------------------
 
+const pesquisarCep = async () => {
+  const cep = document.querySelector('#cep').value;
+  const url = `http://viacep.com.br/ws/${cep}/json/`;
+  try {
+    const dados = await fetch(url);
+    if (!dados.ok) {
+      throw new Error('Erro ao buscar CEP');
+    }
+    const endereco = await dados.json();
+    if (endereco.erro) {
+      throw new Error('CEP não encontrado');
+    }
+    localStorage.setItem('endereco', JSON.stringify(endereco));
+    return true;
+  } catch (error) {
+    console.error(error.message);
+    return false;
+  }
+}
+
 const btnRegistrar = document.querySelector(".btn-registrar");
 btnRegistrar.addEventListener("click", () => {
-  let inputLocal = document.querySelector(".local-retirada").value,
-    dataRetirada = document.querySelector(".data-retirada").value,
-    horaRetirada = document.querySelector(".hora-retirada").value,
-    dataEntrega = document.querySelector(".data-entrega").value,
-    horaEntrega = document.querySelector(".hora-entrega").value;
-  let erro;
-  if (!inputLocal) erro = "O local não está definido, por favor defina";
-  if (!dataRetirada) erro = "Faltam alguns campos para definir:)";
-  if (!horaRetirada) erro = "Faltam alguns campos para definir:)";
-  if (!dataEntrega) erro = "Faltam alguns campos para definir:)";
-  if (!horaEntrega) erro = "Faltam alguns campos para preencher";
+  registrarDados()
+});
 
-  if (
-    !inputLocal &&
-    !dataEntrega &&
-    !dataRetirada &&
-    !horaEntrega &&
-    !horaRetirada
-  ) {
-    window.alert(
-      "Nenhum campo preenchido, por favor, digite as informações necessarias"
-    );
-  } else if (erro) {
-    window.alert(erro);
+async function registrarDados() {
+  const cepValido = await pesquisarCep();
+  if (cepValido) {
+    let inputLocal = document.querySelector(".local-retirada").value,
+      dataRetirada = document.querySelector(".data-retirada").value,
+      dataEntrega = document.querySelector(".data-entrega").value;
+    let erro;
+    if (!inputLocal) erro = "O local não está definido, por favor defina";
+    if (!dataRetirada) erro = "Faltam alguns campos para definir:)";
+    if (!dataEntrega) erro = "Faltam alguns campos para definir:)";
+
+    if (
+      !inputLocal &&
+      !dataEntrega &&
+      !dataRetirada
+    ) {
+      window.alert(
+        "Nenhum campo preenchido, por favor, digite as informações necessarias"
+      );
+    } else if (erro) {
+      window.alert(erro);
+      return false;
+    } else {
+      const divRegistrar = document.querySelector(".div-registrar");
+
+      btnRegistrar.classList.add("ocultar");
+      divRegistrar.classList.add("registrando");
+
+      setTimeout(() => {
+        divRegistrar.classList.remove("registrando");
+        divRegistrar.classList.add("registrou");
+        divRegistrar.innerHTML = "Registrado✅";
+      }, 3000);
+
+      const entregaData = new Date(dataRetirada);
+      const devolucaoData = new Date(dataEntrega);
+      let intervaloMilissegundos = devolucaoData - entregaData;
+      let intervaloDias = intervaloMilissegundos / (1000 * 60 * 60 * 24);
+      const data = {
+        entrega: dataRetirada,
+        devolucao: dataEntrega,
+        intervalo: intervaloDias
+      };
+      localStorage.setItem('data', JSON.stringify(data));
+
+      setTimeout(() => {
+        btnRegistrar.classList.remove("ocultar");
+        divRegistrar.classList.remove("registrando");
+        divRegistrar.classList.remove("registrou");
+        divRegistrar.innerHTML = "Agora escolha o carro desejado";
+        divRegistrar.style.height = "auto";
+      }, 8000);
+
+      dadosValidados = true;
+    }
   } else {
-    const divRegistrar = document.querySelector(".div-registrar");
+    alert('CEP não encontrado. Por favor, verifique e tente novamente.');
+  }
 
-    btnRegistrar.classList.add("ocultar");
-    divRegistrar.classList.add("registrando");
+}
 
-    setTimeout(() => {
-      divRegistrar.classList.remove("registrando");
-      divRegistrar.classList.add("registrou");
-      divRegistrar.innerHTML = "Registrado✅";
-    }, 3000);
+// Delimitar datas -----------------------------------------------------------
+const startDateInput = document.querySelector(".data-retirada");
+const endDateInput = document.querySelector(".data-entrega");
 
-    setTimeout(() => {
-      btnRegistrar.classList.remove("ocultar");
-      divRegistrar.classList.remove("registrando");
-      divRegistrar.classList.remove("registrou");
-      divRegistrar.innerHTML = "Agora escolha o carro desejado";
-      divRegistrar.style.height = "auto";
-    }, 8000);
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = (today.getMonth() + 1).toString().padStart(2, '0');
+const dd = today.getDate().toString().padStart(2, '0');
+
+const todayString = `${yyyy}-${mm}-${dd}`;
+startDateInput.min = todayString;
+
+startDateInput.addEventListener('change', () => {
+  if (startDateInput.value) {
+    endDateInput.value = '';
+    endDateInput.readOnly = false;
+
+    const selectedDate = new Date(startDateInput.value);
+    selectedDate.setDate(selectedDate.getDate() + 2);
+
+    const yyyy = selectedDate.getFullYear();
+    const mm = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
+    const dd = selectedDate.getDate().toString().padStart(2, '0');
+
+    const nextDayString = `${yyyy}-${mm}-${dd}`;
+    endDateInput.min = nextDayString;
+
+  } else {
+    endDateInput.readOnly = true;
+    endDateInput.value = '';
   }
 });
+// -----------------------------------------------------------
 
 function modeloEscolhido(idCarro) {
   fetch('data/carros.json')
-      .then(response => response.json())
-      .then(data => {
-          const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
-          if (carroSelecionado) {
-              localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
-              window.location.href = "reserva.html";
-          } else {
-              console.error('Carro não encontrado no arquivo JSON.');
-          }
-      })
-      .catch(error => console.error('Erro ao carregar dados do arquivo JSON:', error));
+    .then(response => response.json())
+    .then(data => {
+      const carroSelecionado = data.carros.find(carro => carro.id === idCarro);
+      if (carroSelecionado) {
+        localStorage.setItem('carroEscolhido', JSON.stringify(carroSelecionado));
+        window.location.href = "reserva.html";
+      } else {
+        console.error('Carro não encontrado no arquivo JSON.');
+      }
+    })
+    .catch(error => console.error('Erro ao carregar dados do arquivo JSON:', error));
 }
 
