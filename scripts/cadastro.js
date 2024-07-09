@@ -19,9 +19,9 @@ function bordaAzul(index) {
 function validaNome() {
   const nome = document.querySelector("#nome");
   usuario = nome.value
-localStorage.setItem("nomeDoMano", usuario);
+  localStorage.setItem("nomeDoMano", usuario);
 
-  if (nome.value.length >= 3) {
+  if (nome.value.length >= 3 && nome.value.length <=10) {
     bordaAzul(0); // Chamado bordaAzul quando válido
   } else {
     bordaVermelha(0);
