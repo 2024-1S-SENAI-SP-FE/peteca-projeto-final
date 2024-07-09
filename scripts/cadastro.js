@@ -1,3 +1,5 @@
+let usuario
+
 function bordaVermelha(index) {
   const input = document.querySelectorAll("input");
   const span = document.querySelectorAll(".invalido");
@@ -16,6 +18,9 @@ function bordaAzul(index) {
 
 function validaNome() {
   const nome = document.querySelector("#nome");
+  usuario = nome.value
+localStorage.setItem("nomeDoMano", usuario);
+
   if (nome.value.length >= 3) {
     bordaAzul(0); // Chamado bordaAzul quando válido
   } else {
@@ -129,5 +134,4 @@ async function cadastrar(event) {
 
 
 document.querySelector(".btn-login").addEventListener("click", cadastrar);
-
 
