@@ -1,5 +1,5 @@
-// variaveis para export
-let usuario, executou = false
+
+
 
 
 function bordaVermelha(index,text) {
