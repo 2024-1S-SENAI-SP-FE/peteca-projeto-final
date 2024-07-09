@@ -1,20 +1,31 @@
+let nameUser = localStorage.getItem("nomeDoMano");
 document.addEventListener("DOMContentLoaded", function() {
-
     const links = [
-        {"url": "index.html", "texto": "Home"},
-        {"url": "aluguel.html", "texto": "Carros"},
-        {"url": "sobre-nos.html", "texto": "Sobre nós"},
-        {"url": "contato.html", "texto": "Contatos"},
-        {"url": "login.html", "texto": '<img src="../icones/arrow-right-to-bracket-solid copy.svg" alt="">Log in'}
+      { url: "index.html", texto: "Home" },
+      { url: "aluguel.html", texto: "Carros" },
+      { url: "sobre-nos.html", texto: "Sobre nós" },
+      { url: "contato.html", texto: "Contatos" },
+      { url: "login.html", texto: '<img src="../icones/arrow-right-to-bracket-solid copy.svg" alt="">Log in'},
     ];
     
-    function criaAncora(url, texto){
-        const a = document.createElement('a');
-        a.href = url;
-        a.innerHTML = texto;
-    
-        return a;
+    function criaAncora(url, texto) {
+      const a = document.createElement("a");
+
+      a.href = url;
+      if (
+        texto ===
+        '<img src="../icones/arrow-right-to-bracket-solid copy.svg" alt="">Log in'
+      ) {
+        if (nameUser) {
+          texto = nameUser;
+        }
+        a.setAttribute("target", "_blank");
+      }
+      a.innerHTML = texto;
+      console.log(a);
+      return a;
     }
+
     
     function criaItem(ancora){
         const li = document.createElement('li');
@@ -41,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     nav.id = "menu";
     const div = document.createElement('div');
     div.classList.add('logo');
-    div.innerHTML = '<img src="imagens/logo.png" alt="">';
+    // div.innerHTML = '<img src="imagens/logo.png" alt="">';
     nav.appendChild(div);
     nav.appendChild(criaUl(links));
     
