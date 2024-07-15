@@ -1,8 +1,8 @@
 const scripts = [
-  { src: "./scripts/aluguel.js" },
-  { src: "./scripts/carrossel-carros.js" },
-  { src: "./scripts/scripts.js" },
-  { src: "./scripts/footer.js" },
+  { src: ".scripts/aluguel.js" },
+  { src: ".scripts/carrossel-carros.js" },
+  { src: ".scripts/scripts.js" },
+  { src: ".scripts/footer.js" },
 ];
 
 function criaScripts(scripts) {
@@ -21,10 +21,10 @@ console.log(criaScripts(scripts));
 
 
 const batata = [
-  { "rel": "stylesheet", "type": "text/css", url: "/estilos/reset.css"},
-  { "rel": "stylesheet", "type": "text/css", url: "/estilos/styles.css" },
-  { "rel": "stylesheet", "type": "text/css", url: "/estilos/resposividade.css" },
-  { "rel": "stylesheet", "type": "text/css", url: "/estilos/aluguel.css" },
+  { "rel": "stylesheet", "type": "text/css", url: "estilos/reset.css"},
+  { "rel": "stylesheet", "type": "text/css", url: "estilos/styles.css" },
+  { "rel": "stylesheet", "type": "text/css", url: "estilos/resposividade.css" },
+  { "rel": "stylesheet", "type": "text/css", url: "estilos/aluguel.css" },
 ];
 
 function criaLink(batata) {
