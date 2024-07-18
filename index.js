@@ -1,8 +1,8 @@
 const scripts = [
-  { src: ".scripts/aluguel.js" },
-  { src: ".scripts/carrossel-carros.js" },
-  { src: ".scripts/scripts.js" },
-  { src: ".scripts/footer.js" },
+  { src: "scripts/aluguel.js" },
+  { src: "scripts/carrossel-carros.js" },
+  { src: "scripts/scripts.js" },
+  { src: "scripts/footer.js" },
 ];
 
 function criaScripts(scripts) {
