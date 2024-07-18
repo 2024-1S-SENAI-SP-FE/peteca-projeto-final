@@ -36,7 +36,7 @@ botaoEnviar.addEventListener('click', async () => {
 
 const pesquisarCep = async () => {
     const cep = document.querySelector('#cep').value;
-    const url = `http://viacep.com.br/ws/${cep}/json/`;
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
     try {
         const dados = await fetch(url);
         if (!dados.ok) {
